@@ -1,0 +1,276 @@
+{
+  "site": {
+    "name": "Nurdai",
+    "email": "hello@nurdai.com",
+    "social": {
+      "instagram": "https://instagram.com/nurdai",
+      "linkedin": "https://linkedin.com/in/nurdai",
+      "youtube": "https://youtube.com/@nurdai",
+      "tiktok": "https://tiktok.com/@nurdai",
+      "podcast": "#",
+      "twitter": "https://x.com/nurdai"
+    }
+  },
+  "hero": {
+    "badge": "AI Çağında Dijital Görünürlük",
+    "title": "AI sistemi markanızı biliyor mu?",
+    "subtitle": "ChatGPT, Google AI ve Perplexity'de markanızın nasıl göründüğünü anlayın. AI Visibility ile yeni nesil dijital görünürlük."
+  },
+  "about": {
+    "photo": "assets/images/nurdan.jpg",
+    "bio": "Dijital dünyaya sosyal medya, grafik tasarım ve içerik üretimiyle başladım. Zaman içinde markaların sadece güzel görünmesinin değil; doğru yerde, doğru şekilde ve doğru mesajla görünür olmasının daha önemli olduğunu fark ettim. AI çağında görünürlük, artık sadece insan gözüyle değil, algoritmalarla da ölçülüyor. Bu yolculukta yüzlerce markaya AI Visibility danışmanlığı, SEO stratejisi ve içerik üretimiyle destek oldum.",
+    "short": "AI Visibility danışmanı. Markaların dijital çağda görünür olmasına yardımcı oluyorum."
+  },
+  "portfolio": [
+    {
+      "id": 1,
+      "title": "Instagram Reels Kampanyası",
+      "client": "Café Luna",
+      "category": "sosyal",
+      "categoryLabel": "Sosyal Medya",
+      "image": "assets/images/port01.jpg",
+      "mockupType": "phone",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 2,
+      "title": "Story Tasarımı",
+      "client": "Eczane Kartal",
+      "category": "sosyal",
+      "categoryLabel": "Sosyal Medya",
+      "image": "assets/images/port02.jpg",
+      "mockupType": "phone",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 3,
+      "title": "Post Serisi",
+      "client": "Restoran Projesi",
+      "category": "sosyal",
+      "categoryLabel": "Sosyal Medya",
+      "image": "assets/images/port03.jpg",
+      "mockupType": "phone",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 4,
+      "title": "Reels İçerik",
+      "client": "Güzellik Markası",
+      "category": "sosyal",
+      "categoryLabel": "Sosyal Medya",
+      "image": "assets/images/port04.jpg",
+      "mockupType": "phone",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 5,
+      "title": "Sosyal Medya Paketi",
+      "client": "Teknoloji Startup",
+      "category": "sosyal",
+      "categoryLabel": "Sosyal Medya",
+      "image": "assets/images/port05.jpg",
+      "mockupType": "phone",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 6,
+      "title": "Logo Tasarımı",
+      "client": "Finans Şirketi",
+      "category": "logo",
+      "categoryLabel": "Logo",
+      "image": "assets/images/port06.jpg",
+      "mockupType": "logo",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 7,
+      "title": "Marka Logosu",
+      "client": "E-ticaret Platformu",
+      "category": "logo",
+      "categoryLabel": "Logo",
+      "image": "assets/images/port07.jpg",
+      "mockupType": "logo",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 8,
+      "title": "Kurumsal Logo",
+      "client": "Danışmanlık Firması",
+      "category": "logo",
+      "categoryLabel": "Logo",
+      "image": "assets/images/port08.jpg",
+      "mockupType": "logo",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 9,
+      "title": "Logo Redesign",
+      "client": "Yazılım Şirketi",
+      "category": "logo",
+      "categoryLabel": "Logo",
+      "image": "assets/images/port09.jpg",
+      "mockupType": "logo",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 10,
+      "title": "Yeni Logo",
+      "client": "Sağlık Kliniği",
+      "category": "logo",
+      "categoryLabel": "Logo",
+      "image": "assets/images/port10.jpg",
+      "mockupType": "logo",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 11,
+      "title": "Kartvizit Tasarımı",
+      "client": "Avukatlık Bürosu",
+      "category": "branding",
+      "categoryLabel": "Branding",
+      "image": "assets/images/port11.jpg",
+      "mockupType": "brand",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 12,
+      "title": "Marka Kimliği",
+      "client": "Eğitim Kurumu",
+      "category": "branding",
+      "categoryLabel": "Branding",
+      "image": "assets/images/port12.jpg",
+      "mockupType": "brand",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 13,
+      "title": "Branding Paketi",
+      "client": "Spor Kulübü",
+      "category": "branding",
+      "categoryLabel": "Branding",
+      "image": "assets/images/port13.jpg",
+      "mockupType": "brand",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 14,
+      "title": "Kurumsal Kimlik",
+      "client": "İnşaat Firması",
+      "category": "branding",
+      "categoryLabel": "Branding",
+      "image": "assets/images/port14.jpg",
+      "mockupType": "brand",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 15,
+      "title": "Marka Tasarımı",
+      "client": "Turizm Ajansı",
+      "category": "branding",
+      "categoryLabel": "Branding",
+      "image": "assets/images/port15.jpg",
+      "mockupType": "brand",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 16,
+      "title": "Afiş Tasarımı",
+      "client": "Konser Organizasyonu",
+      "category": "grafik",
+      "categoryLabel": "Grafik Tasarım",
+      "image": "assets/images/port16.jpg",
+      "mockupType": "frame",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 17,
+      "title": "Banner Tasarımı",
+      "client": "E-ticaret Kampanyası",
+      "category": "grafik",
+      "categoryLabel": "Grafik Tasarım",
+      "image": "assets/images/port17.jpg",
+      "mockupType": "frame",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 18,
+      "title": "Grafik Paketi",
+      "client": "Etkinlik Organizasyonu",
+      "category": "grafik",
+      "categoryLabel": "Grafik Tasarım",
+      "image": "assets/images/port18.jpg",
+      "mockupType": "frame",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 19,
+      "title": "İllüstrasyon",
+      "client": "Çocuk Kitabı",
+      "category": "grafik",
+      "categoryLabel": "Grafik Tasarım",
+      "image": "assets/images/port19.jpg",
+      "mockupType": "frame",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 20,
+      "title": "Poster Tasarımı",
+      "client": "Sergi Açılışı",
+      "category": "grafik",
+      "categoryLabel": "Grafik Tasarım",
+      "image": "assets/images/port20.jpg",
+      "mockupType": "frame",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 21,
+      "title": "Kampanya Görselleri",
+      "client": "Yeni Ürün Lansmanı",
+      "category": "kampanya",
+      "categoryLabel": "Kampanya",
+      "image": "assets/images/port21.jpg",
+      "mockupType": "frame",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 22,
+      "title": "Dijital Kampanya",
+      "client": "Marka Yenileme",
+      "category": "kampanya",
+      "categoryLabel": "Kampanya",
+      "image": "assets/images/port22.jpg",
+      "mockupType": "frame",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 23,
+      "title": "Pazarlama Materyalleri",
+      "client": "Sezon Kampanyası",
+      "category": "kampanya",
+      "categoryLabel": "Kampanya",
+      "image": "assets/images/port23.jpg",
+      "mockupType": "frame",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 24,
+      "title": "İçerik Tasarımı",
+      "client": "Blog Yazısı",
+      "category": "icerik",
+      "categoryLabel": "İçerik Tasarımı",
+      "image": "assets/images/port24.jpg",
+      "mockupType": "frame",
+      "description": "Kısa açıklama"
+    },
+    {
+      "id": 25,
+      "title": "Sosyal İçerik",
+      "client": "Haftalık Yayın",
+      "category": "icerik",
+      "categoryLabel": "İçerik Tasarımı",
+      "image": "assets/images/port25.jpg",
+      "mockupType": "frame",
+      "description": "Kısa açıklama"
+    }
+  ]
+}

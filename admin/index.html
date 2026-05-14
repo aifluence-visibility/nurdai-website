@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nurdai Admin</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06060f;--bg2:#0d0d1e;--surf:rgba(255,255,255,.05);--surf2:rgba(255,255,255,.09);--brd:rgba(255,255,255,.09);--txt:#f0f0ff;--txt2:rgba(240,240,255,.55);--a1:#7c3aed;--a2:#06b6d4;--grad:linear-gradient(135deg,#7c3aed,#06b6d4);--r:10px;--rlg:18px;--green:#22c55e;--red:#ef4444;--yellow:#f59e0b}
+[data-theme=light]{--bg:#f9f9f5;--bg2:#f0f0ea;--surf:rgba(0,0,0,.04);--surf2:rgba(0,0,0,.08);--brd:rgba(0,0,0,.09);--txt:#0a0a1a;--txt2:rgba(10,10,26,.55)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh}
+
+/* LOGIN */
+#login-screen{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px}
+.login-card{background:var(--bg2);border:1px solid var(--brd);border-radius:var(--rlg);padding:48px;width:100%;max-width:420px;text-align:center}
+.login-logo{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;margin-bottom:6px}
+.login-logo span{background:linear-gradient(135deg,#a855f7,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.login-sub{color:var(--txt2);font-size:.84rem;margin-bottom:32px}
+.login-input{width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--brd);border-radius:var(--r);color:var(--txt);font-family:inherit;font-size:.9rem;outline:none;transition:border-color .2s;margin-bottom:12px;text-align:center;letter-spacing:.15em}
+.login-input:focus{border-color:rgba(124,58,237,.45)}
+.login-btn{width:100%;padding:13px;background:var(--grad);color:#fff;border:none;border-radius:100px;font-family:inherit;font-weight:600;font-size:.95rem;cursor:pointer;transition:opacity .2s}
+.login-btn:hover{opacity:.88}
+.login-err{color:#f87171;font-size:.82rem;margin-top:10px;display:none}
+
+/* GITHUB SETUP */
+#github-screen{display:none;align-items:center;justify-content:center;min-height:100vh;padding:24px}
+.github-card{background:var(--bg2);border:1px solid var(--brd);border-radius:var(--rlg);padding:48px;width:100%;max-width:480px}
+.github-card h2{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;margin-bottom:8px}
+.github-card p{color:var(--txt2);font-size:.86rem;line-height:1.7;margin-bottom:24px}
+.step{display:flex;gap:14px;padding:14px;background:var(--surf);border-radius:var(--r);margin-bottom:10px;font-size:.84rem;line-height:1.6}
+.step-num{width:24px;height:24px;border-radius:50%;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;flex-shrink:0;margin-top:1px}
+.gh-link{color:#a855f7;text-decoration:none}
+.gh-link:hover{text-decoration:underline}
+
+/* ADMIN LAYOUT */
+#admin-screen{display:none}
+.admin-nav{height:58px;background:var(--bg2);border-bottom:1px solid var(--brd);display:flex;align-items:center;justify-content:space-between;padding:0 24px;position:sticky;top:0;z-index:10}
+.admin-logo{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800;display:flex;align-items:center;gap:10px}
+.admin-logo span{background:linear-gradient(135deg,#a855f7,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.admin-badge{padding:3px 10px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.25);border-radius:100px;font-size:.68rem;color:#a855f7;font-weight:600}
+.nav-r{display:flex;gap:8px;align-items:center}
+.btn{padding:7px 16px;border-radius:100px;border:1px solid var(--brd);background:var(--surf);color:var(--txt2);font-family:inherit;font-size:.8rem;cursor:pointer;transition:all .2s;white-space:nowrap}
+.btn:hover{background:var(--surf2);color:var(--txt)}
+.btn.green{background:rgba(34,197,94,.12);border-color:rgba(34,197,94,.3);color:var(--green)}
+.btn.green:hover{background:rgba(34,197,94,.2)}
+.btn.primary{background:var(--grad);border-color:transparent;color:#fff}
+.btn.primary:hover{opacity:.88}
+.btn.danger{border-color:rgba(239,68,68,.3);color:var(--red)}
+.btn.danger:hover{background:rgba(239,68,68,.1)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+
+/* DEPLOY STATUS */
+.deploy-status{display:flex;align-items:center;gap:7px;font-size:.78rem;padding:5px 12px;border-radius:100px;border:1px solid}
+.deploy-status.idle{color:var(--txt2);border-color:var(--brd)}
+.deploy-status.saving{color:var(--yellow);border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.06)}
+.deploy-status.success{color:var(--green);border-color:rgba(34,197,94,.3);background:rgba(34,197,94,.06)}
+.deploy-status.error{color:var(--red);border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.06)}
+.status-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+.status-dot.pulse{animation:dp 1.2s ease-in-out infinite}
+@keyframes dp{0%,100%{opacity:1}50%{opacity:.3}}
+
+.admin-body{display:grid;grid-template-columns:210px 1fr;min-height:calc(100vh - 58px)}
+.sidebar{background:var(--bg2);border-right:1px solid var(--brd);padding:16px 0;overflow-y:auto}
+.sb-label{font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--txt2);padding:14px 16px 6px}
+.sb-btn{display:flex;align-items:center;gap:10px;padding:9px 14px;cursor:pointer;transition:all .2s;font-size:.83rem;color:var(--txt2);border:none;background:transparent;width:100%;text-align:left;font-family:inherit;border-radius:0}
+.sb-btn:hover{background:var(--surf);color:var(--txt)}
+.sb-btn.active{background:rgba(124,58,237,.1);color:#a855f7;font-weight:500}
+.sb-ico{font-size:.95rem;width:18px;text-align:center}
+
+.main{padding:28px;overflow-y:auto}
+.panel{display:none}
+.panel.active{display:block}
+.panel-title{font-family:'Syne',sans-serif;font-size:1.45rem;font-weight:800;margin-bottom:4px}
+.panel-sub{color:var(--txt2);font-size:.84rem;margin-bottom:28px}
+
+/* CARDS */
+.card{background:var(--bg2);border:1px solid var(--brd);border-radius:var(--rlg);padding:22px;margin-bottom:18px}
+.card h3{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--brd)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.fg{margin-bottom:14px}
+.fl{display:block;font-size:.78rem;font-weight:500;color:var(--txt2);margin-bottom:5px}
+.fi,.fta,.fsel{width:100%;padding:10px 13px;background:var(--bg);border:1px solid var(--brd);border-radius:var(--r);color:var(--txt);font-family:inherit;font-size:.84rem;transition:border-color .2s;outline:none}
+.fi:focus,.fta:focus,.fsel:focus{border-color:rgba(124,58,237,.44)}
+.fta{resize:vertical;min-height:90px;line-height:1.6}
+.char-count{font-size:.7rem;color:var(--txt2);text-align:right;margin-top:3px}
+.char-count.warn{color:var(--yellow)}
+.char-count.over{color:var(--red)}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+.stat{background:var(--bg2);border:1px solid var(--brd);border-radius:var(--rlg);padding:18px}
+.stat .n{font-family:'Syne',sans-serif;font-size:1.7rem;font-weight:800;background:linear-gradient(135deg,#a855f7,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:4px}
+.stat .l{font-size:.73rem;color:var(--txt2)}
+
+/* PORTFOLIO */
+.port-list{display:flex;flex-direction:column;gap:10px}
+.port-item{display:grid;grid-template-columns:72px 1fr auto;gap:12px;align-items:center;background:var(--bg2);border:1px solid var(--brd);border-radius:var(--r);padding:12px}
+.port-thumb{width:72px;height:54px;border-radius:7px;background:var(--surf);display:flex;align-items:center;justify-content:center;font-size:1.4rem;overflow:hidden;flex-shrink:0}
+.port-thumb img{width:100%;height:100%;object-fit:cover}
+.port-info h4{font-size:.87rem;font-weight:600;margin-bottom:2px}
+.port-info span{font-size:.73rem;color:var(--txt2)}
+.port-info .ref{font-size:.73rem;color:#a855f7}
+.port-actions{display:flex;gap:6px}
+.add-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;background:rgba(124,58,237,.07);border:1.5px dashed rgba(124,58,237,.28);border-radius:var(--r);color:#a855f7;cursor:pointer;font-family:inherit;font-size:.83rem;font-weight:500;transition:all .2s;width:100%;margin-bottom:12px}
+.add-btn:hover{background:rgba(124,58,237,.13)}
+
+/* FILE DROP */
+.file-drop{border:1.5px dashed var(--brd);border-radius:var(--r);padding:22px;text-align:center;cursor:pointer;transition:all .2s;background:var(--surf)}
+.file-drop:hover{border-color:rgba(124,58,237,.38);background:rgba(124,58,237,.06)}
+.file-drop p{color:var(--txt2);font-size:.82rem;margin-top:6px}
+.file-drop strong{color:var(--a1)}
+
+/* MODAL */
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(5px);z-index:100;align-items:center;justify-content:center;padding:24px}
+.overlay.open{display:flex}
+.modal{background:var(--bg2);border:1px solid var(--brd);border-radius:var(--rlg);padding:26px;width:100%;max-width:500px;max-height:85vh;overflow-y:auto}
+.modal-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.modal-hd h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700}
+.modal-close{background:var(--surf);border:1px solid var(--brd);border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--txt2);font-size:1rem;line-height:1}
+
+/* TOAST */
+.toast{position:fixed;bottom:22px;right:22px;padding:11px 18px;background:var(--bg2);border:1px solid var(--brd);border-radius:var(--r);font-size:.82rem;z-index:200;transform:translateY(80px);opacity:0;transition:all .3s;max-width:280px}
+.toast.show{transform:translateY(0);opacity:1}
+.toast.ok{border-color:rgba(34,197,94,.35);color:var(--green)}
+.toast.err{border-color:rgba(239,68,68,.35);color:var(--red)}
+.toast.info{border-color:rgba(124,58,237,.35);color:#a855f7}
+
+/* GITHUB SETTINGS */
+.gh-info{display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.2);border-radius:var(--r);margin-bottom:14px}
+.gh-info .ico{font-size:1.1rem}
+.gh-info .txt{font-size:.82rem;color:var(--green)}
+.gh-info .sub{font-size:.72rem;color:var(--txt2)}
+
+@media(max-width:768px){
+  .admin-body{grid-template-columns:1fr}
+  .sidebar{display:none}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .row2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ── LOGIN ── -->
+<div id="login-screen">
+  <div class="login-card">
+    <div class="login-logo">NURD<span>AI</span></div>
+    <div class="login-sub">Admin Paneli</div>
+    <input type="password" class="login-input" id="pw" placeholder="••••••••" onkeydown="if(event.key==='Enter')login()">
+    <button class="login-btn" onclick="login()">Giriş Yap</button>
+    <div class="login-err" id="pw-err">Şifre hatalı.</div>
+  </div>
+</div>
+
+<!-- ── GITHUB SETUP ── -->
+<div id="github-screen">
+  <div class="github-card">
+    <h2>🔗 GitHub Bağlantısı</h2>
+    <p>Admin panelinden yaptığın değişiklikler direkt GitHub repo'na kaydedilecek. Vercel otomatik deploy edecek. Bunun için bir kere token girmen gerekiyor.</p>
+
+    <div class="step"><div class="step-num">1</div><div><a href="https://github.com/settings/tokens/new" target="_blank" class="gh-link">github.com/settings/tokens/new</a> adresine git</div></div>
+    <div class="step"><div class="step-num">2</div><div>Token adı: <strong>nurdai-admin</strong> — Expiration: <strong>No expiration</strong></div></div>
+    <div class="step"><div class="step-num">3</div><div>Scopes: sadece <strong>repo</strong> kutusunu işaretle</div></div>
+    <div class="step"><div class="step-num">4</div><div>Generate Token → Kopyala → Aşağıya yapıştır</div></div>
+
+    <div class="fg" style="margin-top:20px">
+      <label class="fl">GitHub Personal Access Token</label>
+      <input type="password" class="fi" id="gh-token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+    </div>
+    <div class="fg">
+      <label class="fl">GitHub Kullanıcı Adı</label>
+      <input type="text" class="fi" id="gh-user" placeholder="kullanici-adin">
+    </div>
+    <div class="fg">
+      <label class="fl">Repo Adı</label>
+      <input type="text" class="fi" id="gh-repo" placeholder="nurdai-website">
+    </div>
+    <div class="fg">
+      <label class="fl">Branch (genellikle: main)</label>
+      <input type="text" class="fi" id="gh-branch" value="main">
+    </div>
+    <button class="login-btn" onclick="saveGithub()" style="margin-top:8px">Bağlan & Devam Et</button>
+    <div class="login-err" id="gh-err">Bilgiler eksik veya hatalı.</div>
+  </div>
+</div>
+
+<!-- ── ADMIN ── -->
+<div id="admin-screen">
+  <nav class="admin-nav">
+    <div class="admin-logo">NURD<span>AI</span><div class="admin-badge">Admin</div></div>
+    <div class="nav-r">
+      <div class="deploy-status idle" id="deploy-status">
+        <div class="status-dot"></div>
+        <span id="deploy-txt">Hazır</span>
+      </div>
+      <a href="../index.html" target="_blank" class="btn">Siteyi Gör ↗</a>
+      <button class="btn green" id="publish-btn" onclick="publishToGithub()">🚀 Yayınla</button>
+      <button class="btn danger" onclick="logout()">Çıkış</button>
+    </div>
+  </nav>
+
+  <div class="admin-body">
+    <aside class="sidebar">
+      <div class="sb-label">Genel</div>
+      <button class="sb-btn active" onclick="showPanel('dashboard',this)"><span class="sb-ico">📊</span> Dashboard</button>
+      <button class="sb-btn" onclick="showPanel('hero',this)"><span class="sb-ico">🏠</span> Hero Metinleri</button>
+      <button class="sb-btn" onclick="showPanel('about',this)"><span class="sb-ico">👤</span> Hakkımda</button>
+      <div class="sb-label">İçerik</div>
+      <button class="sb-btn" onclick="showPanel('portfolio',this)"><span class="sb-ico">🖼️</span> Portfolyo</button>
+      <button class="sb-btn" onclick="showPanel('services',this)"><span class="sb-ico">⚡</span> Hizmetler</button>
+      <button class="sb-btn" onclick="showPanel('media',this)"><span class="sb-ico">📱</span> Sosyal Medya</button>
+      <div class="sb-label">Teknik</div>
+      <button class="sb-btn" onclick="showPanel('contact-info',this)"><span class="sb-ico">📧</span> İletişim</button>
+      <button class="sb-btn" onclick="showPanel('seo',this)"><span class="sb-ico">🔍</span> SEO</button>
+      <button class="sb-btn" onclick="showPanel('github',this)"><span class="sb-ico">🔗</span> GitHub</button>
+    </aside>
+
+    <main class="main">
+
+      <!-- DASHBOARD -->
+      <div id="panel-dashboard" class="panel active">
+        <div class="panel-title">Dashboard</div>
+        <div class="panel-sub">Nurdai admin paneline hoşgeldin.</div>
+        <div class="stats">
+          <div class="stat"><div class="n" id="s-port">0</div><div class="l">Portfolyo Projesi</div></div>
+          <div class="stat"><div class="n">7</div><div class="l">Sayfa</div></div>
+          <div class="stat"><div class="n">6</div><div class="l">Hizmet</div></div>
+          <div class="stat"><div class="n">6</div><div class="l">Sosyal Kanal</div></div>
+        </div>
+        <div class="card">
+          <h3>🚀 Kullanım</h3>
+          <div style="color:var(--txt2);font-size:.85rem;line-height:1.9">
+            <div>1. Sol menüden düzenlemek istediğin bölümü seç</div>
+            <div>2. Değişikliklerini yap</div>
+            <div>3. Sağ üstteki <strong style="color:var(--txt)">🚀 Yayınla</strong> butonuna bas</div>
+            <div>4. ~30 saniye → site güncellendi ✅</div>
+          </div>
+        </div>
+        <div class="card" id="gh-status-card">
+          <h3>🔗 GitHub Durumu</h3>
+          <div id="gh-status-content">Yükleniyor...</div>
+        </div>
+      </div>
+
+      <!-- HERO -->
+      <div id="panel-hero" class="panel">
+        <div class="panel-title">Hero Metinleri</div>
+        <div class="panel-sub">Ana sayfanın başlık bölümü.</div>
+        <div class="card">
+          <h3>Hero Bölümü</h3>
+          <div class="fg">
+            <label class="fl">Badge (üst küçük yazı)</label>
+            <input type="text" class="fi" id="hero-badge">
+          </div>
+          <div class="fg">
+            <label class="fl">Ana Başlık</label>
+            <textarea class="fta" id="hero-title" rows="3"></textarea>
+          </div>
+          <div class="fg">
+            <label class="fl">Alt Metin</label>
+            <textarea class="fta" id="hero-subtitle" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABOUT -->
+      <div id="panel-about" class="panel">
+        <div class="panel-title">Hakkımda</div>
+        <div class="panel-sub">Profil ve biyografi.</div>
+        <div class="card">
+          <h3>Fotoğraf</h3>
+          <div class="file-drop" onclick="document.getElementById('photo-up').click()">
+            <div style="font-size:2rem">📷</div>
+            <p><strong>Tıkla</strong> veya sürükle — PNG/JPG max 2MB</p>
+          </div>
+          <input type="file" id="photo-up" accept="image/*" style="display:none" onchange="pickPhoto(this)">
+          <div id="photo-prev" style="display:none;margin-top:10px">
+            <img id="photo-img" style="width:100px;height:133px;object-fit:cover;border-radius:10px;border:1px solid var(--brd)">
+            <div style="font-size:.75rem;color:var(--txt2);margin-top:5px" id="photo-name"></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Biyografi</h3>
+          <div class="fg">
+            <label class="fl">Uzun Biyografi (Hakkımda sayfası)</label>
+            <textarea class="fta" id="about-bio" rows="5"></textarea>
+          </div>
+          <div class="fg">
+            <label class="fl">Kısa Biyografi (Ana sayfa)</label>
+            <textarea class="fta" id="about-short" rows="2"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- PORTFOLIO -->
+      <div id="panel-portfolio" class="panel">
+        <div class="panel-title">Portfolyo</div>
+        <div class="panel-sub">Proje ekle, düzenle veya sil.</div>
+        <button class="add-btn" onclick="openModal()">+ Yeni Proje Ekle</button>
+        <div class="port-list" id="port-list"></div>
+      </div>
+
+      <!-- SERVICES -->
+      <div id="panel-services" class="panel">
+        <div class="panel-title">Hizmetler</div>
+        <div class="panel-sub">Hizmet açıklamalarını düzenle.</div>
+        <div id="svc-list"></div>
+      </div>
+
+      <!-- MEDIA -->
+      <div id="panel-media" class="panel">
+        <div class="panel-title">Sosyal Medya</div>
+        <div class="panel-sub">Platform linklerini güncelle.</div>
+        <div class="card">
+          <h3>Linkler</h3>
+          <div class="row2">
+            <div class="fg"><label class="fl">📸 Instagram</label><input type="url" class="fi" id="s-instagram"></div>
+            <div class="fg"><label class="fl">💼 LinkedIn</label><input type="url" class="fi" id="s-linkedin"></div>
+            <div class="fg"><label class="fl">▶️ YouTube</label><input type="url" class="fi" id="s-youtube"></div>
+            <div class="fg"><label class="fl">🎵 TikTok</label><input type="url" class="fi" id="s-tiktok"></div>
+            <div class="fg"><label class="fl">🎙️ Podcast</label><input type="url" class="fi" id="s-podcast"></div>
+            <div class="fg"><label class="fl">𝕏 Twitter/X</label><input type="url" class="fi" id="s-twitter"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div id="panel-contact-info" class="panel">
+        <div class="panel-title">İletişim Bilgileri</div>
+        <div class="panel-sub">Formda görünen iletişim bilgileri.</div>
+        <div class="card">
+          <h3>Bilgiler</h3>
+          <div class="fg"><label class="fl">E-posta</label><input type="email" class="fi" id="c-email"></div>
+          <div class="fg"><label class="fl">WhatsApp (opsiyonel)</label><input type="tel" class="fi" id="c-phone"></div>
+        </div>
+      </div>
+
+      <!-- SEO -->
+      <div id="panel-seo" class="panel">
+        <div class="panel-title">SEO & Meta</div>
+        <div class="panel-sub">Her sayfa için başlık ve açıklama. Başlık max 60, açıklama max 160 karakter.</div>
+        <div id="seo-list"></div>
+      </div>
+
+      <!-- GITHUB SETTINGS -->
+      <div id="panel-github" class="panel">
+        <div class="panel-title">GitHub Ayarları</div>
+        <div class="panel-sub">Yayınlama bağlantısını yönet.</div>
+        <div class="card">
+          <h3>Bağlantı Bilgileri</h3>
+          <div id="gh-connected-info"></div>
+          <div class="fg"><label class="fl">GitHub Token</label><input type="password" class="fi" id="gh-t2" placeholder="ghp_..."></div>
+          <div class="row2">
+            <div class="fg"><label class="fl">Kullanıcı Adı</label><input type="text" class="fi" id="gh-u2"></div>
+            <div class="fg"><label class="fl">Repo Adı</label><input type="text" class="fi" id="gh-r2"></div>
+          </div>
+          <div class="fg"><label class="fl">Branch</label><input type="text" class="fi" id="gh-b2" value="main"></div>
+          <button class="btn primary" onclick="updateGithub()">Güncelle</button>
+          <button class="btn danger" onclick="clearGithub()" style="margin-left:8px">Bağlantıyı Sil</button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<!-- MODAL: Proje -->
+<div class="overlay" id="proj-overlay">
+  <div class="modal">
+    <div class="modal-hd">
+      <h3 id="modal-ttl">Yeni Proje</h3>
+      <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+    <div class="fg"><label class="fl">Proje Başlığı *</label><input type="text" class="fi" id="p-title"></div>
+    <div class="row2">
+      <div class="fg">
+        <label class="fl">Kategori</label>
+        <select class="fsel" id="p-cat">
+          <option value="sosyal">Sosyal Medya</option>
+          <option value="grafik">Grafik Tasarım</option>
+          <option value="logo">Logo</option>
+          <option value="kampanya">Kampanya</option>
+          <option value="branding">Branding</option>
+          <option value="icerik">İçerik</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label class="fl">Mockup Tipi</label>
+        <select class="fsel" id="p-mock">
+          <option value="phone">📱 iPhone (Sosyal Medya)</option>
+          <option value="logo">🎨 Logo (Çift Zemin)</option>
+          <option value="brand">✦ Branding (3D Kart)</option>
+          <option value="frame">🖼️ Çerçeve (Genel)</option>
+        </select>
+      </div>
+    </div>
+    <div class="fg">
+      <label class="fl">Referans / Müşteri Adı *</label>
+      <input type="text" class="fi" id="p-client" placeholder="Café Luna veya 'Restoran Projesi'">
+    </div>
+    <div class="fg">
+      <label class="fl">Görsel</label>
+      <div class="file-drop" onclick="document.getElementById('p-img-up').click()">
+        <div style="font-size:1.5rem">🖼️</div>
+        <p><strong>Tıkla</strong> — PNG/JPG</p>
+      </div>
+      <input type="file" id="p-img-up" accept="image/*" style="display:none" onchange="pickProjImg(this)">
+      <input type="text" class="fi" id="p-img-path" placeholder="assets/images/port01.jpg" style="margin-top:8px">
+      <div id="p-img-prev" style="display:none;margin-top:8px">
+        <img id="p-img-prev-img" style="width:100%;height:120px;object-fit:cover;border-radius:8px;border:1px solid var(--brd)">
+      </div>
+    </div>
+    <div class="fg"><label class="fl">Açıklama (opsiyonel)</label><textarea class="fta" id="p-desc" rows="2"></textarea></div>
+    <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:4px">
+      <button class="btn" onclick="closeModal()">İptal</button>
+      <button class="btn primary" onclick="saveProject()">Kaydet</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const PASS = 'NurdaiSecure2025!'; // ← Bunu değiştir!
+let editIdx = -1;
+
+// ── AUTH ──
+function login() {
+  if (document.getElementById('pw').value === PASS) {
+    sessionStorage.setItem('nd-auth', '1');
+    document.getElementById('login-screen').style.display = 'none';
+    const gh = getGH();
+    if (!gh.token) {
+      document.getElementById('github-screen').style.display = 'flex';
+    } else {
+      startAdmin();
+    }
+  } else {
+    document.getElementById('pw-err').style.display = 'block';
+    document.getElementById('pw').value = '';
+  }
+}
+function logout() { sessionStorage.clear(); location.reload(); }
+document.addEventListener('DOMContentLoaded', () => {
+  if (sessionStorage.getItem('nd-auth')) {
+    document.getElementById('login-screen').style.display = 'none';
+    const gh = getGH();
+    if (!gh.token) { document.getElementById('github-screen').style.display = 'flex'; }
+    else { startAdmin(); }
+  }
+});
+
+// ── GITHUB ──
+function getGH() {
+  return {
+    token: localStorage.getItem('nd-gh-token') || '',
+    user: localStorage.getItem('nd-gh-user') || '',
+    repo: localStorage.getItem('nd-gh-repo') || '',
+    branch: localStorage.getItem('nd-gh-branch') || 'main'
+  };
+}
+function saveGithub() {
+  const t = document.getElementById('gh-token').value.trim();
+  const u = document.getElementById('gh-user').value.trim();
+  const r = document.getElementById('gh-repo').value.trim();
+  const b = document.getElementById('gh-branch').value.trim() || 'main';
+  if (!t || !u || !r) { document.getElementById('gh-err').style.display = 'block'; return; }
+  localStorage.setItem('nd-gh-token', t);
+  localStorage.setItem('nd-gh-user', u);
+  localStorage.setItem('nd-gh-repo', r);
+  localStorage.setItem('nd-gh-branch', b);
+  document.getElementById('github-screen').style.display = 'none';
+  startAdmin();
+}
+function updateGithub() {
+  const t = document.getElementById('gh-t2').value.trim();
+  const u = document.getElementById('gh-u2').value.trim();
+  const r = document.getElementById('gh-r2').value.trim();
+  const b = document.getElementById('gh-b2').value.trim() || 'main';
+  if (!t || !u || !r) { toast('Tüm alanları doldur!', 'err'); return; }
+  localStorage.setItem('nd-gh-token', t);
+  localStorage.setItem('nd-gh-user', u);
+  localStorage.setItem('nd-gh-repo', r);
+  localStorage.setItem('nd-gh-branch', b);
+  toast('GitHub bilgileri güncellendi ✓', 'ok');
+  renderGHInfo();
+}
+function clearGithub() {
+  if (!confirm('GitHub bağlantısını sil?')) return;
+  ['nd-gh-token','nd-gh-user','nd-gh-repo','nd-gh-branch'].forEach(k => localStorage.removeItem(k));
+  toast('Bağlantı silindi. Yeniden giriş gerekecek.', 'info');
+  setTimeout(() => location.reload(), 1500);
+}
+function renderGHInfo() {
+  const gh = getGH();
+  const el = document.getElementById('gh-connected-info');
+  if (el && gh.user && gh.repo) {
+    el.innerHTML = `<div class="gh-info"><div class="ico">✅</div><div><div class="txt">${gh.user}/${gh.repo}</div><div class="sub">Branch: ${gh.branch}</div></div></div>`;
+  }
+  const el2 = document.getElementById('gh-status-content');
+  if (el2 && gh.user && gh.repo) {
+    el2.innerHTML = `<div style="font-size:.84rem;color:var(--txt2);line-height:1.8">
+      <div>✅ Bağlı: <strong style="color:var(--txt)">${gh.user}/${gh.repo}</strong> (${gh.branch})</div>
+      <div style="margin-top:6px;font-size:.78rem">🚀 Yayınla butonuna her bastığında <strong>content/data.json</strong> güncellenir, Vercel otomatik deploy eder.</div>
+    </div>`;
+  }
+  // Fill github settings fields
+  const setVal = (id, val) => { const el = document.getElementById(id); if (el) el.value = val || ''; };
+  setVal('gh-u2', gh.user); setVal('gh-r2', gh.repo); setVal('gh-b2', gh.branch);
+}
+
+// ── PUBLISH TO GITHUB ──
+async function publishToGithub() {
+  const gh = getGH();
+  if (!gh.token) { toast('GitHub bağlantısı yok!', 'err'); return; }
+
+  setStatus('saving', '⏳ Yayınlanıyor...');
+  document.getElementById('publish-btn').disabled = true;
+
+  // Collect all current form values
+  collectAll();
+
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))));
+  const path = 'content/data.json';
+  const apiUrl = `https://api.github.com/repos/${gh.user}/${gh.repo}/contents/${path}`;
+  const headers = {
+    'Authorization': `token ${gh.token}`,
+    'Content-Type': 'application/json',
+    'Accept': 'application/vnd.github.v3+json'
+  };
+
+  try {
+    // Get current file SHA
+    const getRes = await fetch(apiUrl, { headers });
+    let sha = null;
+    if (getRes.ok) {
+      const fileData = await getRes.json();
+      sha = fileData.sha;
+    }
+
+    // Commit new content
+    const body = {
+      message: `Admin: içerik güncellendi ${new Date().toLocaleString('tr-TR')}`,
+      content,
+      branch: gh.branch
+    };
+    if (sha) body.sha = sha;
+
+    const putRes = await fetch(apiUrl, {
+      method: 'PUT',
+      headers,
+      body: JSON.stringify(body)
+    });
+
+    if (putRes.ok) {
+      setStatus('success', '✅ Yayınlandı!');
+      toast('Yayınlandı! ~30 sn içinde canlıya geçecek.', 'ok');
+      setTimeout(() => setStatus('idle', 'Hazır'), 4000);
+    } else {
+      const err = await putRes.json();
+      throw new Error(err.message || 'GitHub hatası');
+    }
+  } catch (e) {
+    setStatus('error', '❌ Hata');
+    toast('Hata: ' + e.message, 'err');
+    setTimeout(() => setStatus('idle', 'Hazır'), 4000);
+  }
+
+  document.getElementById('publish-btn').disabled = false;
+}
+
+function setStatus(type, txt) {
+  const el = document.getElementById('deploy-status');
+  const dot = el.querySelector('.status-dot');
+  el.className = 'deploy-status ' + type;
+  dot.className = 'status-dot' + (type === 'saving' ? ' pulse' : '');
+  document.getElementById('deploy-txt').textContent = txt;
+}
+
+// ── DATA ──
+let data = {
+  site: { name: 'Nurdai', email: 'hello@nurdai.com', social: { instagram: '', linkedin: '', youtube: '', tiktok: '', podcast: '', twitter: '' } },
+  hero: { badge: 'AI Çağında Dijital Görünürlük', title: 'AI sistemleri markanızı tanımıyorsa, görünmüyorsunuz demektir.', subtitle: 'AI Visibility danışmanlığı, içerik stratejisi ve SEO ile markanızın dijital her noktada güçlü görünmesini sağlıyorum.' },
+  about: { photo: 'assets/images/nurdan.jpg', bio: '', short: '' },
+  portfolio: [],
+  seo: {
+    home: { title: 'Nurdai — AI Visibility & Dijital Görünürlük Danışmanlığı', description: 'AI Visibility danışmanlığı ile markanızın ChatGPT, Google ve tüm dijital kanallarda güçlü görünmesini sağlıyorum.' },
+    ai: { title: 'AI Visibility Nedir? — Nurdai', description: 'ChatGPT, Google AI ve Perplexity\'de markanızın nasıl göründüğünü anlayın.' },
+    hizmetler: { title: 'Hizmetler — Nurdai', description: 'AI Visibility danışmanlığı, SEO, içerik stratejisi ve sosyal medya hizmetleri.' },
+    portfolyo: { title: 'Portfolyo — Nurdai', description: 'Sosyal medya, logo, branding ve grafik tasarım projeleri.' },
+    hakkimda: { title: 'Hakkımda — Nurdan | Nurdai', description: 'Grafik tasarımdan AI çağının dijital görünürlüğüne.' },
+    medya: { title: 'Medya — Nurdai', description: 'Instagram, LinkedIn, YouTube, TikTok ve Podcast kanalları.' },
+    iletisim: { title: 'İletişim — Nurdai', description: 'AI Visibility danışmanlığı için iletişime geç.' }
+  }
+};
+
+function collectAll() {
+  const v = id => { const el = document.getElementById(id); return el ? el.value : ''; };
+  data.hero = { badge: v('hero-badge'), title: v('hero-title'), subtitle: v('hero-subtitle') };
+  data.about.bio = v('about-bio');
+  data.about.short = v('about-short');
+  data.site.email = v('c-email');
+  ['instagram','linkedin','youtube','tiktok','podcast','twitter'].forEach(k => { data.site.social[k] = v('s-' + k); });
+  // SEO
+  ['home','ai','hizmetler','portfolyo','hakkimda','medya','iletisim'].forEach(p => {
+    const t = document.getElementById('seo-' + p + '-t');
+    const d = document.getElementById('seo-' + p + '-d');
+    if (t) data.seo[p] = { title: t.value, description: d ? d.value : '' };
+  });
+}
+
+async function startAdmin() {
+  document.getElementById('admin-screen').style.display = 'block';
+  try {
+    const res = await fetch('../content/data.json');
+    if (res.ok) {
+      const loaded = await res.json();
+      if (loaded.hero) data.hero = { ...data.hero, ...loaded.hero };
+      if (loaded.about) data.about = { ...data.about, ...loaded.about };
+      if (loaded.portfolio) data.portfolio = loaded.portfolio;
+      if (loaded.site?.social) data.site.social = { ...data.site.social, ...loaded.site.social };
+      if (loaded.site?.email) data.site.email = loaded.site.email;
+      if (loaded.seo) data.seo = { ...data.seo, ...loaded.seo };
+    }
+  } catch(e) {}
+
+  const sv = (id, val) => { const el = document.getElementById(id); if (el) el.value = val || ''; };
+  sv('hero-badge', data.hero.badge);
+  sv('hero-title', data.hero.title);
+  sv('hero-subtitle', data.hero.subtitle);
+  sv('about-bio', data.about.bio);
+  sv('about-short', data.about.short);
+  sv('c-email', data.site.email);
+  Object.keys(data.site.social).forEach(k => sv('s-' + k, data.site.social[k]));
+  document.getElementById('s-port').textContent = data.portfolio.length;
+
+  renderPortfolio();
+  renderServices();
+  renderSEO();
+  renderGHInfo();
+}
+
+// ── PANELS ──
+function showPanel(id, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.sb-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ── PORTFOLIO ──
+const catLabels = { sosyal:'Sosyal Medya', grafik:'Grafik Tasarım', logo:'Logo', kampanya:'Kampanya', branding:'Branding', icerik:'İçerik' };
+const mockLabels = { phone:'📱 iPhone', logo:'🎨 Logo', brand:'✦ Branding', frame:'🖼️ Çerçeve' };
+
+function renderPortfolio() {
+  const el = document.getElementById('port-list');
+  if (!el) return;
+  el.innerHTML = data.portfolio.map((p, i) => `
+    <div class="port-item">
+      <div class="port-thumb">${p.image ? `<img src="../${p.image}" onerror="this.parentElement.textContent='🖼️'">` : '🖼️'}</div>
+      <div class="port-info">
+        <h4>${p.title}</h4>
+        <div class="ref">Referans: ${p.client || '—'}</div>
+        <span>${catLabels[p.category] || p.category} · ${mockLabels[p.mockupType] || p.mockupType}</span>
+      </div>
+      <div class="port-actions">
+        <button class="btn" onclick="editProject(${i})">Düzenle</button>
+        <button class="btn danger" onclick="delProject(${i})">Sil</button>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('s-port').textContent = data.portfolio.length;
+}
+
+function openModal() { editIdx = -1; document.getElementById('modal-ttl').textContent = 'Yeni Proje'; clearProjForm(); document.getElementById('proj-overlay').classList.add('open'); }
+function editProject(i) {
+  editIdx = i; const p = data.portfolio[i];
+  document.getElementById('modal-ttl').textContent = 'Projeyi Düzenle';
+  const sv = (id, v) => { const el = document.getElementById(id); if (el) el.value = v || ''; };
+  sv('p-title', p.title); sv('p-cat', p.category); sv('p-mock', p.mockupType);
+  sv('p-client', p.client); sv('p-img-path', p.image); sv('p-desc', p.description);
+  document.getElementById('proj-overlay').classList.add('open');
+}
+function delProject(i) { if (!confirm('Sil?')) return; data.portfolio.splice(i, 1); renderPortfolio(); toast('Proje silindi', 'ok'); }
+function closeModal() { document.getElementById('proj-overlay').classList.remove('open'); editIdx = -1; }
+function clearProjForm() { ['p-title','p-client','p-img-path','p-desc'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; }); }
+
+function saveProject() {
+  const v = id => document.getElementById(id)?.value || '';
+  const cat = v('p-cat');
+  const proj = { id: editIdx >= 0 ? data.portfolio[editIdx].id : Date.now(), title: v('p-title'), client: v('p-client'), category: cat, categoryLabel: catLabels[cat], image: v('p-img-path'), mockupType: v('p-mock'), description: v('p-desc'), emoji: '🖼️' };
+  if (!proj.title) { toast('Başlık gerekli!', 'err'); return; }
+  if (editIdx >= 0) { data.portfolio[editIdx] = proj; } else { data.portfolio.push(proj); }
+  renderPortfolio(); closeModal(); toast('Kaydedildi ✓', 'ok');
+}
+
+function pickPhoto(input) {
+  if (!input.files[0]) return;
+  const url = URL.createObjectURL(input.files[0]);
+  document.getElementById('photo-img').src = url;
+  document.getElementById('photo-prev').style.display = 'block';
+  document.getElementById('photo-name').textContent = input.files[0].name;
+}
+function pickProjImg(input) {
+  if (!input.files[0]) return;
+  const url = URL.createObjectURL(input.files[0]);
+  document.getElementById('p-img-prev-img').src = url;
+  document.getElementById('p-img-preview').style.display = 'block';
+  document.getElementById('p-img-path').value = 'assets/images/' + input.files[0].name;
+}
+
+// ── SERVICES ──
+const defaultServices = [
+  { title: 'AI Visibility Danışmanlığı', desc: 'ChatGPT, Perplexity ve Google AI\'da markanızın nasıl göründüğünü analiz eder, konumlandırma stratejisi oluştururum.' },
+  { title: 'SEO & Google Görünürlüğü', desc: 'İçeriklerin Google\'da daha görünür olması için stratejik yapı ve optimizasyon.' },
+  { title: 'İçerik Stratejisi', desc: 'Sosyal medya, blog ve SEO odaklı içerik yapıları ve marka dili.' },
+  { title: 'Sosyal Medya Yönetimi', desc: 'Instagram, TikTok, LinkedIn için içerik sistemleri ve platform stratejisi.' },
+  { title: 'Grafik Tasarım', desc: 'Sosyal medya tasarımları, marka görselleri ve kampanya içerikleri.' },
+  { title: 'Logo & Branding', desc: 'Marka kimliği ve dijital görünüm için kapsamlı tasarım çalışmaları.' },
+  { title: 'AI Destekli İş Akışları', desc: 'İçerik üretimi ve dijital süreçlerde AI destekli sistemler.' }
+];
+if (!data.services) data.services = defaultServices;
+
+function renderServices() {
+  const el = document.getElementById('svc-list');
+  if (!el) return;
+  el.innerHTML = (data.services || defaultServices).map((s, i) => `
+    <div class="card">
+      <h3>Hizmet ${i+1}</h3>
+      <div class="fg"><label class="fl">Başlık</label><input type="text" class="fi" id="svc-t-${i}" value="${s.title}"></div>
+      <div class="fg"><label class="fl">Açıklama</label><textarea class="fta" id="svc-d-${i}" rows="2">${s.desc}</textarea></div>
+    </div>
+  `).join('');
+}
+
+// ── SEO ──
+const seoPages = [
+  { key: 'home', label: 'Ana Sayfa' }, { key: 'ai', label: 'AI Visibility' },
+  { key: 'hizmetler', label: 'Hizmetler' }, { key: 'portfolyo', label: 'Portfolyo' },
+  { key: 'hakkimda', label: 'Hakkımda' }, { key: 'medya', label: 'Medya' }, { key: 'iletisim', label: 'İletişim' }
+];
+function renderSEO() {
+  const el = document.getElementById('seo-list');
+  if (!el) return;
+  el.innerHTML = seoPages.map(p => `
+    <div class="card">
+      <h3>${p.label}</h3>
+      <div class="fg">
+        <label class="fl">Title Tag <span style="color:var(--txt2)">(max 60 karakter)</span></label>
+        <input type="text" class="fi" id="seo-${p.key}-t" value="${data.seo[p.key]?.title||''}" maxlength="70" oninput="charCount(this,60)">
+        <div class="char-count" id="cc-${p.key}-t">${(data.seo[p.key]?.title||'').length}/60</div>
+      </div>
+      <div class="fg">
+        <label class="fl">Meta Description <span style="color:var(--txt2)">(max 160 karakter)</span></label>
+        <textarea class="fta" id="seo-${p.key}-d" rows="2" maxlength="170" oninput="charCount(this,160)">${data.seo[p.key]?.description||''}</textarea>
+        <div class="char-count" id="cc-${p.key}-d">${(data.seo[p.key]?.description||'').length}/160</div>
+      </div>
+    </div>
+  `).join('');
+}
+function charCount(el, max) {
+  const len = el.value.length;
+  const cc = document.getElementById('cc-' + el.id.replace('seo-','').replace('-t','-t').replace('-d','-d'));
+  // find the right counter
+  const allCC = document.querySelectorAll('.char-count');
+  allCC.forEach(c => {
+    if (el.nextElementSibling === c) {
+      c.textContent = `${len}/${max}`;
+      c.className = 'char-count' + (len > max ? ' over' : len > max * 0.9 ? ' warn' : '');
+    }
+  });
+}
+
+// ── TOAST ──
+function toast(msg, type = '') {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.className = 'toast show ' + type;
+  setTimeout(() => t.className = 'toast', 3200);
+}
+</script>
+</body>
+</html>
