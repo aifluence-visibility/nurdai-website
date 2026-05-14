@@ -127,23 +127,26 @@ function submitForm(e) {
 
 // ── DATA LOAD (for portfolio) ──
 function renderCard(p) {
+  const isCaseStudy = p.mockupType === 'casestudy';
   const mockups = {
     phone: `<div class="mkp-phone"><div class="mkp-phone-frame"><div class="mkp-phone-screen"><img src="${p.image}" alt="${p.title}" loading="lazy"></div></div></div>`,
     logo:  `<div class="mkp-logo"><div class="mkp-logo-dk"><img src="${p.image}" alt="${p.title}" loading="lazy"></div><div class="mkp-logo-lt"><img src="${p.image}" alt="${p.title}" loading="lazy"></div></div>`,
     brand: `<div class="mkp-brand"><img src="${p.image}" alt="${p.title}" loading="lazy"></div>`,
-    frame: `<div class="mkp-frame"><img src="${p.image}" alt="${p.title}" loading="lazy"></div>`
+    frame: `<div class="mkp-frame"><img src="${p.image}" alt="${p.title}" loading="lazy"></div>`,
+    casestudy: `<div class="mkp-casestudy"><img src="${p.image}" alt="${p.title}" loading="lazy"></div>`
   };
   const visual = p.image
     ? (mockups[p.mockupType] || mockups.frame)
     : `<div class="port-ph"><div style="font-size:2rem">${p.emoji||'🖼️'}</div><div>${p.title}</div></div>`;
-  return `
-    <div class="port-card rv" data-cat="${p.category}" style="break-inside:avoid;margin-bottom:16px">
-      ${visual}
+  const overlay = isCaseStudy ? '' : `
       <div class="port-overlay">
         <div class="port-ref">REFERANS: ${p.client || '—'}</div>
         <div class="port-title">${p.title}</div>
         <div class="port-cat">${p.categoryLabel}</div>
-      </div>
+      </div>`;
+  return `
+    <div class="port-card${isCaseStudy ? ' cs-card' : ''} rv" data-cat="${p.category}" style="break-inside:avoid;margin-bottom:20px">
+      ${visual}${overlay}
     </div>`;
 }
 
