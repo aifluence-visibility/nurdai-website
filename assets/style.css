@@ -256,6 +256,47 @@ footer{padding:52px 0 32px;border-top:1px solid var(--brd);background:var(--bg2)
   .port-grid{grid-template-columns:1fr}
 }
 
+/* ── HIGHLIGHT AI ── */
+.highlight-ai{background:var(--gtxt);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* ── HERO QUESTION CARD ── */
+.hero-question-card{display:flex;align-items:flex-start;gap:13px;padding:16px 20px;background:rgba(109,40,217,.07);border:1px solid rgba(109,40,217,.2);border-radius:var(--r);margin-bottom:32px;max-width:560px}
+.hero-question-card p{font-size:.88rem;color:var(--txt2);line-height:1.65;margin:0}
+.hero-question-card strong{color:var(--txt)}
+.hero-q-icon{font-size:1.2rem;flex-shrink:0;margin-top:1px}
+
+/* ── AI EXPLAINER SECTION ── */
+.ai-explainer-section{background:var(--bg2);padding:88px 0}
+.explainer-lead{font-size:1rem;color:var(--txt2);line-height:1.8;max-width:620px;margin:20px 0 40px;font-style:normal}
+.explainer-lead em{color:var(--txt);font-style:normal;font-weight:500}
+.explainer-steps{display:flex;flex-direction:column;gap:20px;max-width:680px}
+.step{display:flex;align-items:flex-start;gap:18px;padding:22px 24px;background:var(--surf);border:1px solid var(--brd);border-radius:var(--r);transition:all .3s}
+.step:hover{background:var(--surf2);border-color:rgba(124,58,237,.2)}
+.step-num{width:36px;height:36px;border-radius:50%;background:var(--grad);color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step div strong{display:block;font-size:.95rem;font-weight:600;color:var(--txt);margin-bottom:5px}
+.step div p{font-size:.84rem;color:var(--txt2);line-height:1.65;margin:0}
+
+/* ── AI BADGE ── */
+.ai-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;background:rgba(109,40,217,.07);border:1px solid rgba(109,40,217,.15);border-radius:100px;font-size:.72rem;color:#a78bfa;font-weight:500;margin-top:16px}
+.aibadge-highlight{background:rgba(234,179,8,.07);border-color:rgba(234,179,8,.25);color:#ca8a04}
+[data-theme=dark] .aibadge-highlight{color:#fbbf24}
+
+/* ── FAQ SECTION ── */
+.faq-section{padding:88px 0}
+.faq-list{display:flex;flex-direction:column;gap:10px;margin-top:40px;max-width:720px}
+.faq-item{background:var(--surf);border:1px solid var(--brd);border-radius:var(--r);overflow:hidden;transition:border-color .2s}
+.faq-item[open]{border-color:rgba(124,58,237,.26)}
+.faq-item summary{padding:18px 22px;font-weight:600;font-size:.92rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--txt);user-select:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'＋';font-size:1.1rem;color:var(--a1);flex-shrink:0;transition:transform .25s}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item p{padding:0 22px 18px;font-size:.86rem;color:var(--txt2);line-height:1.8}
+
+/* ── SCENARIO CARD (AI Visibility page) ── */
+.scenario-card{background:rgba(109,40,217,.06);border:1px solid rgba(109,40,217,.18);border-radius:var(--rlg);padding:28px 32px;margin-top:24px;max-width:680px}
+.scenario-card p{font-size:.9rem;color:var(--txt2);line-height:1.85;margin:0}
+.scenario-card strong{color:var(--txt)}
+
 /* ── MOCKUPS ── */
 .mkp-phone{display:flex;justify-content:center;align-items:center;padding:28px;background:rgba(0,0,0,.02);min-height:380px}
 .mkp-phone-frame{width:160px;background:#0f0f17;border-radius:32px;padding:10px;box-shadow:0 24px 56px rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.08)}
