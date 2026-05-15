@@ -119,10 +119,24 @@ function filterPortfolio(cat, btn) {
 function submitForm(e) {
   if (e) e.preventDefault();
   const btn = document.getElementById('submit-btn');
-  if (btn) { btn.textContent = 'Gönderildi ✓'; btn.disabled = true; }
-  // TODO: Connect to Formspree or email service
-  // fetch('https://formspree.io/f/YOUR_ID', { method: 'POST', body: new FormData(e.target) })
-  alert('Mesajınız alındı! En kısa sürede dönüş yapacağım. — Nurdan / Nurdai');
+  const success = document.getElementById('form-success');
+  const form = document.getElementById('contact-form');
+  if (btn) { btn.textContent = 'Gönderiliyor…'; btn.disabled = true; }
+  fetch(e.target.action, { method: 'POST', body: new FormData(e.target), headers: { Accept: 'application/json' } })
+    .then(r => {
+      if (r.ok) {
+        if (form) form.reset();
+        if (btn) btn.style.display = 'none';
+        if (success) success.style.display = 'block';
+      } else {
+        if (btn) { btn.textContent = 'Gönder'; btn.disabled = false; }
+        alert('Bir hata oluştu. Lütfen hello@nurdai.com adresine doğrudan yazabilirsiniz.');
+      }
+    })
+    .catch(() => {
+      if (btn) { btn.textContent = 'Gönder'; btn.disabled = false; }
+      alert('Bağlantı hatası. Lütfen hello@nurdai.com adresine doğrudan yazabilirsiniz.');
+    });
 }
 
 // ── DATA LOAD (for portfolio) ──
