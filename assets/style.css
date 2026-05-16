@@ -331,3 +331,11 @@ footer{padding:52px 0 32px;border-top:1px solid var(--brd);background:var(--bg2)
 .mkp-casestudy{width:100%;display:block;border-radius:var(--rlg);overflow:hidden}
 .mkp-casestudy img{width:100%;height:auto;display:block;object-fit:contain}
 .port-card.cs-card img{height:auto;object-fit:contain}
+
+/* ── ANSWER-FIRST SECTION ── */
+.answer-first-section{padding:60px 0;border-top:1px solid rgba(255,255,255,0.06)}
+.af-block{max-width:760px;margin:0 auto 48px}
+.af-block h2{font-size:1.4rem;font-weight:600;margin-bottom:16px;color:var(--txt)}
+.af-block p,.af-block li{font-size:1rem;line-height:1.75;color:var(--txt2);margin-bottom:12px}
+.af-block ol{padding-left:20px}
+.af-block li{margin-bottom:14px}
