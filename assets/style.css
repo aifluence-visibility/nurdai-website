@@ -339,3 +339,8 @@ footer{padding:52px 0 32px;border-top:1px solid var(--brd);background:var(--bg2)
 .af-block p,.af-block li{font-size:1rem;line-height:1.75;color:var(--txt2);margin-bottom:12px}
 .af-block ol{padding-left:20px}
 .af-block li{margin-bottom:14px}
+
+
+/* ── LANGUAGE SWITCHER ── */
+.lang-sw{font-size:.72rem;font-weight:700;color:var(--txt3);text-decoration:none;padding:3px 9px;border:1px solid var(--brd);border-radius:4px;letter-spacing:.06em;transition:color .2s,border-color .2s;margin-right:4px}
+.lang-sw:hover{color:var(--a1);border-color:var(--a1)}
