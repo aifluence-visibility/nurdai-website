@@ -120,22 +120,45 @@ function submitForm(e) {
   if (e) e.preventDefault();
   const btn = document.getElementById('submit-btn');
   const success = document.getElementById('form-success');
+  const errorMsg = document.getElementById('form-error');
   const form = document.getElementById('contact-form');
+
   if (btn) { btn.textContent = 'Gönderiliyor…'; btn.disabled = true; }
-  fetch(e.target.action, { method: 'POST', body: new FormData(e.target), headers: { Accept: 'application/json' } })
-    .then(r => {
+  if (errorMsg) errorMsg.style.display = 'none';
+
+  const data = {
+    name: form.querySelector('[name="name"]')?.value || '',
+    company: form.querySelector('[name="company"]')?.value || '',
+    email: form.querySelector('[name="email"]')?.value || '',
+    subject: form.querySelector('[name="subject"]')?.value || '',
+    message: form.querySelector('[name="message"]')?.value || '',
+  };
+
+  fetch('/api/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify(data),
+  })
+    .then(async r => {
       if (r.ok) {
         if (form) form.reset();
         if (btn) btn.style.display = 'none';
         if (success) success.style.display = 'block';
       } else {
+        const body = await r.json().catch(() => ({}));
         if (btn) { btn.textContent = 'Gönder'; btn.disabled = false; }
-        alert('Bir hata oluştu. Lütfen hello@nurdai.com adresine doğrudan yazabilirsiniz.');
+        if (errorMsg) {
+          errorMsg.textContent = body.error || 'Bir hata oluştu. Lütfen hello@nurdai.com adresine yazın.';
+          errorMsg.style.display = 'block';
+        }
       }
     })
     .catch(() => {
       if (btn) { btn.textContent = 'Gönder'; btn.disabled = false; }
-      alert('Bağlantı hatası. Lütfen hello@nurdai.com adresine doğrudan yazabilirsiniz.');
+      if (errorMsg) {
+        errorMsg.textContent = 'Bağlantı hatası. Lütfen hello@nurdai.com adresine yazın.';
+        errorMsg.style.display = 'block';
+      }
     });
 }
 
