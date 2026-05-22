@@ -22,6 +22,8 @@ html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);transition:background .4s,color .4s;overflow-x:hidden;cursor:none}
 .cur{position:fixed;width:7px;height:7px;background:var(--a1);border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:screen;transition:transform .12s;top:0;left:0}
 .curl{position:fixed;width:28px;height:28px;border:1px solid rgba(124,58,237,.32);border-radius:50%;pointer-events:none;z-index:9998;top:0;left:0;transition:width .28s,height .28s}
+[data-theme=light] .cur{mix-blend-mode:normal;background:#6d28d9}
+[data-theme=light] .curl{border-color:rgba(109,40,217,.5)}
 h1,h2,h3,h4{font-family:'Syne',sans-serif;line-height:1.1;letter-spacing:-.015em;font-weight:700}
 .gtxt{background:var(--gtxt);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .con{max-width:1160px;margin:0 auto;padding:0 24px}

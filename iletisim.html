@@ -107,13 +107,6 @@
           </div>
         </div>
         <div class="ci-item">
-          <div class="ci-ico">🌐</div>
-          <div>
-            <div class="ci-name">Çalışma Modeli</div>
-            <div class="ci-val">Remote / Projeli</div>
-          </div>
-        </div>
-        <div class="ci-item">
           <div class="ci-ico">💬</div>
           <div>
             <div class="ci-name">WhatsApp</div>
@@ -137,49 +130,24 @@
         <div class="ci-item">
           <div class="ci-ico">⏰</div>
           <div>
-            <div class="ci-name">Yanıt Süresi</div>
+            <div class="ci-name">Yanıt süresi</div>
             <div class="ci-val">24 saat içinde</div>
           </div>
         </div>
       </div>
-      <form action="/api/contact" method="POST" onsubmit="submitForm(event)" class="c-form" id="contact-form">
-        <div class="f-row">
-          <div class="f-group">
-            <label for="name" class="f-label">Ad Soyad *</label>
-            <input type="text" id="name" name="name" class="f-input" required>
-          </div>
-          <div class="f-group">
-            <label for="company" class="f-label">Marka / Şirket</label>
-            <input type="text" id="company" name="company" class="f-input">
-          </div>
+      <div class="contact-cta-block rv" style="background:var(--surf);border:1px solid var(--brd);border-radius:var(--rlg);padding:48px 40px;display:flex;flex-direction:column;gap:28px;justify-content:center">
+        <div>
+          <div class="sec-label">Başlayalım</div>
+          <h2 style="font-family:'Syne',sans-serif;font-size:1.55rem;font-weight:700;line-height:1.2;margin-bottom:14px">Stratejik görünürlük görüşmesi için mail gönderin.</h2>
+          <p style="color:var(--txt2);font-size:.92rem;line-height:1.72">Markanızın yapay zeka ve arama motorlarındaki görünürlük potansiyelini değerlendireceğiz. Kısa bir ön değerlendirme için <strong style="color:var(--txt)">hello@nurdai.com</strong> adresine ulaşın.</p>
         </div>
-        <div class="f-group">
-          <label for="email" class="f-label">E-posta *</label>
-          <input type="email" id="email" name="email" class="f-input" required>
+        <a href="mailto:hello@nurdai.com" class="btn-p" style="width:fit-content">hello@nurdai.com</a>
+        <div style="display:flex;gap:16px;padding-top:8px;border-top:1px solid var(--brd)">
+          <a href="https://www.instagram.com/hellonurdai" target="_blank" rel="noopener" style="color:var(--txt2);text-decoration:none;font-size:.84rem;font-weight:500;transition:color .2s" onmouseover="this.style.color='var(--txt)'" onmouseout="this.style.color='var(--txt2)'">Instagram</a>
+          <a href="https://www.linkedin.com/company/nurdai/" target="_blank" rel="noopener" style="color:var(--txt2);text-decoration:none;font-size:.84rem;font-weight:500;transition:color .2s" onmouseover="this.style.color='var(--txt)'" onmouseout="this.style.color='var(--txt2)'">LinkedIn</a>
+          <a href="https://wa.me/905325788737" target="_blank" rel="noopener" style="color:var(--txt2);text-decoration:none;font-size:.84rem;font-weight:500;transition:color .2s" onmouseover="this.style.color='var(--txt)'" onmouseout="this.style.color='var(--txt2)'">WhatsApp</a>
         </div>
-        <div class="f-group">
-          <label for="subject" class="f-label">Konu *</label>
-          <select id="subject" name="subject" class="f-select" required>
-            <option value="" disabled selected>Konu seçin…</option>
-            <option value="Yapay Zeka Görünürlüğü">Yapay Zeka Görünürlüğü</option>
-            <option value="SEO & GEO">SEO & GEO</option>
-            <option value="İçerik">İçerik</option>
-            <option value="Genel">Genel</option>
-          </select>
-        </div>
-        <div class="f-group">
-          <label for="message" class="f-label">Mesaj</label>
-          <textarea id="message" name="message" class="f-textarea" rows="5" placeholder="Projeniz hakkında bilgi verebilirsiniz…"></textarea>
-        </div>
-        <div class="f-group">
-          <div class="kvkk-row">
-            <input type="checkbox" id="kvkk" name="kvkk" required>
-            <label for="kvkk">Kişisel verilerimin <a href="gizlilik-politikasi.html">Gizlilik Politikası</a> kapsamında işlenmesini kabul ediyorum. *</label>
-          </div>
-        </div>
-        <button type="submit" class="btn-p" id="submit-btn">Gönder</button>
-        <div class="form-success" id="form-success">Mesajınız alındı. En kısa sürede dönüş yapılacaktır.</div>
-      </form>
+      </div>
     </div>
   </div>
 </section>

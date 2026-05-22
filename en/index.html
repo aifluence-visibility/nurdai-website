@@ -142,14 +142,17 @@
     <a href="../index.html" class="logo" aria-label="Nurdai Home">NURD<span>AI</span></a>
     <ul class="nav-links" role="navigation" aria-label="Main navigation">
       <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="ai-visibility.html">AI Visibility</a></li>
       <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="media.html">Media</a></li>
     </ul>
     <div class="nav-r">
       <a href="../index.html" class="lang-sw" aria-label="Türkçe">TR</a>
       <button class="tgl" onclick="toggleTheme()" aria-label="Toggle theme">
         <span id="theme-icon">☀️</span>
       </button>
-      <a href="../iletisim.html" class="nav-cta">Get in Touch</a>
+      <a href="contact.html" class="nav-cta">Get in Touch</a>
       <div class="ham" onclick="toggleMenu()" aria-label="Menu" role="button">
         <span></span><span></span><span></span>
       </div>
@@ -159,8 +162,11 @@
 
 <div class="mob-menu" id="mob-menu">
   <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="ai-visibility.html" onclick="closeMenu()">AI Visibility</a>
   <a href="services.html" onclick="closeMenu()">Services</a>
-  <a href="../iletisim.html" onclick="closeMenu()">Get in Touch</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="media.html" onclick="closeMenu()">Media</a>
+  <a href="contact.html" onclick="closeMenu()">Get in Touch</a>
 </div>
 
 <main>
@@ -189,46 +195,53 @@
   <div class="hero-scroll" aria-hidden="true"><span>Explore</span><div class="scroll-line"></div></div>
 </section>
 
-<section style="padding:48px 24px;max-width:800px;margin:0 auto;border-top:1px solid rgba(255,255,255,0.07)">
+<style>
+.faq-item{margin-bottom:12px;border:1px solid var(--brd);border-radius:var(--r);overflow:hidden}
+.faq-item summary{cursor:pointer;font-weight:500;color:var(--txt);padding:16px 20px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';font-size:1.1rem;color:var(--a1);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:'−'}
+.faq-item p{padding:0 20px 18px;color:var(--txt2);font-size:.88rem;line-height:1.72;margin:0}
+.faq-def{font-size:.9rem;color:var(--txt2);line-height:1.75;margin-bottom:32px}
+.faq-def strong{color:var(--txt)}
+</style>
 
-  <h2 style="font-size:1.35rem;font-weight:600;margin-bottom:14px">What is AI visibility?</h2>
-  <p style="line-height:1.75;color:rgba(255,255,255,0.65);margin-bottom:32px">
-    AI visibility is the ability of your brand to be recognized and recommended as a source by systems like <strong>ChatGPT, Perplexity and Google AI Overviews</strong>. Nurdai is a strategic digital visibility studio offering <strong>SEO, Generative Engine Optimization (GEO)</strong> and semantic structure services.
-  </p>
+<section style="background:var(--bg2)" aria-labelledby="faq-title">
+  <div class="con">
+    <div class="rv" style="max-width:760px;margin:0 auto">
+      <div class="sec-label">Knowledge Base</div>
+      <h2 class="sec-title" id="faq-title" style="font-size:clamp(1.4rem,2.5vw,2rem)">AI visibility, explained.</h2>
 
-  <h2 style="font-size:1.35rem;font-weight:600;margin-bottom:14px">What is GEO — Generative Engine Optimization?</h2>
-  <p style="line-height:1.75;color:rgba(255,255,255,0.65);margin-bottom:32px">
-    GEO is the optimization process that makes your brand appear in AI-generated search responses. It's built on content structure, semantic authority and entity signals. As of 2026, GEO is a core component of any digital discoverability strategy alongside SEO.
-  </p>
+      <p class="faq-def"><strong>AI visibility</strong> is the ability of your brand to be recognized and recommended as a source by systems like <strong>ChatGPT, Perplexity and Google AI Overviews</strong>. NURDAI is a strategic digital visibility studio offering SEO, <strong>Generative Engine Optimization (GEO)</strong> and semantic structure services.</p>
 
-  <h2 style="font-size:1.35rem;font-weight:600;margin-bottom:14px">Frequently asked questions</h2>
+      <p class="faq-def" style="margin-bottom:40px"><strong>GEO</strong> is the optimization process that makes your brand appear in AI-generated search responses — built on content structure, semantic authority and entity signals.</p>
 
-  <details style="margin-bottom:16px;border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:16px">
-    <summary style="cursor:pointer;font-weight:500;color:rgba(255,255,255,0.9)">What is the difference between SEO and AI visibility?</summary>
-    <p style="margin-top:12px;line-height:1.7;color:rgba(255,255,255,0.6)">SEO targets Google rankings. AI visibility determines whether systems like ChatGPT, Perplexity and Google AI Overviews recommend your brand as a source. The two complement each other but require different strategies.</p>
-  </details>
+      <div class="faq-list rv">
+        <details class="faq-item">
+          <summary>What is the difference between SEO and AI visibility?</summary>
+          <p>SEO targets Google rankings. AI visibility determines whether systems like ChatGPT, Perplexity and Google AI Overviews recommend your brand as a source. The two complement each other but require different strategies.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Which AI systems should my brand appear in?</summary>
+          <p>Priority targets are ChatGPT, Google AI Overviews, Perplexity and Claude. Each system has different source-selection criteria.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How long does it take to see results?</summary>
+          <p>Initial signals become measurable within 4–8 weeks. AI systems typically begin referencing your brand within 2–3 months.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can smaller brands benefit?</summary>
+          <p>Yes. Building semantic authority in a niche is a significant advantage for smaller brands. Because larger brands are still early in this space, the opportunity window is open.</p>
+        </details>
+      </div>
 
-  <details style="margin-bottom:16px;border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:16px">
-    <summary style="cursor:pointer;font-weight:500;color:rgba(255,255,255,0.9)">Which AI systems should my brand appear in?</summary>
-    <p style="margin-top:12px;line-height:1.7;color:rgba(255,255,255,0.6)">Priority targets are ChatGPT, Google AI Overviews, Perplexity and Claude. Each system has different source-selection criteria.</p>
-  </details>
-
-  <details style="margin-bottom:16px;border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:16px">
-    <summary style="cursor:pointer;font-weight:500;color:rgba(255,255,255,0.9)">How long does it take to see results?</summary>
-    <p style="margin-top:12px;line-height:1.7;color:rgba(255,255,255,0.6)">Initial signals become measurable within 4–8 weeks. AI systems typically begin referencing your brand within 2–3 months.</p>
-  </details>
-
-  <details style="margin-bottom:32px;border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:16px">
-    <summary style="cursor:pointer;font-weight:500;color:rgba(255,255,255,0.9)">Can smaller brands benefit?</summary>
-    <p style="margin-top:12px;line-height:1.7;color:rgba(255,255,255,0.6)">Yes. Building semantic authority in a niche is a significant advantage for smaller brands. Because larger brands are still early in this space, the opportunity window is open.</p>
-  </details>
-
-  <p style="font-size:.875rem;color:rgba(255,255,255,0.35);line-height:1.6">
-    Learn more about Nurdai digital visibility services:
-    <a href="https://www.linkedin.com/company/nurdai/about/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.5);text-decoration:underline">LinkedIn</a> ·
-    <a href="https://www.instagram.com/hellonurdai" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.5);text-decoration:underline">Instagram</a>
-  </p>
-
+      <p style="font-size:.8rem;color:var(--txt3);line-height:1.6;margin-top:28px">
+        Follow NURDAI:
+        <a href="https://www.linkedin.com/company/nurdai/about/" target="_blank" rel="noopener" style="color:var(--txt2);text-decoration:none;font-weight:500">LinkedIn</a> ·
+        <a href="https://www.instagram.com/hellonurdai" target="_blank" rel="noopener" style="color:var(--txt2);text-decoration:none;font-weight:500">Instagram</a>
+      </p>
+    </div>
+  </div>
 </section>
 
 <!-- STATS -->
@@ -375,7 +388,7 @@
     <div class="sec-label">Strategy</div>
     <h2 class="sec-title">Let's build your brand's visibility infrastructure <span class="gtxt">together.</span></h2>
     <p>From AI visibility to SEO, content strategy to brand architecture — a tailored approach for your brand.</p>
-    <a href="../iletisim.html" class="btn-p">Get in Touch</a>
+    <a href="contact.html" class="btn-p">Get in Touch</a>
   </div>
 </section>
 
@@ -400,17 +413,20 @@
         <h4>Pages</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
+          <li><a href="ai-visibility.html">AI Visibility</a></li>
           <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="media.html">Media</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="../yapay-zeka-gorunurlugu.html">AI Visibility</a></li>
+          <li><a href="ai-visibility.html">AI Visibility</a></li>
           <li><a href="services.html">SEO &amp; GEO</a></li>
           <li><a href="services.html">Content &amp; Semantic Structure</a></li>
           <li><a href="services.html">Social Media &amp; Discovery</a></li>
-          <li><a href="../iletisim.html">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
