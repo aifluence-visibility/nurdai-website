@@ -162,15 +162,30 @@ function submitForm(e) {
     });
 }
 
-// ── DATA LOAD (for portfolio) ──
+// ── DATA LOAD (portfolio + blog) ──
+function resolveAssetUrl(path) {
+  if (!path) return '';
+  if (/^https?:\/\//.test(path) || path.startsWith('/')) return path;
+  return '/' + path.replace(/^\.\//, '');
+}
+
+function revealElements(root) {
+  (root || document).querySelectorAll('.rv:not(.vs)').forEach(el => {
+    new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vs'); } });
+    }, { threshold: 0.07 }).observe(el);
+  });
+}
+
 function renderCard(p) {
   const isCaseStudy = p.mockupType === 'casestudy';
+  const img = resolveAssetUrl(p.image);
   const mockups = {
-    phone: `<div class="mkp-phone"><div class="mkp-phone-frame"><div class="mkp-phone-screen"><img src="${p.image}" alt="${p.title}" loading="lazy"></div></div></div>`,
-    logo:  `<div class="mkp-logo"><div class="mkp-logo-dk"><img src="${p.image}" alt="${p.title}" loading="lazy"></div><div class="mkp-logo-lt"><img src="${p.image}" alt="${p.title}" loading="lazy"></div></div>`,
-    brand: `<div class="mkp-brand"><img src="${p.image}" alt="${p.title}" loading="lazy"></div>`,
-    frame: `<div class="mkp-frame"><img src="${p.image}" alt="${p.title}" loading="lazy"></div>`,
-    casestudy: `<div class="mkp-casestudy"><img src="${p.image}" alt="${p.title}" loading="lazy"></div>`
+    phone: `<div class="mkp-phone"><div class="mkp-phone-frame"><div class="mkp-phone-screen"><img src="${img}" alt="${p.title}" loading="lazy"></div></div></div>`,
+    logo:  `<div class="mkp-logo"><div class="mkp-logo-dk"><img src="${img}" alt="${p.title}" loading="lazy"></div><div class="mkp-logo-lt"><img src="${img}" alt="${p.title}" loading="lazy"></div></div>`,
+    brand: `<div class="mkp-brand"><img src="${img}" alt="${p.title}" loading="lazy"></div>`,
+    frame: `<div class="mkp-frame"><img src="${img}" alt="${p.title}" loading="lazy"></div>`,
+    casestudy: `<div class="mkp-casestudy"><img src="${img}" alt="${p.title}" loading="lazy"></div>`
   };
   const visual = p.image
     ? (mockups[p.mockupType] || mockups.frame)
@@ -189,18 +204,48 @@ function renderCard(p) {
 
 async function loadPortfolio(containerId, limit) {
   try {
-    const base = window.location.pathname.includes('/') ? '' : './';
-    const res = await fetch(base + 'content/data.json');
+    const res = await fetch('/content/data.json');
+    if (!res.ok) throw new Error('data.json');
     const data = await res.json();
     const container = document.getElementById(containerId);
     if (!container || !data.portfolio) return;
     const items = limit ? data.portfolio.slice(0, limit) : data.portfolio;
     container.innerHTML = items.map(p => renderCard(p)).join('');
-    // Re-trigger reveal
-    document.querySelectorAll('.rv:not(.vs)').forEach(el => {
-      new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vs'); } });
-      }, { threshold: 0.07 }).observe(el);
-    });
-  } catch(e) { console.log('data.json yüklenemedi'); }
+    revealElements(container);
+  } catch (e) { console.warn('Portfolio yüklenemedi', e); }
+}
+
+async function loadBlog(containerId, lang) {
+  lang = lang || (window.location.pathname.startsWith('/en') ? 'en' : 'tr');
+  try {
+    const res = await fetch('/content/blog.json');
+    if (!res.ok) throw new Error('blog.json');
+    const data = await res.json();
+    const container = document.getElementById(containerId);
+    if (!container || !data.posts) return;
+    const readLabel = lang === 'en' ? 'Read more →' : 'Devamını Oku →';
+    const posts = data.posts
+      .filter(p => p.published !== false)
+      .map(p => {
+        const loc = p[lang] || p.tr || {};
+        return { ...p, title: loc.title || p.title, excerpt: loc.excerpt || p.excerpt, dateLabel: p.dateLabel || p.date };
+      })
+      .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+    if (!posts.length) {
+      container.innerHTML = `<p style="color:var(--txt3);font-size:.9rem">${lang === 'en' ? 'No posts yet.' : 'Henüz yayınlanmış yazı yok.'}</p>`;
+      return;
+    }
+    const prefix = lang === 'en' ? '/en/blog/' : '/blog/';
+    container.innerHTML = posts.map(p => `
+      <a href="${prefix}${p.slug}" class="blog-card rv">
+        <div class="blog-card-cat">${p.category || 'Blog'}</div>
+        <h2>${p.title}</h2>
+        <p>${p.excerpt || ''}</p>
+        <div class="blog-card-meta">
+          <time datetime="${p.date || ''}">${p.dateLabel || ''}</time>
+          <span class="blog-read">${readLabel}</span>
+        </div>
+      </a>`).join('');
+    revealElements(container);
+  } catch (e) { console.warn('Blog yüklenemedi', e); }
 }

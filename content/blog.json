@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "slug": "ai-visibility-seo-fark",
+      "category": "AI Visibility",
+      "date": "2026-05-08",
+      "published": true,
+      "tr": {
+        "title": "AI Visibility ile SEO Arasındaki Fark",
+        "excerpt": "Arama motorlarında sıralanmak ile yapay zeka sistemlerinde referans gösterilmek aynı şey değil.",
+        "body": ""
+      },
+      "en": {
+        "title": "The Difference Between AI Visibility and SEO",
+        "excerpt": "Ranking on search engines and being cited by AI systems are not the same thing.",
+        "body": ""
+      }
+    },
+    {
+      "slug": "chatgpt-perplexity-marka-gorunurlugu",
+      "category": "AI Visibility",
+      "date": "2026-04-24",
+      "published": true,
+      "tr": {
+        "title": "ChatGPT ve Perplexity'de Marka Görünürlüğü Nasıl Sağlanır?",
+        "excerpt": "AI arama motorları kaynak seçerken hangi kriterleri kullanıyor? 5 adımlı pratik strateji.",
+        "body": ""
+      },
+      "en": {
+        "title": "How to Build Brand Visibility on ChatGPT and Perplexity",
+        "excerpt": "Which criteria do AI search systems use when selecting sources? A 5-step practical strategy.",
+        "body": ""
+      }
+    },
+    {
+      "slug": "geo-nedir-generative-engine-optimization",
+      "category": "GEO",
+      "date": "2026-04-10",
+      "published": true,
+      "tr": {
+        "title": "GEO Nedir? Generative Engine Optimization Rehberi",
+        "excerpt": "Yapay zeka sistemlerinin içerikleri nasıl seçip sunduğunu anlayan yeni bir disiplin.",
+        "body": ""
+      },
+      "en": {
+        "title": "What Is GEO? A Guide to Generative Engine Optimization",
+        "excerpt": "A new discipline focused on how generative AI systems select and present content.",
+        "body": ""
+      }
+    }
+  ]
+}

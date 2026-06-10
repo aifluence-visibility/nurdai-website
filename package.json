@@ -2,6 +2,9 @@
   "name": "nurdai-website",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "new-post": "node scripts/new-blog-post.mjs"
+  },
   "dependencies": {
     "nodemailer": "^6.9.14"
   }

@@ -109,7 +109,8 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'DM San
 .panel-desc{color:var(--text2);font-size:13px;margin-bottom:24px}
 
 /* DASHBOARD */
-.dash-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+.dash-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+@media(max-width:900px){.dash-grid{grid-template-columns:repeat(2,1fr)}}
 .stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
 .stat-num{font-family:'Syne',sans-serif;font-size:32px;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .stat-label{color:var(--text2);font-size:12px;margin-top:4px}
@@ -237,6 +238,19 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'DM San
 .pub-log{background:var(--bg2);border-radius:var(--radius-sm);padding:12px;width:100%;text-align:left;font-size:11px;color:var(--text2);line-height:1.8;max-height:140px;overflow-y:auto;font-family:monospace}
 .pub-success{font-size:48px}
 
+.blog-row{display:flex;align-items:center;gap:16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin-bottom:10px}
+.blog-row-main{flex:1;min-width:0}
+.blog-row-cat{font-size:10px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.blog-row-title{font-size:14px;font-weight:600;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.blog-row-sub{font-size:12px;color:var(--text3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.blog-row-meta{display:flex;flex-direction:column;align-items:flex-end;gap:4px;font-size:11px;color:var(--text3);flex-shrink:0}
+.blog-row-actions{display:flex;gap:4px;flex-shrink:0}
+.blog-tabs{display:flex;gap:6px;margin-bottom:16px}
+.blog-tab{padding:8px 16px;border-radius:var(--radius-sm);border:1px solid var(--border);background:transparent;cursor:pointer;font-family:inherit;font-size:12px;font-weight:600;color:var(--text2)}
+.blog-tab.active{background:rgba(124,92,252,.15);border-color:rgba(124,92,252,.4);color:var(--accent)}
+.blog-hint{font-size:11px;color:var(--text3);line-height:1.6;margin-top:6px}
+.modal.wide{width:680px}
+
 /* TOAST */
 .toast{position:fixed;bottom:24px;right:24px;background:var(--surface2);border:1px solid var(--border2);border-radius:var(--radius-sm);padding:12px 18px;font-size:13px;box-shadow:var(--shadow);z-index:400;transform:translateY(80px);opacity:0;transition:all .3s}
 .toast.show{transform:translateY(0);opacity:1}
@@ -309,6 +323,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'DM San
           <div class="nav-label">İçerik</div>
           <div class="nav-item" onclick="goPanel('hero',this)"><span class="icon">✦</span>Hero Alanı</div>
           <div class="nav-item" onclick="goPanel('portfolio',this)"><span class="icon">◈</span>Portfolio <span class="nav-badge" id="port-badge">0</span></div>
+          <div class="nav-item" onclick="goPanel('blog',this)"><span class="icon">✎</span>Blog <span class="nav-badge" id="blog-badge">0</span></div>
           <div class="nav-item" onclick="goPanel('services',this)"><span class="icon">⬡</span>Hizmetler</div>
           <div class="nav-item" onclick="goPanel('about',this)"><span class="icon">◎</span>Hakkımda</div>
           <div class="nav-item" onclick="goPanel('media',this)"><span class="icon">⬛</span>Medya</div>
@@ -338,6 +353,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'DM San
         <div class="panel-desc">Sitenizdeki içeriklerin genel özeti.</div>
         <div class="dash-grid">
           <div class="stat-card"><div class="stat-num" id="stat-projects">0</div><div class="stat-label">Portfolio Projesi</div></div>
+          <div class="stat-card"><div class="stat-num" id="stat-blog">0</div><div class="stat-label">Blog Yazısı</div></div>
           <div class="stat-card"><div class="stat-num" id="stat-services">0</div><div class="stat-label">Hizmet</div></div>
           <div class="stat-card"><div class="stat-num" id="stat-media">0</div><div class="stat-label">Medya Dosyası</div></div>
         </div>
@@ -345,6 +361,10 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'DM San
           <div class="qa-card" onclick="goPanel('portfolio',document.querySelector('.nav-item[onclick*=portfolio]'))">
             <div class="qa-icon">◈</div>
             <div class="qa-text"><strong>Portfolio Ekle</strong><span>Yeni proje veya vaka çalışması</span></div>
+          </div>
+          <div class="qa-card" onclick="openBlogModal(-1);goPanel('blog',document.querySelector('.nav-item[onclick*=blog]'))">
+            <div class="qa-icon">✎</div>
+            <div class="qa-text"><strong>Blog Yazısı Ekle</strong><span>TR + EN içerik, tek tıkla yayınla</span></div>
           </div>
           <div class="qa-card" onclick="goPanel('hero',document.querySelector('.nav-item[onclick*=hero]'))">
             <div class="qa-icon">✦</div>
@@ -398,6 +418,16 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'DM San
           </div>
         </div>
         <div class="proj-grid" id="proj-grid"></div>
+      </div>
+
+      <!-- BLOG -->
+      <div id="p-blog" class="panel">
+        <div class="panel-title">Blog</div>
+        <div class="panel-desc">Türkçe ve İngilizce başlık, özet ve içerik girin. Kaydet &amp; Yayınla ile siteye gönderilir.</div>
+        <div class="port-toolbar">
+          <button class="btn-add-project" onclick="openBlogModal(-1)">+ Yeni Yazı</button>
+        </div>
+        <div id="blog-list"></div>
       </div>
 
       <!-- SERVICES -->
@@ -551,6 +581,54 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'DM San
   </div>
 </div>
 
+<!-- ── BLOG MODAL ── -->
+<div class="modal-overlay" id="blog-modal">
+  <div class="modal wide">
+    <div class="modal-head">
+      <div class="modal-title" id="blog-modal-title">Yeni Blog Yazısı</div>
+      <button class="modal-close" onclick="closeBlogModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-grid">
+        <div class="form-field"><label>Slug (URL)</label><input type="text" id="b-slug" placeholder="ornek-yazi" oninput="this.dataset.manual='1'"></div>
+        <div class="form-field"><label>Tarih</label><input type="date" id="b-date"></div>
+        <div class="form-field"><label>Kategori</label>
+          <select id="b-category">
+            <option>AI Visibility</option>
+            <option>GEO</option>
+            <option>SEO</option>
+            <option>Strateji</option>
+            <option>Dijital Görünürlük</option>
+          </select>
+        </div>
+        <div class="form-field" style="display:flex;align-items:center;gap:8px;padding-top:22px">
+          <input type="checkbox" id="b-published" style="width:auto">
+          <label for="b-published" style="text-transform:none;font-size:13px;color:var(--text)">Yayında</label>
+        </div>
+      </div>
+      <div class="blog-tabs">
+        <button type="button" class="blog-tab active" data-lang="tr" onclick="switchBlogTab('tr')">🇹🇷 Türkçe</button>
+        <button type="button" class="blog-tab" data-lang="en" onclick="switchBlogTab('en')">🇬🇧 English</button>
+      </div>
+      <div id="blog-pane-tr">
+        <div class="form-field"><label>Başlık (TR)</label><input type="text" id="b-title-tr" oninput="autoSlugFromTitle()"></div>
+        <div class="form-field"><label>Özet (TR)</label><textarea id="b-excerpt-tr" rows="2"></textarea></div>
+        <div class="form-field"><label>İçerik (TR)</label><textarea id="b-body-tr" rows="12" placeholder="## Alt başlık&#10;&#10;Paragraf metni...&#10;&#10;- Madde"></textarea>
+        <p class="blog-hint">## büyük başlık, ### küçük başlık, boş satır = yeni paragraf, - madde</p></div>
+      </div>
+      <div id="blog-pane-en" style="display:none">
+        <div class="form-field"><label>Title (EN)</label><input type="text" id="b-title-en"></div>
+        <div class="form-field"><label>Excerpt (EN)</label><textarea id="b-excerpt-en" rows="2"></textarea></div>
+        <div class="form-field"><label>Content (EN)</label><textarea id="b-body-en" rows="12"></textarea></div>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn-ghost" onclick="closeBlogModal()">İptal</button>
+      <button class="btn-primary" style="padding:10px 24px;font-size:13px" onclick="saveBlogPost()">Kaydet</button>
+    </div>
+  </div>
+</div>
+
 <!-- ── SETTINGS OVERLAY ── -->
 <div class="settings-overlay" id="settings-overlay">
   <div class="settings-box">
@@ -649,7 +727,7 @@ function goPanel(id, el){
   if(el) el.classList.add('active');
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
   document.getElementById('p-'+id).classList.add('active');
-  const labels = {dashboard:'Dashboard',hero:'Hero Alanı',portfolio:'Portfolio',
+  const labels = {dashboard:'Dashboard',hero:'Hero Alanı',portfolio:'Portfolio',blog:'Blog',
     services:'Hizmetler',about:'Hakkımda',media:'Medya',contact:'İletişim',seo:'SEO Ayarları'};
   document.getElementById('topbar-page').textContent = labels[id]||id;
 }
@@ -671,6 +749,7 @@ async function loadData(){
     }
   } catch(e){ console.warn('Data load failed',e); }
   populateAll();
+  loadBlogData();
   setStatus('Kaydedildi ✓', 'saved');
 }
 
@@ -1023,6 +1102,8 @@ async function publish(){
     const b64=btoa(unescape(encodeURIComponent(json)));
     await ghPut(DATA_PATH, b64, 'data.json');
 
+    await publishBlogContent(pubLog);
+
     pubLog('✅ Yayınlandı!');
     showPubSuccess();
     setStatus('Yayınlandı ✓','saved');
@@ -1083,5 +1164,7 @@ function toast(msg,type=''){
   setTimeout(()=>el.classList.remove('show'),2800);
 }
 </script>
+<script src="../assets/blog-generator.js"></script>
+<script src="blog.js"></script>
 </body>
 </html>
