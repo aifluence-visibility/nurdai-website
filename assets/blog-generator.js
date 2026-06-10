@@ -108,6 +108,9 @@
 <meta property="og:description" content="${esc(excerpt)}">
 <meta property="og:url" content="${canon}">
 <meta property="og:image" content="https://nurdai.com/assets/images/og-home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nurdai — AI Visibility & Dijital Görünürlük Danışmanlığı">
 <meta property="og:locale" content="${ogLocale}">
 <meta property="og:site_name" content="Nurdai">
 <meta name="twitter:card" content="summary_large_image">
