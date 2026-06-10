@@ -51,6 +51,12 @@
 
   function buildBlogArticleHtml(post, lang) {
     const isEn = lang === 'en';
+    const ogImage = isEn
+      ? 'https://nurdai.com/assets/images/og-home-en.jpg'
+      : 'https://nurdai.com/assets/images/og-home.jpg';
+    const ogImageAlt = isEn
+      ? 'Nurdai — AI Visibility & Digital Discoverability'
+      : 'Nurdai — AI Visibility & Dijital Görünürlük Danışmanlığı';
     const loc = post[lang] || post.tr || {};
     const other = isEn ? 'tr' : 'en';
     const slug = post.slug;
@@ -107,16 +113,16 @@
 <meta property="og:title" content="${esc(title)} — Nurdai">
 <meta property="og:description" content="${esc(excerpt)}">
 <meta property="og:url" content="${canon}">
-<meta property="og:image" content="https://nurdai.com/assets/images/og-home.jpg">
+<meta property="og:image" content="${ogImage}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Nurdai — AI Visibility & Dijital Görünürlük Danışmanlığı">
+<meta property="og:image:alt" content="${esc(ogImageAlt)}">
 <meta property="og:locale" content="${ogLocale}">
 <meta property="og:site_name" content="Nurdai">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(title)} — Nurdai">
 <meta name="twitter:description" content="${esc(excerpt)}">
-<meta name="twitter:image" content="https://nurdai.com/assets/images/og-home.jpg">
+<meta name="twitter:image" content="${ogImage}">
 <script type="application/ld+json">${JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Article',
