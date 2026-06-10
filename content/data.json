@@ -143,6 +143,10 @@
     "short": "AI Visibility danışmanı. Markaların dijital çağda görünür olmasına yardımcı oluyorum."
   },
   "contact": {},
-  "seo": {},
+  "seo": {
+    "title": "Nurdai — AI Visibility & Dijital Görünürlük Danışmanlığı",
+    "description": "Markanızın dijital görünürlüğünü arama motorları, sosyal platformlar ve yapay zeka sistemleri (ChatGPT, Perplexity) için yapılandırıyoruz. AI Visibility, GEO ve SEO danışmanlığı.",
+    "keywords": "AI visibility, dijital görünürlük, GEO, generative engine optimization, SEO danışmanlığı, ChatGPT optimizasyon, Perplexity, içerik stratejisi, marka görünürlüğü, yapay zeka SEO, Nurdan Çetin, NURDAI"
+  },
   "media": []
 }
