@@ -1,15 +1,137 @@
 {
-  "site": {
-    "name": "Nurdai",
-    "email": "hello@nurdai.com",
-    "social": {
-      "instagram": "https://instagram.com/hellonurdai",
-      "linkedin": "https://linkedin.com/company/nurdai",
-      "youtube": "https://youtube.com/@Hellonurdai",
-      "tiktok": "https://tiktok.com/@hellonurdai",
-      "podcast": "https://youtube.com/@Hellonurdai"
+  "portfolio": [
+    {
+      "id": 1,
+      "title": "OdiX Pay Global",
+      "client": "OdiX Pay Global",
+      "category": "sosyal",
+      "categoryLabel": "Sosyal Medya",
+      "image": "assets/images/portfolio-mockups/1/2.png",
+      "mockupType": "casestudy",
+      "description": "Fintech / Social Media System"
+    },
+    {
+      "id": 2,
+      "title": "Dimora Villas",
+      "client": "Dimora Villas",
+      "category": "sosyal",
+      "categoryLabel": "Sosyal Medya",
+      "image": "assets/images/portfolio-mockups/1/12.png",
+      "mockupType": "casestudy",
+      "description": "Real Estate / Brand & Social"
+    },
+    {
+      "id": 3,
+      "title": "NOi Hotel Bodrum",
+      "client": "NOi Hotel Bodrum",
+      "category": "sosyal",
+      "categoryLabel": "Sosyal Medya",
+      "image": "assets/images/portfolio-mockups/1/3.png",
+      "mockupType": "casestudy",
+      "description": "Hospitality / Social Direction"
+    },
+    {
+      "id": 4,
+      "title": "HealThink Life",
+      "client": "HealThink Life",
+      "category": "kampanya",
+      "categoryLabel": "Kampanya",
+      "image": "assets/images/portfolio-mockups/1/4.png",
+      "mockupType": "casestudy",
+      "description": "Packaging / Wellness Campaign"
+    },
+    {
+      "id": 5,
+      "title": "Bitz Bodrum",
+      "client": "Bitz Bodrum",
+      "category": "sosyal",
+      "categoryLabel": "Sosyal Medya",
+      "image": "assets/images/portfolio-mockups/1/14.png",
+      "mockupType": "casestudy",
+      "description": "Restaurant / Lifestyle Identity"
+    },
+    {
+      "id": 6,
+      "title": "Bodrum Solar",
+      "client": "Bodrum Solar",
+      "category": "kampanya",
+      "categoryLabel": "Kampanya",
+      "image": "assets/images/portfolio-mockups/1/5.png",
+      "mockupType": "casestudy",
+      "description": "Energy / Social Campaign"
+    },
+    {
+      "id": 7,
+      "title": "Venerdi Restaurant",
+      "client": "Venerdi Restaurant",
+      "category": "sosyal",
+      "categoryLabel": "Sosyal Medya",
+      "image": "assets/images/portfolio-mockups/1/6.png",
+      "mockupType": "casestudy",
+      "description": "Restaurant / Content System"
+    },
+    {
+      "id": 8,
+      "title": "Boyner x Land of Legends",
+      "client": "Boyner x Land of Legends",
+      "category": "kampanya",
+      "categoryLabel": "Kampanya",
+      "image": "assets/images/portfolio-mockups/1/7.png",
+      "mockupType": "casestudy",
+      "description": "Fashion / Campaign Art Direction"
+    },
+    {
+      "id": 9,
+      "title": "Ayben Ersoy Akademi",
+      "client": "Ayben Ersoy Akademi",
+      "category": "icerik",
+      "categoryLabel": "İçerik Tasarımı",
+      "image": "assets/images/portfolio-mockups/1/8.png",
+      "mockupType": "casestudy",
+      "description": "Education / Social Design"
+    },
+    {
+      "id": 10,
+      "title": "Prognoz Medical",
+      "client": "Prognoz Medical",
+      "category": "grafik",
+      "categoryLabel": "Grafik Tasarım",
+      "image": "assets/images/portfolio-mockups/1/9.png",
+      "mockupType": "casestudy",
+      "description": "Editorial / Book Cover Design"
+    },
+    {
+      "id": 11,
+      "title": "Bi Corba Logo Identity",
+      "client": "Bi Corba",
+      "category": "branding",
+      "categoryLabel": "Branding",
+      "image": "assets/images/portfolio-mockups/1/13.png",
+      "mockupType": "casestudy",
+      "description": "Branding / Logo & Usage"
+    },
+    {
+      "id": 12,
+      "title": "Brand Guideline Systems",
+      "client": "Çeşitli Markalar",
+      "category": "branding",
+      "categoryLabel": "Branding",
+      "image": "assets/images/portfolio-mockups/1/11.png",
+      "mockupType": "casestudy",
+      "description": "Branding / Guideline Boards"
+    },
+    {
+      "id": 13,
+      "title": "Metin Cingiloglu Gourmet",
+      "client": "Metin Cingiloglu Gourmet",
+      "category": "branding",
+      "categoryLabel": "Branding",
+      "image": "assets/images/portfolio-mockups/1/10.png",
+      "mockupType": "casestudy",
+      "description": "Gourmet Brand / Social & Packaging"
     }
-  },
+  ],
+  "services": [],
   "hero": {
     "badge": "Sosyal Medya & Yapay Zeka Stratejisi",
     "title": "Markaların dijital görünürlüğünü AI çağına hazırlıyorum.",
@@ -20,19 +142,7 @@
     "bio": "Dijital dünyaya sosyal medya, grafik tasarım ve içerik üretimiyle başladım. Zaman içinde markaların sadece güzel görünmesinin değil; doğru yerde, doğru şekilde ve doğru mesajla görünür olmasının daha önemli olduğunu fark ettim. AI çağında görünürlük, artık sadece insan gözüyle değil, algoritmalarla da ölçülüyor. Bu yolculukta yüzlerce markaya AI Visibility danışmanlığı, SEO stratejisi ve içerik üretimiyle destek oldum.",
     "short": "AI Visibility danışmanı. Markaların dijital çağda görünür olmasına yardımcı oluyorum."
   },
-  "portfolio": [
-    {"id":1,"title":"OdiX Pay Global","client":"OdiX Pay Global","category":"sosyal","categoryLabel":"Sosyal Medya","image":"assets/images/portfolio-mockups/1/2.png","mockupType":"casestudy","description":"Fintech / Social Media System"},
-    {"id":2,"title":"Dimora Villas","client":"Dimora Villas","category":"sosyal","categoryLabel":"Sosyal Medya","image":"assets/images/portfolio-mockups/1/12.png","mockupType":"casestudy","description":"Real Estate / Brand & Social"},
-    {"id":3,"title":"NOi Hotel Bodrum","client":"NOi Hotel Bodrum","category":"sosyal","categoryLabel":"Sosyal Medya","image":"assets/images/portfolio-mockups/1/3.png","mockupType":"casestudy","description":"Hospitality / Social Direction"},
-    {"id":4,"title":"HealThink Life","client":"HealThink Life","category":"kampanya","categoryLabel":"Kampanya","image":"assets/images/portfolio-mockups/1/4.png","mockupType":"casestudy","description":"Packaging / Wellness Campaign"},
-    {"id":5,"title":"Bitz Bodrum","client":"Bitz Bodrum","category":"sosyal","categoryLabel":"Sosyal Medya","image":"assets/images/portfolio-mockups/1/14.png","mockupType":"casestudy","description":"Restaurant / Lifestyle Identity"},
-    {"id":6,"title":"Bodrum Solar","client":"Bodrum Solar","category":"kampanya","categoryLabel":"Kampanya","image":"assets/images/portfolio-mockups/1/5.png","mockupType":"casestudy","description":"Energy / Social Campaign"},
-    {"id":7,"title":"Venerdi Restaurant","client":"Venerdi Restaurant","category":"sosyal","categoryLabel":"Sosyal Medya","image":"assets/images/portfolio-mockups/1/6.png","mockupType":"casestudy","description":"Restaurant / Content System"},
-    {"id":8,"title":"Boyner x Land of Legends","client":"Boyner x Land of Legends","category":"kampanya","categoryLabel":"Kampanya","image":"assets/images/portfolio-mockups/1/7.png","mockupType":"casestudy","description":"Fashion / Campaign Art Direction"},
-    {"id":9,"title":"Ayben Ersoy Akademi","client":"Ayben Ersoy Akademi","category":"icerik","categoryLabel":"İçerik Tasarımı","image":"assets/images/portfolio-mockups/1/8.png","mockupType":"casestudy","description":"Education / Social Design"},
-    {"id":10,"title":"Prognoz Medical","client":"Prognoz Medical","category":"grafik","categoryLabel":"Grafik Tasarım","image":"assets/images/portfolio-mockups/1/9.png","mockupType":"casestudy","description":"Editorial / Book Cover Design"},
-    {"id":11,"title":"Bi Corba Logo Identity","client":"Bi Corba","category":"branding","categoryLabel":"Branding","image":"assets/images/portfolio-mockups/1/13.png","mockupType":"casestudy","description":"Branding / Logo & Usage"},
-    {"id":12,"title":"Brand Guideline Systems","client":"Çeşitli Markalar","category":"branding","categoryLabel":"Branding","image":"assets/images/portfolio-mockups/1/11.png","mockupType":"casestudy","description":"Branding / Guideline Boards"},
-    {"id":13,"title":"Metin Cingiloglu Gourmet","client":"Metin Cingiloglu Gourmet","category":"branding","categoryLabel":"Branding","image":"assets/images/portfolio-mockups/1/10.png","mockupType":"casestudy","description":"Gourmet Brand / Social & Packaging"}
-  ]
+  "contact": {},
+  "seo": {},
+  "media": []
 }
