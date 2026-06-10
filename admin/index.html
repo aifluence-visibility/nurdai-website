@@ -423,7 +423,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'DM San
       <!-- BLOG -->
       <div id="p-blog" class="panel">
         <div class="panel-title">Blog</div>
-        <div class="panel-desc">Türkçe ve İngilizce başlık, özet ve içerik girin. Kaydet &amp; Yayınla ile siteye gönderilir.</div>
+        <div class="panel-desc">+ Yeni Yazı ile formu açın. Türkçe ve İngilizce metinleri ayrı ayrı yazın (otomatik çeviri yok). Modal içinde Kaydet → sol alttan Kaydet &amp; Yayınla.</div>
         <div class="port-toolbar">
           <button class="btn-add-project" onclick="openBlogModal(-1)">+ Yeni Yazı</button>
         </div>
@@ -748,8 +748,13 @@ async function loadData(){
       data.media     = raw.media     || [];
     }
   } catch(e){ console.warn('Data load failed',e); }
-  populateAll();
-  loadBlogData();
+  try {
+    populateAll();
+    await loadBlogData();
+  } catch(e) {
+    console.error('Admin init failed', e);
+    toast('Bazı bölümler yüklenemedi — sayfayı yenileyin', 'error');
+  }
   setStatus('Kaydedildi ✓', 'saved');
 }
 
@@ -1164,7 +1169,7 @@ function toast(msg,type=''){
   setTimeout(()=>el.classList.remove('show'),2800);
 }
 </script>
-<script src="../assets/blog-generator.js"></script>
-<script src="blog.js"></script>
+<script src="/assets/blog-generator.js"></script>
+<script src="/admin/blog.js"></script>
 </body>
 </html>

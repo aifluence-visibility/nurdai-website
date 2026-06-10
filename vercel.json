@@ -5,6 +5,11 @@
       "source": "/en",
       "destination": "/en/",
       "permanent": true
+    },
+    {
+      "source": "/admin",
+      "destination": "/admin/",
+      "permanent": true
     }
   ],
   "functions": {
