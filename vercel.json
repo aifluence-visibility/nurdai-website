@@ -2,6 +2,12 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.nurdai.com" }],
+      "destination": "https://nurdai.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/en",
       "destination": "/en/",
       "permanent": true
