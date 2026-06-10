@@ -4,7 +4,7 @@ let blogData = { posts: [] };
 let blogEditIdx = -1;
 let blogLangTab = 'tr';
 
-const BLOG_CATS = ['AI Visibility', 'GEO', 'SEO', 'Strateji', 'Dijital Görünürlük'];
+const BLOG_CATS = ['AI Visibility', 'GEO', 'AI Search', 'SEO', 'Digital Strategy'];
 
 async function loadBlogData() {
   try {

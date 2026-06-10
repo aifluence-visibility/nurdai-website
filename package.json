@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "new-post": "node scripts/new-blog-post.mjs",
-    "generate-og": "node scripts/generate-og-home.mjs"
+    "generate-og": "node scripts/generate-og-home.mjs",
+    "build:services": "node scripts/build-service-pages.mjs"
   },
   "dependencies": {
     "nodemailer": "^6.9.14"

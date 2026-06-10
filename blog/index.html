@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <title>Blog | AI Visibility & Dijital Strateji — Nurdai</title>
 <meta name="description" content="AI Visibility, GEO ve dijital strateji üzerine makaleler. Yapay zeka çağında markanızı görünür kılacak içerikler.">
 <link rel="canonical" href="https://nurdai.com/blog/">
@@ -19,7 +19,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Nurdai Blog","url":"https://nurdai.com/blog/","publisher":{"@type":"Organization","name":"Nurdai","url":"https://nurdai.com"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 <div class="cur" id="cur"></div>
@@ -63,9 +63,19 @@
     <p style="margin-top:14px;font-size:.8rem;color:var(--txt3)">Nurdan Çetin — AI Visibility &amp; GEO Stratejisti, NURDAI</p>
   </div>
 </section>
-<section style="padding-bottom:80px">
+<section class="blog-section">
   <div class="con">
-    <div id="blog-grid" class="blog-grid"></div>
+    <div class="blog-layout">
+      <aside class="blog-sidebar rv">
+        <div class="blog-sidebar-title">Kategoriler</div>
+        <nav class="blog-cat-nav" id="blog-cat-nav" aria-label="Blog kategorileri"></nav>
+      </aside>
+      <div class="blog-main">
+        <div id="blog-results-meta" class="blog-results-meta rv"></div>
+        <div id="blog-grid" class="blog-grid"></div>
+        <div id="blog-empty" class="blog-empty" hidden>Bu kategoride henüz yazı yok.</div>
+      </div>
+    </div>
   </div>
 </section>
 <section class="cta-sec rv">
@@ -76,18 +86,9 @@
   </div>
 </section>
 </main>
-<footer role="contentinfo">
-  <div class="con">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="/" class="logo">NURD<span>AI</span></a>
-        <p>Markaların dijital görünürlüğünü arama motorları ve yapay zeka sistemleri için yapılandıran stratejik stüdyo.</p>
-      </div>
-    </div>
-    <div class="footer-bot"><span>© 2026 Nurdai</span></div>
-  </div>
-</footer>
-<script src="../assets/main.js"></script>
+<footer role="contentinfo"></footer>
+<script src="/assets/site-footer.js"></script>
+<script src="/assets/main.js"></script>
 <script>loadBlog('blog-grid', 'tr');</script>
 </body>
 </html>

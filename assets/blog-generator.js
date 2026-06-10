@@ -102,7 +102,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="${assetPrefix}favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <title>${esc(title)} — Nurdai</title>
 <meta name="description" content="${esc(excerpt)}">
 <meta name="author" content="Nurdan — Nurdai">
@@ -137,7 +137,7 @@
     })}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="${assetPrefix}assets/style.css">
+<link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 <div class="cur" id="cur"></div>
@@ -179,8 +179,9 @@
   </div>
 </section>
 </main>
-<footer role="contentinfo"><div class="con"><div class="footer-bot"><span>© 2026 Nurdai</span></div></div></footer>
-<script src="${assetPrefix}assets/main.js"></script>
+<footer role="contentinfo"></footer>
+<script src="/assets/site-footer.js"></script>
+<script src="/assets/main.js"></script>
 </body>
 </html>`;
   }

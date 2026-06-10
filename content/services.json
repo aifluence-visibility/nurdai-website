@@ -1,0 +1,232 @@
+{
+  "services": [
+    {
+      "slug": "ai-visibility-audit",
+      "num": "01",
+      "tr": {
+        "title": "AI Visibility Audit",
+        "metaTitle": "AI Visibility Audit — Markanız AI'da Görünür mü? | Nurdai",
+        "metaDesc": "ChatGPT, Perplexity ve Google AI'da markanızın görünürlük denetimi. AI Visibility audit ile mevcut konumunuzu ölçün, fırsatları haritalayın.",
+        "heroLabel": "AI Visibility",
+        "heroTitle": "Markanız AI sistemlerinde nasıl görünüyor?",
+        "heroText": "AI Visibility Audit, markanızın ChatGPT, Perplexity, Google AI Overviews ve Claude gibi sistemlerde kaynak olarak konumlanma durumunu ölçer.",
+        "intro": "Audit süreci; mevcut görünürlük sinyallerinizi, entity tutarlılığınızı, içerik yapınızı ve rakip konumlandırmanızı bir arada değerlendirir. Sonuç: önceliklendirilmiş bir yol haritası.",
+        "features": [
+          "AI sistemlerinde marka mention analizi",
+          "Kaynak seçim kriterlerine göre gap analizi",
+          "Entity ve semantic sinyal denetimi",
+          "Rakip AI görünürlük karşılaştırması",
+          "Önceliklendirilmiş aksiyon planı"
+        ],
+        "body": "AI arama katmanı hızla büyüyor. Markaların çoğu hâlâ yalnızca klasik SEO metriklerine bakıyor — oysa müşteriler artık ChatGPT ve Perplexity'den de öneri alıyor.\n\nAudit, hangi sorularda göründüğünüzü, hangi içeriklerinizin referans alındığını ve nerelerde boşluk olduğunu netleştirir. Teknik altyapı, içerik mimarisi ve otorite sinyalleri birlikte incelenir."
+      },
+      "en": {
+        "title": "AI Visibility Audit",
+        "metaTitle": "AI Visibility Audit — Is Your Brand Visible in AI? | Nurdai",
+        "metaDesc": "Measure your brand visibility across ChatGPT, Perplexity and Google AI. AI Visibility audit maps gaps and prioritizes your next moves.",
+        "heroLabel": "AI Visibility",
+        "heroTitle": "How does your brand appear in AI systems?",
+        "heroText": "An AI Visibility Audit measures how your brand is positioned as a source in ChatGPT, Perplexity, Google AI Overviews and Claude.",
+        "intro": "The audit evaluates your visibility signals, entity consistency, content structure and competitive positioning together. Output: a prioritized roadmap.",
+        "features": [
+          "Brand mention analysis across AI systems",
+          "Gap analysis against source selection criteria",
+          "Entity and semantic signal review",
+          "Competitive AI visibility benchmark",
+          "Prioritized action plan"
+        ],
+        "body": "The AI discovery layer is expanding fast. Most brands still track classic SEO only — while buyers increasingly ask ChatGPT and Perplexity for recommendations.\n\nThe audit clarifies which queries you appear in, which content gets cited, and where the gaps are. Technical infrastructure, content architecture and authority signals are reviewed together."
+      }
+    },
+    {
+      "slug": "generative-engine-optimization",
+      "num": "02",
+      "tr": {
+        "title": "Generative Engine Optimization (GEO)",
+        "metaTitle": "GEO — Generative Engine Optimization | Nurdai",
+        "metaDesc": "Yapay zeka motorlarında kaynak olarak görünmek için GEO stratejisi. Generative Engine Optimization danışmanlığı — NURDAI.",
+        "heroLabel": "GEO",
+        "heroTitle": "Generative engine'lerde kaynak olun.",
+        "heroText": "GEO, yapay zeka sistemlerinin yanıt üretirken hangi kaynakları seçtiğini anlayarak markanızı o kaynaklar arasına taşır.",
+        "intro": "SEO arama sıralaması için, GEO ise AI yanıtlarında referans gösterilmek için tasarlanır. İçerik yapısı, otorite sinyalleri ve entity tutarlılığı GEO'nun üç temel direğidir.",
+        "features": [
+          "GEO strateji ve konu haritalama",
+          "AI-readable içerik yapılandırması",
+          "Citation-ready içerik formatları",
+          "Perplexity ve ChatGPT optimizasyonu",
+          "GEO performans izleme"
+        ],
+        "body": "Generative Engine Optimization, markanızın üretici AI sistemlerinde güvenilir kaynak olarak konumlanması için uygulanan disiplindir.\n\nGEO; semantic yapı, net tanımlar, veri destekli içerik ve tutarlı entity sinyalleri üzerine kurulur. Klasik SEO ile birlikte çalışır — yerine geçmez."
+      },
+      "en": {
+        "title": "Generative Engine Optimization (GEO)",
+        "metaTitle": "GEO — Generative Engine Optimization | Nurdai",
+        "metaDesc": "GEO strategy to become a cited source in generative AI engines. Generative Engine Optimization consulting by NURDAI.",
+        "heroLabel": "GEO",
+        "heroTitle": "Become a source in generative engines.",
+        "heroText": "GEO moves your brand into the sources AI systems select when generating answers.",
+        "intro": "SEO targets search rankings; GEO targets being referenced in AI responses. Content structure, authority signals and entity consistency are the three pillars.",
+        "features": [
+          "GEO strategy and topic mapping",
+          "AI-readable content architecture",
+          "Citation-ready content formats",
+          "Perplexity and ChatGPT optimization",
+          "GEO performance monitoring"
+        ],
+        "body": "Generative Engine Optimization is the discipline of positioning your brand as a trusted source in generative AI systems.\n\nGEO is built on semantic structure, clear definitions, data-backed content and consistent entity signals. It works alongside classic SEO — it does not replace it."
+      }
+    },
+    {
+      "slug": "ai-search-optimization",
+      "num": "03",
+      "tr": {
+        "title": "AI Search Optimization",
+        "metaTitle": "AI Search Optimization — AI Arama Görünürlüğü | Nurdai",
+        "metaDesc": "ChatGPT Search, Perplexity ve Google AI Overviews için AI arama optimizasyonu. Markanızı yeni arama katmanında konumlandırın.",
+        "heroLabel": "AI Search",
+        "heroTitle": "AI arama katmanında görünür olun.",
+        "heroText": "AI Search Optimization, markanızın yapay zeka destekli arama deneyimlerinde keşfedilmesini sağlayan optimizasyon sürecidir.",
+        "intro": "Google AI Overviews, ChatGPT Search ve Perplexity farklı kaynak seçim mantıkları kullanır. Strateji, her platformun kriterlerine göre yapılandırılır.",
+        "features": [
+          "AI arama platformu analizi",
+          "Query intent haritalama",
+          "Featured source optimizasyonu",
+          "AI Overviews görünürlük stratejisi",
+          "Cross-platform AI search izleme"
+        ],
+        "body": "Arama davranışı değişiyor: kullanıcılar doğrudan AI arayüzlerinden cevap alıyor. Markanız bu cevapların içinde yoksa, görünmezsiniz.\n\nAI Search Optimization; içerik formatı, kaynak güvenilirliği sinyalleri ve topical authority üzerine odaklanır."
+      },
+      "en": {
+        "title": "AI Search Optimization",
+        "metaTitle": "AI Search Optimization — Visibility in AI Search | Nurdai",
+        "metaDesc": "Optimize for ChatGPT Search, Perplexity and Google AI Overviews. Position your brand in the new AI search layer.",
+        "heroLabel": "AI Search",
+        "heroTitle": "Be visible in the AI search layer.",
+        "heroText": "AI Search Optimization helps your brand get discovered in AI-powered search experiences.",
+        "intro": "Google AI Overviews, ChatGPT Search and Perplexity use different source selection logic. Strategy is built per platform.",
+        "features": [
+          "AI search platform analysis",
+          "Query intent mapping",
+          "Featured source optimization",
+          "AI Overviews visibility strategy",
+          "Cross-platform AI search monitoring"
+        ],
+        "body": "Search behavior is shifting: users get answers directly from AI interfaces. If your brand is not inside those answers, you are invisible.\n\nAI Search Optimization focuses on content format, source credibility signals and topical authority."
+      }
+    },
+    {
+      "slug": "semantic-seo",
+      "num": "04",
+      "tr": {
+        "title": "Semantic SEO",
+        "metaTitle": "Semantic SEO — Anlamsal SEO Stratejisi | Nurdai",
+        "metaDesc": "Semantic SEO ile konu otoritesi ve anlamsal içerik mimarisi. AI sistemlerinin anlayabileceği SEO altyapısı — Nurdai.",
+        "heroLabel": "SEO",
+        "heroTitle": "Anlamsal SEO ile konu otoritesi kurun.",
+        "heroText": "Semantic SEO, anahtar kelime odaklı yaklaşımın ötesine geçerek konu kümeleri, entity ilişkileri ve anlamsal içerik mimarisi kurar.",
+        "intro": "AI sistemleri ve modern arama motorları artık kelime eşleşmesinden çok anlam ve bağlam arıyor. Semantic SEO bu yeni gerçeğe göre yapılandırılır.",
+        "features": [
+          "Topical cluster ve pillar stratejisi",
+          "Schema ve structured data mimarisi",
+          "Internal linking ve semantic flow",
+          "AI-readable içerik hiyerarşisi",
+          "Konu otoritesi ölçümleme"
+        ],
+        "body": "Semantic SEO, markanızın belirli konularda derinlemesine otorite kurmasını sağlar. Hem Google hem AI sistemleri, tutarlı ve yapılandırılmış içeriği tercih eder.\n\nPillar-cluster mimarisi, net tanımlar ve entity bağlantıları semantic SEO'nun temelidir."
+      },
+      "en": {
+        "title": "Semantic SEO",
+        "metaTitle": "Semantic SEO — Topical Authority Strategy | Nurdai",
+        "metaDesc": "Build topical authority with semantic content architecture. SEO infrastructure AI systems can understand — Nurdai.",
+        "heroLabel": "SEO",
+        "heroTitle": "Build topical authority with semantic SEO.",
+        "heroText": "Semantic SEO goes beyond keywords to build topic clusters, entity relationships and semantic content architecture.",
+        "intro": "AI systems and modern search engines look for meaning and context, not just keyword matches. Semantic SEO is built for this reality.",
+        "features": [
+          "Topical cluster and pillar strategy",
+          "Schema and structured data architecture",
+          "Internal linking and semantic flow",
+          "AI-readable content hierarchy",
+          "Topical authority measurement"
+        ],
+        "body": "Semantic SEO helps your brand build deep authority on specific topics. Both Google and AI systems prefer consistent, structured content.\n\nPillar-cluster architecture, clear definitions and entity connections are the foundation of semantic SEO."
+      }
+    },
+    {
+      "slug": "entity-seo",
+      "num": "05",
+      "tr": {
+        "title": "Entity SEO",
+        "metaTitle": "Entity SEO — Marka Entity Optimizasyonu | Nurdai",
+        "metaDesc": "Entity SEO ile markanızı arama motorları ve AI sistemleri için tanınabilir bir varlık haline getirin. Knowledge Graph ve entity sinyalleri.",
+        "heroLabel": "SEO",
+        "heroTitle": "Markanızı tanınabilir bir entity yapın.",
+        "heroText": "Entity SEO, markanızın Google Knowledge Graph ve AI sistemlerinde net, tutarlı ve güvenilir bir varlık olarak konumlanmasını sağlar.",
+        "intro": "AI sistemleri markaları entity olarak değerlendirir. Tutarsız isim, eksik schema veya zayıf sameAs sinyalleri görünürlüğü düşürür.",
+        "features": [
+          "Entity audit ve tutarlılık analizi",
+          "Schema.org ve JSON-LD yapılandırması",
+          "Knowledge Panel optimizasyonu",
+          "sameAs ve dijital kimlik haritalama",
+          "Cross-platform entity sinyalleri"
+        ],
+        "body": "Entity SEO, markanızın dijital ekosistemde tek ve tutarlı bir kimlikle temsil edilmesini sağlar.\n\nLinkedIn, web sitesi, Wikipedia, dizinler ve sosyal profiller arasında entity tutarlılığı — AI görünürlüğünün temelidir."
+      },
+      "en": {
+        "title": "Entity SEO",
+        "metaTitle": "Entity SEO — Brand Entity Optimization | Nurdai",
+        "metaDesc": "Make your brand a recognizable entity for search engines and AI. Knowledge Graph and entity signal optimization — Nurdai.",
+        "heroLabel": "SEO",
+        "heroTitle": "Make your brand a recognizable entity.",
+        "heroText": "Entity SEO positions your brand as a clear, consistent and trusted entity in Google Knowledge Graph and AI systems.",
+        "intro": "AI systems evaluate brands as entities. Inconsistent naming, missing schema or weak sameAs signals reduce visibility.",
+        "features": [
+          "Entity audit and consistency analysis",
+          "Schema.org and JSON-LD setup",
+          "Knowledge Panel optimization",
+          "sameAs and digital identity mapping",
+          "Cross-platform entity signals"
+        ],
+        "body": "Entity SEO ensures your brand is represented with a single, consistent identity across the digital ecosystem.\n\nEntity consistency between LinkedIn, website, directories and social profiles is foundational for AI visibility."
+      }
+    },
+    {
+      "slug": "digital-authority",
+      "num": "06",
+      "tr": {
+        "title": "Digital Authority",
+        "metaTitle": "Digital Authority — Dijital Otorite Stratejisi | Nurdai",
+        "metaDesc": "Dijital otorite ve E-E-A-T sinyalleri ile AI ve arama sistemlerinde güvenilir kaynak olun. Digital Authority danışmanlığı — Nurdai.",
+        "heroLabel": "Digital Strategy",
+        "heroTitle": "Dijital otorite inşa edin.",
+        "heroText": "Digital Authority, markanızın arama motorları ve AI sistemleri tarafından güvenilir, referans alınabilir bir kaynak olarak tanınmasını sağlar.",
+        "intro": "Otorite; backlink, içerik derinliği, uzmanlık sinyalleri ve tutarlı dijital varlık ile inşa edilir. AI sistemleri güvenilir kaynakları tercih eder.",
+        "features": [
+          "E-E-A-T sinyal stratejisi",
+          "Thought leadership içerik planı",
+          "Dijital PR ve mention stratejisi",
+          "Otorite metrikleri ve izleme",
+          "AI citation otorite optimizasyonu"
+        ],
+        "body": "Digital Authority, uzun vadeli bir yapılanmadır. Kısa vadeli taktikler yerine sürdürülebilir güven sinyalleri kurulur.\n\nBlog, medya görünürlüğü, uzman içerik ve tutarlı marka sesi — dijital otoritenin yapı taşlarıdır."
+      },
+      "en": {
+        "title": "Digital Authority",
+        "metaTitle": "Digital Authority — Build Trusted Source Status | Nurdai",
+        "metaDesc": "Build digital authority and E-E-A-T signals to become a trusted source in AI and search. Digital Authority consulting — Nurdai.",
+        "heroLabel": "Digital Strategy",
+        "heroTitle": "Build digital authority.",
+        "heroText": "Digital Authority helps your brand be recognized as a trusted, citable source by search engines and AI systems.",
+        "intro": "Authority is built through backlinks, content depth, expertise signals and consistent digital presence. AI systems prefer trusted sources.",
+        "features": [
+          "E-E-A-T signal strategy",
+          "Thought leadership content plan",
+          "Digital PR and mention strategy",
+          "Authority metrics and monitoring",
+          "AI citation authority optimization"
+        ],
+        "body": "Digital Authority is a long-term structure. Sustainable trust signals replace short-term tactics.\n\nBlog, media visibility, expert content and consistent brand voice are the building blocks of digital authority."
+      }
+    }
+  ]
+}
