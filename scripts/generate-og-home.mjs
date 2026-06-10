@@ -14,7 +14,7 @@ const hero = join(root, 'assets/images/og-hero-bg.jpg');
 
 const W = 1200;
 const H = 630;
-const TEXT_W = 580;
+const TEXT_W = 600;
 const IMG_W = W - TEXT_W;
 
 const VARIANTS = {
@@ -38,7 +38,7 @@ const VARIANTS = {
     out: join(root, 'assets/images/og-social-en.jpg'),
     badgeW: 318,
     headline: {
-      lines: ['AI Visibility &', 'Digital Discoverability'],
+      lines: ['AI Visibility &', 'Digital Visibility'],
       size: 50,
       y: 158,
       dy: 56,
@@ -79,11 +79,6 @@ function buildSvg(v) {
       <stop offset="0%" stop-color="#7c5cfc"/>
       <stop offset="100%" stop-color="#38bdf8"/>
     </linearGradient>
-    <linearGradient id="fadeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0f0f17" stop-opacity="1"/>
-      <stop offset="60%" stop-color="#0f0f17" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#0f0f17" stop-opacity="0"/>
-    </linearGradient>
     <filter id="ctaShadow" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#7c5cfc" flood-opacity="0.45"/>
     </filter>
@@ -96,8 +91,8 @@ function buildSvg(v) {
   <!-- Right: hero image composited underneath -->
   <rect x="${TEXT_W}" y="0" width="${IMG_W}" height="${H}" fill="#0a0a14"/>
 
-  <!-- Left panel -->
-  <rect width="${TEXT_W + 48}" height="${H}" fill="url(#bg)"/>
+  <!-- Left panel (hard edge — no overlay on hero) -->
+  <rect width="${TEXT_W}" height="${H}" fill="url(#bg)"/>
   <rect width="${W}" height="5" fill="url(#accent)"/>
   <circle cx="140" cy="560" r="210" fill="url(#glow)"/>
 
@@ -119,9 +114,6 @@ function buildSvg(v) {
     <rect x="52" y="520" width="${v.ctaW}" height="54" rx="27" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
   </g>
   <text x="${52 + v.ctaW / 2}" y="553" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" fill="#ffffff" text-anchor="middle">${esc(v.cta)}</text>
-
-  <!-- Soft fade into hero -->
-  <rect x="${TEXT_W - 72}" y="0" width="120" height="${H}" fill="url(#fadeGrad)"/>
 </svg>`;
 }
 
