@@ -2,18 +2,6 @@
   "cleanUrls": true,
   "redirects": [
     {
-      "source": "/",
-      "has": [{ "type": "host", "value": "www.nurdai.com" }],
-      "destination": "https://nurdai.com/",
-      "permanent": true
-    },
-    {
-      "source": "/:path+",
-      "has": [{ "type": "host", "value": "www.nurdai.com" }],
-      "destination": "https://nurdai.com/:path+",
-      "permanent": true
-    },
-    {
       "source": "/en",
       "destination": "/en/",
       "permanent": true
@@ -22,6 +10,16 @@
       "source": "/admin",
       "destination": "/admin/",
       "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/images/og-social-tr.jpg",
+      "headers": [{ "key": "Accept-Ranges", "value": "none" }]
+    },
+    {
+      "source": "/assets/images/og-social-en.jpg",
+      "headers": [{ "key": "Accept-Ranges", "value": "none" }]
     }
   ],
   "functions": {
