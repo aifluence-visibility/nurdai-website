@@ -19,7 +19,7 @@ const IMG_W = W - TEXT_W;
 
 const VARIANTS = {
   tr: {
-    out: join(root, 'assets/images/og-home.jpg'),
+    out: join(root, 'assets/images/og-social-tr.jpg'),
     badgeW: 318,
     headline: {
       lines: ['AI Visibility &', 'Dijital Görünürlük'],
@@ -35,7 +35,7 @@ const VARIANTS = {
     ctaW: 248,
   },
   en: {
-    out: join(root, 'assets/images/og-home-en.jpg'),
+    out: join(root, 'assets/images/og-social-en.jpg'),
     badgeW: 318,
     headline: {
       lines: ['AI Visibility &', 'Digital Discoverability'],

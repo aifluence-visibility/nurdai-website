@@ -52,8 +52,8 @@
   function buildBlogArticleHtml(post, lang) {
     const isEn = lang === 'en';
     const ogImage = isEn
-      ? 'https://nurdai.com/assets/images/og-home-en.jpg'
-      : 'https://nurdai.com/assets/images/og-home.jpg';
+      ? 'https://nurdai.com/assets/images/og-social-en.jpg'
+      : 'https://nurdai.com/assets/images/og-social-tr.jpg';
     const ogImageAlt = isEn
       ? 'Nurdai — AI Visibility & Digital Discoverability'
       : 'Nurdai — AI Visibility & Dijital Görünürlük Danışmanlığı';

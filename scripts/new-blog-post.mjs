@@ -58,13 +58,13 @@ const html = `<!DOCTYPE html>
 <meta property="og:title" content="${title} — Nurdai">
 <meta property="og:description" content="${excerpt}">
 <meta property="og:url" content="https://nurdai.com/blog/${slug}">
-<meta property="og:image" content="https://nurdai.com/assets/images/og-home.jpg">
+<meta property="og:image" content="https://nurdai.com/assets/images/og-social-tr.jpg">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:site_name" content="Nurdai">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${title} — Nurdai">
 <meta name="twitter:description" content="${excerpt}">
-<meta name="twitter:image" content="https://nurdai.com/assets/images/og-home.jpg">
+<meta name="twitter:image" content="https://nurdai.com/assets/images/og-social-tr.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
