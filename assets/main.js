@@ -69,28 +69,30 @@ function closeMenu() {
 (function initCursor() {
   const cur = document.getElementById('cur');
   const curl = document.getElementById('curl');
-  if (!cur || !curl) return;
+  if (!cur || !curl || !window.matchMedia('(pointer: fine)').matches) return;
+
   let mx = 0, my = 0, lx = 0, ly = 0;
+  const hoverSel = 'a, button, .port-card, .svc-group, .media-card, .blog-card, .blog-cat-btn, .pf-btn, .btn-p, .btn-s';
+
   document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
+    mx = e.clientX;
+    my = e.clientY;
     cur.style.transform = `translate(${mx - 3.5}px, ${my - 3.5}px)`;
   });
   (function animate() {
-    lx += (mx - lx) * 0.1;
-    ly += (my - ly) * 0.1;
-    curl.style.transform = `translate(${lx - 14}px, ${ly - 14}px)`;
+    lx += (mx - lx) * 0.12;
+    ly += (my - ly) * 0.12;
+    const size = curl.classList.contains('hover') ? 18 : 14;
+    curl.style.transform = `translate(${lx - size}px, ${ly - size}px)`;
     requestAnimationFrame(animate);
   })();
-  document.addEventListener('mouseover', e => {
-    if (e.target.closest('a, button, .port-card, .svc-group, .media-card')) {
-      cur.style.transform += ' scale(3)';
-      curl.style.width = '46px'; curl.style.height = '46px';
-    }
+
+  document.addEventListener('pointerover', e => {
+    if (e.target.closest(hoverSel)) curl.classList.add('hover');
   });
-  document.addEventListener('mouseout', e => {
-    if (e.target.closest('a, button, .port-card, .svc-group, .media-card')) {
-      curl.style.width = '28px'; curl.style.height = '28px';
-    }
+  document.addEventListener('pointerout', e => {
+    const rel = e.relatedTarget;
+    if (!rel || !rel.closest(hoverSel)) curl.classList.remove('hover');
   });
 })();
 
