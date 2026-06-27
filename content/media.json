@@ -1,0 +1,38 @@
+{
+  "sections": {
+    "featured": { "enabled": true, "dataKey": "featured" },
+    "podcast": { "enabled": false, "items": [] },
+    "videos": { "enabled": false, "items": [] },
+    "guestArticles": { "enabled": false, "items": [] },
+    "interviews": { "enabled": false, "items": [] },
+    "pressMentions": { "enabled": false, "items": [] }
+  },
+  "featured": [
+    {
+      "id": "simplysansu-new-seo-2026",
+      "publisher": "SimplySansu",
+      "publisherUrl": "https://simplysansu.com",
+      "logo": "https://www.google.com/s2/favicons?domain=simplysansu.com&sz=128",
+      "title": "The New SEO: Why Being Understood by AI Matters More Than Ranking #1",
+      "titleTr": "Yeni SEO: AI Tarafından Anlaşılmak #1 Sırada Olmaktan Daha Önemli",
+      "url": "https://simplysansu.com/the-new-seo-why-being-understood-by-ai-matters-more-than-ranking-1/",
+      "date": "2026-06-01",
+      "dateLabel": { "tr": "Haziran 2026", "en": "June 2026" },
+      "excerpt": {
+        "en": "This article explores why AI understanding is becoming more important than traditional search rankings.",
+        "tr": "Bu makale, AI tarafından anlaşılmanın geleneksel arama sıralamalarından neden daha önemli hale geldiğini inceliyor."
+      },
+      "type": "article",
+      "author": "Nurdan Çetin",
+      "about": ["AI Visibility", "SEO", "Generative Engine Optimization"]
+    }
+  ],
+  "social": [
+    { "name": "Instagram", "handle": { "tr": "Günlük notlar", "en": "@hellonurdai" }, "icon": "📸", "url": "https://www.instagram.com/hellonurdai", "color": "#E4405F" },
+    { "name": "LinkedIn", "handle": { "tr": "Strateji yazıları", "en": "Strategy posts" }, "icon": "💼", "url": "https://linkedin.com/company/nurdai", "color": "#0A66C2" },
+    { "name": "YouTube", "handle": { "tr": "Eğitim videoları", "en": "@Hellonurdai" }, "icon": "▶", "url": "https://youtube.com/@Hellonurdai", "color": "#FF0000" },
+    { "name": "TikTok", "handle": { "tr": "Kısa AI içerikleri", "en": "@hellonurdai" }, "icon": "🎵", "url": "https://tiktok.com/@hellonurdai", "color": "#00F2EA" },
+    { "name": "Substack", "handle": { "tr": "Derinlemesine yazılar", "en": "Long-form writing" }, "icon": "✉️", "url": "https://hellonurdai.substack.com", "color": "#FF6719" },
+    { "name": "Clutch", "handle": { "tr": "Profil & referanslar", "en": "Profile & reviews" }, "icon": "⭐", "url": "https://clutch.co/profile/nurdai", "color": "#FF3D2E" }
+  ]
+}
