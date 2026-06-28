@@ -149,7 +149,8 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap"></noscript>
 <link rel="stylesheet" href="/assets/style.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3SJMSLVLB"></script>
 <script>
@@ -214,7 +215,7 @@
       <h2 id="featured-heading" data-media-label="featured">Featured In</h2>
       <p data-media-label="featuredSub">International articles, interviews and publications.</p>
     </div>
-    <div id="media-featured-list" class="media-featured-list" role="list"></div>
+    <div id="media-featured-list" class="media-featured-list"></div>
   </div>
 </section>
 
@@ -253,9 +254,9 @@
 
 <footer role="contentinfo"></footer>
 
-<script src="/assets/site-footer.js"></script>
-<script src="/assets/main.js"></script>
-<script src="/assets/media-center.js"></script>
-<script>loadMediaCenter('en');</script>
+<script src="/assets/site-footer.js" defer></script>
+<script src="/assets/main.js" defer></script>
+<script src="/assets/media-center.js" defer></script>
+<script defer>loadMediaCenter('en');</script>
 </body>
 </html>

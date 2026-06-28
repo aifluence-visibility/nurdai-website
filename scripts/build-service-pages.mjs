@@ -122,7 +122,9 @@ function buildPage(svc, lang) {
   "serviceType": "${esc(loc.heroLabel)}"
 }</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap"></noscript>
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
@@ -131,7 +133,7 @@ function buildPage(svc, lang) {
 <nav class="nav" id="main-nav">
   <div class="con nav-in">
     <a href="${home}" class="logo logo-img-link" aria-label="${logoAria}"><img src="/assets/images/nurdai-logo-nav.png" alt="Nurdai" class="logo-img" width="1024" height="798"></a>
-    <ul class="nav-links" role="navigation">${nav}
+    <ul class="nav-links">${nav}
     </ul>
     <div class="nav-r">
       ${langSw}
@@ -182,8 +184,8 @@ function buildPage(svc, lang) {
 </section>
 </main>
 <footer role="contentinfo"></footer>
-<script src="/assets/site-footer.js"></script>
-<script src="/assets/main.js"></script>
+<script src="/assets/site-footer.js" defer></script>
+<script src="/assets/main.js" defer></script>
 </body>
 </html>`;
 }

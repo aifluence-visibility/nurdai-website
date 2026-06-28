@@ -65,6 +65,35 @@ function closeMenu() {
   }
 })();
 
+// ── A11Y + LIGHTHOUSE FIXES ──
+(function initA11y() {
+  function run() {
+    document.querySelectorAll('.nav-links[role="navigation"]').forEach(el => el.removeAttribute('role'));
+    document.querySelectorAll('.ham').forEach(el => {
+      if (el.tagName === 'BUTTON') return;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = el.className;
+      const label = el.getAttribute('aria-label');
+      if (label) btn.setAttribute('aria-label', label);
+      btn.innerHTML = el.innerHTML;
+      btn.addEventListener('click', toggleMenu);
+      el.replaceWith(btn);
+    });
+    document.querySelectorAll('.logo-img-link[aria-label] img').forEach(img => { img.alt = ''; });
+    document.querySelectorAll('.footer-social a[aria-label]').forEach(a => {
+      if (!a.querySelector('.sr-only')) {
+        const span = document.createElement('span');
+        span.className = 'sr-only';
+        span.textContent = a.getAttribute('aria-label') || '';
+        a.appendChild(span);
+      }
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+  else run();
+})();
+
 // ── CUSTOM CURSOR ──
 (function initCursor() {
   const cur = document.getElementById('cur');

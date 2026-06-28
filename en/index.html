@@ -139,7 +139,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap"></noscript>
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -195,10 +196,10 @@
   </div>
   <div class="con">
     <div class="hero-con">
-      <div class="hero-badge" role="note">
-        <div class="bdot" aria-hidden="true"></div>
+      <p class="hero-badge">
+        <span class="bdot" aria-hidden="true"></span>
         Strategic Digital Visibility
-      </div>
+      </p>
       <h1>Your brand, recommended by<br />both humans and <span class="highlight-ai">AI</span>.</h1>
       <p class="hero-sub">We structure your brand's digital discoverability for search engines, social platforms and the new generation of AI systems.</p>
       <div class="hero-btns">
@@ -468,7 +469,7 @@
   </div>
 </footer>
 
-<script src="/assets/site-footer.js"></script>
-<script src="/assets/main.js"></script>
+<script src="/assets/site-footer.js" defer></script>
+<script src="/assets/main.js" defer></script>
 </body>
 </html>

@@ -21,16 +21,6 @@
 <meta name="twitter:description" content="AI sistemleri markanızı tanımıyorsa, görünmüyorsunuz demektir. Yeni nesil dijital görünürlük altyapısı — NURDAI.">
 <meta name="twitter:image" content="https://nurdai.com/assets/images/og-social-tr.jpg">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J3SJMSLVLB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-J3SJMSLVLB');
-</script>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
@@ -113,8 +103,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap"></noscript>
+<link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
@@ -169,17 +160,17 @@
   </div>
   <div class="con">
     <div class="hero-con">
-      <div class="hero-badge" role="note">
-        <div class="bdot" aria-hidden="true"></div>
+      <p class="hero-badge">
+        <span class="bdot" aria-hidden="true"></span>
         Stratejik Dijital Görünürlük
-      </div>
+      </p>
       <h1>Markanı hem insanlar hem <span class="gtxt">yapay zeka</span> önersin.</h1>
       <p class="hero-sub">Markanızın dijital görünürlüğünü arama motorları, sosyal platformlar ve yeni nesil yapay zeka sistemleri için yapılandırıyoruz.</p>
       <div class="hero-btns">
         <a href="hizmetler" class="btn-p">Hizmetleri İncele</a>
         <a href="yapay-zeka-gorunurlugu" class="btn-s">Yapay Zeka Görünürlüğü</a>
       </div>
-      <p style="margin-top:24px;font-size:.79rem;color:var(--txt3)">Kurucusu: <a href="hakkimda" style="color:var(--a1);text-decoration:none;font-weight:600">Nurdan Çetin</a> — AI Visibility &amp; GEO Stratejisti</p>
+      <p style="margin-top:24px;font-size:.79rem;color:var(--txt2)">Kurucusu: <a href="hakkimda" style="color:#c4b5fd;text-decoration:none;font-weight:600">Nurdan Çetin</a> — AI Visibility &amp; GEO Stratejisti</p>
     </div>
   </div>
   <div class="hero-scroll" aria-hidden="true"><span>Keşfet</span><div class="scroll-line"></div></div>
@@ -395,10 +386,16 @@
   </div>
 </footer>
 
-<script src="/assets/site-footer.js"></script>
-<script src="/assets/main.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J3SJMSLVLB"></script>
 <script>
-  // Load portfolio from data.json (Claude Code will fill real images)
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J3SJMSLVLB');
+</script>
+<script src="/assets/site-footer.js" defer></script>
+<script src="/assets/main.js" defer></script>
+<script defer>
   loadPortfolio('home-portfolio', 3);
 </script>
 </body>
