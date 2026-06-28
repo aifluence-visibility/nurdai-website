@@ -16,7 +16,7 @@
     tr: `<div class="con">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" class="logo">NURD<span>AI</span></a>
+        <a href="/" class="logo logo-img-link" aria-label="Nurdai"><img src="/assets/images/nurdai-logo.png" alt="Nurdai" class="logo-img logo-img--footer" width="1024" height="1024"></a>
         <p>Markaların dijital görünürlüğünü arama motorları ve yapay zeka sistemleri için yapılandıran stratejik stüdyo.</p>
         <div class="footer-tagline">Exploring digital visibility in the AI era.</div>
         <div class="footer-social" aria-label="Sosyal medya bağlantıları">
@@ -62,7 +62,7 @@
     en: `<div class="con">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/en/" class="logo">NURD<span>AI</span></a>
+        <a href="/en/" class="logo logo-img-link" aria-label="Nurdai"><img src="/assets/images/nurdai-logo.png" alt="Nurdai" class="logo-img logo-img--footer" width="1024" height="1024"></a>
         <p>Strategic studio structuring brands' digital visibility for search engines and AI systems.</p>
         <div class="footer-tagline">Exploring digital visibility in the AI era.</div>
         <div class="footer-social" aria-label="Social media links">

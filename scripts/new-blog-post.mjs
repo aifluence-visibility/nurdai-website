@@ -48,6 +48,8 @@ const html = `<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <title>${title} — Nurdai</title>
 <meta name="description" content="${excerpt}">
 <meta name="author" content="Nurdan — Nurdai">
@@ -96,7 +98,7 @@ const html = `<!DOCTYPE html>
 <div class="curl" id="curl"></div>
 <nav class="nav" id="main-nav">
   <div class="con nav-in">
-    <a href="/" class="logo" aria-label="Nurdai Ana Sayfa">NURD<span>AI</span></a>
+    <a href="/" class="logo logo-img-link" aria-label="Nurdai Ana Sayfa"><img src="/assets/images/nurdai-logo-nav.png" alt="Nurdai" class="logo-img" width="1024" height="798"></a>
     <ul class="nav-links" role="navigation" aria-label="Ana navigasyon">
       <li><a href="/">Ana Sayfa</a></li>
       <li><a href="/yapay-zeka-gorunurlugu">Yapay Zeka Görünürlüğü</a></li>

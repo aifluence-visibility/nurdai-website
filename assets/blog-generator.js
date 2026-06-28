@@ -103,6 +103,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <title>${esc(title)} — Nurdai</title>
 <meta name="description" content="${esc(excerpt)}">
 <meta name="author" content="Nurdan — Nurdai">
@@ -144,7 +146,7 @@
 <div class="curl" id="curl"></div>
 <nav class="nav" id="main-nav">
   <div class="con nav-in">
-    <a href="${isEn ? '/en/' : '/'}" class="logo" aria-label="Nurdai">NURD<span>AI</span></a>
+    <a href="${isEn ? '/en/' : '/'}" class="logo logo-img-link" aria-label="Nurdai"><img src="/assets/images/nurdai-logo-nav.png" alt="Nurdai" class="logo-img" width="1024" height="798"></a>
     <ul class="nav-links" role="navigation">${navTr}
     </ul>
     <div class="nav-r">

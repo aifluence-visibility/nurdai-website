@@ -38,6 +38,9 @@ h1,h2,h3,h4{font-family:'Syne',sans-serif;line-height:1.1;letter-spacing:-.015em
 .nav-in{display:flex;align-items:center;justify-content:space-between;width:100%}
 .logo{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;text-decoration:none;color:var(--txt);letter-spacing:-.02em}
 .logo span{background:var(--gtxt);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo-img-link{display:inline-flex;align-items:center;line-height:0;text-decoration:none;flex-shrink:0}
+.logo-img{height:46px;width:auto;display:block;object-fit:contain}
+.logo-img--footer{height:88px;width:auto}
 .nav-links{display:flex;gap:28px;list-style:none}
 .nav-links a{color:var(--txt2);text-decoration:none;font-size:.855rem;font-weight:500;transition:color .2s;letter-spacing:.015em}
 .nav-links a:hover,.nav-links a.active{color:var(--txt)}
