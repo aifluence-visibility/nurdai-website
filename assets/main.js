@@ -373,3 +373,18 @@ async function loadBlog(containerId, lang) {
     filterBlog(initialCat, null);
   } catch (e) { console.warn('Blog yüklenemedi', e); }
 }
+
+window.loadBlog = loadBlog;
+window.loadPortfolio = loadPortfolio;
+window.filterBlog = filterBlog;
+
+(function autoInitDataSections() {
+  const blogGrid = document.getElementById('blog-grid');
+  if (blogGrid) loadBlog('blog-grid', blogLang());
+
+  const homePortfolio = document.getElementById('home-portfolio');
+  if (homePortfolio) loadPortfolio('home-portfolio', 3);
+
+  const portfolioGrid = document.getElementById('portfolio-grid');
+  if (portfolioGrid) loadPortfolio('portfolio-grid');
+})();

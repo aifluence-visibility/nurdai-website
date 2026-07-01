@@ -87,3 +87,12 @@ async function loadMediaCenter(lang) {
     if (L[key]) el.textContent = L[key];
   });
 }
+
+window.loadMediaCenter = loadMediaCenter;
+
+(function autoInitMedia() {
+  if (document.getElementById('media-featured-list') || document.getElementById('media-social-grid')) {
+    const lang = document.documentElement.lang === 'en' || location.pathname.startsWith('/en') ? 'en' : 'tr';
+    loadMediaCenter(lang);
+  }
+})();

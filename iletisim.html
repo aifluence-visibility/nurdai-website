@@ -33,15 +33,36 @@
 <meta property="og:site_name" content="Nurdai">
 <script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "İletişim",
-  "description": "AI Visibility ve dijital görünürlük danışmanlığı için iletişime geç.",
-  "url": "https://nurdai.com/iletisim",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "Nurdai",
-    "url": "https://nurdai.com"
-  }
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "name": "İletişim",
+      "description": "AI Visibility ve dijital görünürlük danışmanlığı için iletişime geç.",
+      "url": "https://nurdai.com/iletisim",
+      "inLanguage": "tr-TR",
+      "isPartOf": { "@id": "https://nurdai.com/#website" },
+      "about": { "@id": "https://nurdai.com/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://nurdai.com/#organization",
+      "name": "Nurdai",
+      "url": "https://nurdai.com",
+      "telephone": "+905325788737",
+      "email": "hello@nurdai.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bodrum",
+        "addressRegion": "Muğla",
+        "addressCountry": "TR"
+      },
+      "sameAs": [
+        "https://www.google.com/search?kgmid=/g/11z8tkbskk",
+        "https://share.google/1g3yrdgRt2Ufk8BdD",
+        "https://linkedin.com/company/nurdai"
+      ]
+    }
+  ]
 }</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,6 +124,13 @@
           <div>
             <div class="ci-name">LinkedIn</div>
             <div class="ci-val"><a href="https://linkedin.com/company/nurdai" target="_blank" rel="noopener" style="color:var(--a1);text-decoration:none">linkedin.com/company/nurdai</a></div>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-ico" style="font-size:.85rem;font-weight:700">G</div>
+          <div>
+            <div class="ci-name">Google Business</div>
+            <div class="ci-val"><a href="https://share.google/1g3yrdgRt2Ufk8BdD" target="_blank" rel="noopener me" style="color:var(--a1);text-decoration:none">Nurdai — Google'da görüntüle</a></div>
           </div>
         </div>
         <div class="ci-item">

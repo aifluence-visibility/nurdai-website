@@ -61,3 +61,12 @@ async function loadFutureOfAiSearch(lang) {
     console.warn('Insights load failed', e);
   }
 }
+
+window.loadFutureOfAiSearch = loadFutureOfAiSearch;
+
+(function autoInitInsights() {
+  if (document.getElementById('foas-articles')) {
+    const lang = document.documentElement.lang === 'en' || location.pathname.startsWith('/en') ? 'en' : 'tr';
+    loadFutureOfAiSearch(lang);
+  }
+})();

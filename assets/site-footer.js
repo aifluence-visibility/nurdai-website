@@ -21,6 +21,7 @@
         <div class="footer-tagline">Exploring digital visibility in the AI era.</div>
         <div class="footer-social" aria-label="Sosyal medya bağlantıları">
           <a href="https://linkedin.com/company/nurdai" target="_blank" rel="noopener" aria-label="LinkedIn" style="font-size:.68rem;font-weight:700">in</a>
+          <a href="https://share.google/1g3yrdgRt2Ufk8BdD" target="_blank" rel="noopener" aria-label="Google Business">G</a>
           <a href="https://youtube.com/@Hellonurdai" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
           <a href="https://www.instagram.com/hellonurdai" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
         </div>
@@ -76,6 +77,7 @@
         <div class="footer-tagline">Exploring digital visibility in the AI era.</div>
         <div class="footer-social" aria-label="Social media links">
           <a href="https://linkedin.com/company/nurdai" target="_blank" rel="noopener" aria-label="LinkedIn" style="font-size:.68rem;font-weight:700">in</a>
+          <a href="https://share.google/1g3yrdgRt2Ufk8BdD" target="_blank" rel="noopener" aria-label="Google Business">G</a>
           <a href="https://youtube.com/@Hellonurdai" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
           <a href="https://www.instagram.com/hellonurdai" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
         </div>

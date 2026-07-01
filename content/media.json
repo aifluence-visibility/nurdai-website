@@ -28,6 +28,7 @@
     }
   ],
   "social": [
+    { "name": "Google Business", "handle": { "tr": "İşletme profili", "en": "Business profile" }, "icon": "📍", "url": "https://share.google/1g3yrdgRt2Ufk8BdD", "color": "#4285F4" },
     { "name": "Instagram", "handle": { "tr": "Günlük notlar", "en": "@hellonurdai" }, "icon": "📸", "url": "https://www.instagram.com/hellonurdai", "color": "#E4405F" },
     { "name": "LinkedIn", "handle": { "tr": "Strateji yazıları", "en": "Strategy posts" }, "icon": "💼", "url": "https://linkedin.com/company/nurdai", "color": "#0A66C2" },
     { "name": "YouTube", "handle": { "tr": "Eğitim videoları", "en": "@Hellonurdai" }, "icon": "▶", "url": "https://youtube.com/@Hellonurdai", "color": "#FF0000" },
