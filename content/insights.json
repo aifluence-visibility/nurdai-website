@@ -1,0 +1,94 @@
+{
+  "publications": {
+    "futureOfAiSearch": {
+      "enabled": true,
+      "slug": "future-of-ai-search",
+      "linkedinNewsletterUrl": "https://www.linkedin.com/newsletters/future-of-ai-search-7476605211265064960/",
+      "substackUrl": "https://hellonurdai.substack.com",
+      "type": "newsletter",
+      "status": "active"
+    },
+    "aiSearchLab": {
+      "enabled": false,
+      "slug": "ai-search-lab",
+      "type": "experiments",
+      "status": "comingSoon"
+    },
+    "aiVisibilityClinic": {
+      "enabled": false,
+      "slug": "ai-visibility-clinic",
+      "type": "analysis",
+      "status": "comingSoon"
+    },
+    "aiSearchNews": {
+      "enabled": false,
+      "slug": "ai-search-news",
+      "type": "news",
+      "status": "comingSoon"
+    },
+    "research": {
+      "enabled": false,
+      "slug": "research",
+      "type": "research",
+      "status": "comingSoon"
+    },
+    "frameworks": {
+      "enabled": false,
+      "slug": "frameworks",
+      "type": "methodology",
+      "status": "comingSoon",
+      "items": [
+        "AI Visibility Score™",
+        "AI Trust Score™",
+        "AI Entity Map™"
+      ]
+    }
+  },
+  "futureOfAiSearchArticles": [
+    {
+      "id": "ai-visibility-seo-fark",
+      "source": "blog",
+      "slug": "ai-visibility-seo-fark",
+      "date": "2026-05-08",
+      "url": { "tr": "/blog/ai-visibility-seo-fark", "en": "/blog/ai-visibility-seo-fark" },
+      "title": {
+        "tr": "AI Visibility ile SEO Arasındaki Fark",
+        "en": "The Difference Between AI Visibility and SEO"
+      },
+      "excerpt": {
+        "tr": "Arama motorlarında sıralanmak ile yapay zeka sistemlerinde referans gösterilmek aynı şey değil.",
+        "en": "Ranking on search engines and being cited by AI systems are not the same thing."
+      }
+    },
+    {
+      "id": "chatgpt-perplexity-marka-gorunurlugu",
+      "source": "blog",
+      "slug": "chatgpt-perplexity-marka-gorunurlugu",
+      "date": "2026-04-24",
+      "url": { "tr": "/blog/chatgpt-perplexity-marka-gorunurlugu", "en": "/blog/chatgpt-perplexity-marka-gorunurlugu" },
+      "title": {
+        "tr": "ChatGPT ve Perplexity'de Marka Görünürlüğü Nasıl Sağlanır?",
+        "en": "How to Build Brand Visibility on ChatGPT and Perplexity"
+      },
+      "excerpt": {
+        "tr": "AI arama motorları kaynak seçerken hangi kriterleri kullanıyor? 5 adımlı pratik strateji.",
+        "en": "Which criteria do AI search systems use when selecting sources? A 5-step practical strategy."
+      }
+    },
+    {
+      "id": "geo-nedir-generative-engine-optimization",
+      "source": "blog",
+      "slug": "geo-nedir-generative-engine-optimization",
+      "date": "2026-04-10",
+      "url": { "tr": "/blog/geo-nedir-generative-engine-optimization", "en": "/blog/geo-nedir-generative-engine-optimization" },
+      "title": {
+        "tr": "GEO Nedir? Generative Engine Optimization Rehberi",
+        "en": "What Is GEO? A Guide to Generative Engine Optimization"
+      },
+      "excerpt": {
+        "tr": "Yapay zeka sistemlerinin içerikleri nasıl seçip sunduğunu anlayan yeni bir disiplin.",
+        "en": "A new discipline focused on how generative AI systems select and present content."
+      }
+    }
+  ]
+}

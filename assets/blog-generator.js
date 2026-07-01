@@ -71,8 +71,6 @@
     const altCanon = (isEn ? 'https://nurdai.com/blog/' : 'https://nurdai.com/en/blog/') + slug;
     const assetPrefix = isEn ? '../../' : '../';
     const blogHome = isEn ? '/en/blog' : '/blog';
-    const langSwitch = isEn ? `/blog/${slug}` : `/en/blog/${slug}`;
-    const langLabel = isEn ? 'TR' : 'EN';
     const contact = isEn ? '/en/contact' : '/iletisim';
     const ctaTitle = isEn ? "Let's talk about your brand's visibility" : 'Markanızın görünürlüğünü konuşalım';
     const ctaText = isEn ? 'Get in touch for AI visibility and digital strategy.' : 'AI görünürlüğü ve dijital strateji için iletişime geçin.';
@@ -80,22 +78,6 @@
     const backLabel = isEn ? '← Back to Blog' : '← Blog\'a Dön';
     const htmlLang = isEn ? 'en' : 'tr';
     const ogLocale = isEn ? 'en_US' : 'tr_TR';
-
-    const navTr = !isEn ? `
-      <li><a href="/">Ana Sayfa</a></li>
-      <li><a href="/yapay-zeka-gorunurlugu">Yapay Zeka Görünürlüğü</a></li>
-      <li><a href="/hizmetler">Hizmetler</a></li>
-      <li><a href="/portfolyo">Portfolyo</a></li>
-      <li><a href="/hakkimda">Hakkımda</a></li>
-      <li><a href="/medya">Medya</a></li>
-      <li><a href="/blog" class="active">Blog</a></li>` : `
-      <li><a href="/en/">Home</a></li>
-      <li><a href="/en/ai-visibility">AI Visibility</a></li>
-      <li><a href="/en/services">Services</a></li>
-      <li><a href="/en/portfolio">Portfolio</a></li>
-      <li><a href="/en/about">About</a></li>
-      <li><a href="/en/media">Media</a></li>
-      <li><a href="/en/blog" class="active">Blog</a></li>`;
 
     return `<!DOCTYPE html>
 <html lang="${htmlLang}" data-theme="dark">
@@ -146,19 +128,10 @@
 <body>
 <div class="cur" id="cur"></div>
 <div class="curl" id="curl"></div>
-<nav class="nav" id="main-nav">
-  <div class="con nav-in">
-    <a href="${isEn ? '/en/' : '/'}" class="logo logo-img-link" aria-label="Nurdai"><img src="/assets/images/nurdai-logo-nav.png" alt="Nurdai" class="logo-img" width="1024" height="798"></a>
-    <ul class="nav-links">${navTr}
-    </ul>
-    <div class="nav-r">
-      <a href="${langSwitch}" class="lang-sw" aria-label="${langLabel}">${langLabel}</a>
-      <button class="tgl" onclick="toggleTheme()" aria-label="Theme"><span id="theme-icon">☀️</span></button>
-      <a href="${contact}" class="nav-cta">${ctaBtn}</a>
-      <div class="ham" onclick="toggleMenu()" aria-label="Menu" role="button"><span></span><span></span><span></span></div>
-    </div>
-  </div>
-</nav>
+<!-- NAV -->
+<nav class="nav" id="main-nav"></nav>
+<div class="mob-menu" id="mob-menu"></div>
+<script src="/assets/site-nav.js"></script>
 <main>
 <section class="blog-article-hero rv">
   <div class="con">

@@ -98,26 +98,10 @@ const html = `<!DOCTYPE html>
 <body>
 <div class="cur" id="cur"></div>
 <div class="curl" id="curl"></div>
-<nav class="nav" id="main-nav">
-  <div class="con nav-in">
-    <a href="/" class="logo logo-img-link" aria-label="Nurdai Ana Sayfa"><img src="/assets/images/nurdai-logo-nav.png" alt="Nurdai" class="logo-img" width="1024" height="798"></a>
-    <ul class="nav-links" role="navigation" aria-label="Ana navigasyon">
-      <li><a href="/">Ana Sayfa</a></li>
-      <li><a href="/yapay-zeka-gorunurlugu">Yapay Zeka Görünürlüğü</a></li>
-      <li><a href="/hizmetler">Hizmetler</a></li>
-      <li><a href="/portfolyo">Portfolyo</a></li>
-      <li><a href="/hakkimda">Hakkımda</a></li>
-      <li><a href="/medya">Medya</a></li>
-      <li><a href="/blog" class="active">Blog</a></li>
-    </ul>
-    <div class="nav-r">
-      <a href="/en/" class="lang-sw" aria-label="English">EN</a>
-      <button class="tgl" onclick="toggleTheme()" aria-label="Tema değiştir"><span id="theme-icon">☀️</span></button>
-      <a href="/iletisim" class="nav-cta">İletişime Geç</a>
-      <div class="ham" onclick="toggleMenu()" aria-label="Menü" role="button"><span></span><span></span><span></span></div>
-    </div>
-  </div>
-</nav>
+<!-- NAV -->
+<nav class="nav" id="main-nav"></nav>
+<div class="mob-menu" id="mob-menu"></div>
+<script src="/assets/site-nav.js"></script>
 <main>
 <section class="page-hero rv">
   <div class="con">
@@ -144,7 +128,7 @@ const html = `<!DOCTYPE html>
 </section>
 </main>
 <footer role="contentinfo"><div class="con"><div class="footer-bot"><span>© 2026 Nurdai</span></div></div></footer>
-<script src="../assets/main.js"></script>
+<script src="../assets/main.js" defer></script>
 </body>
 </html>
 `;

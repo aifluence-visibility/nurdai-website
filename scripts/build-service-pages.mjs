@@ -35,41 +35,6 @@ function buildPage(svc, lang) {
     : 'https://nurdai.com/assets/images/og-social-tr.jpg';
   const ogLocale = isEn ? 'en_US' : 'tr_TR';
 
-  const nav = isEn ? `
-      <li><a href="/en/">Home</a></li>
-      <li><a href="/en/ai-visibility">AI Visibility</a></li>
-      <li><a href="/en/services" class="active">Services</a></li>
-      <li><a href="/en/portfolio">Portfolio</a></li>
-      <li><a href="/en/about">About</a></li>
-      <li><a href="/en/media">Media</a></li>
-      <li><a href="/en/blog">Blog</a></li>` : `
-      <li><a href="/">Ana Sayfa</a></li>
-      <li><a href="yapay-zeka-gorunurlugu">Yapay Zeka Görünürlüğü</a></li>
-      <li><a href="hizmetler" class="active">Hizmetler</a></li>
-      <li><a href="portfolyo">Portfolyo</a></li>
-      <li><a href="hakkimda">Hakkımda</a></li>
-      <li><a href="medya">Medya</a></li>
-      <li><a href="/blog">Blog</a></li>`;
-
-  const mobNav = isEn ? `
-  <a href="/en/" onclick="closeMenu()">Home</a>
-  <a href="/en/ai-visibility" onclick="closeMenu()">AI Visibility</a>
-  <a href="/en/services" onclick="closeMenu()">Services</a>
-  <a href="/en/portfolio" onclick="closeMenu()">Portfolio</a>
-  <a href="/en/about" onclick="closeMenu()">About</a>
-  <a href="/en/media" onclick="closeMenu()">Media</a>
-  <a href="/en/blog" onclick="closeMenu()">Blog</a>
-  <a href="/en/contact" onclick="closeMenu()">Get in Touch</a>` : `
-  <a href="/" onclick="closeMenu()">Ana Sayfa</a>
-  <a href="yapay-zeka-gorunurlugu" onclick="closeMenu()">Yapay Zeka Görünürlüğü</a>
-  <a href="hizmetler" onclick="closeMenu()">Hizmetler</a>
-  <a href="portfolyo" onclick="closeMenu()">Portfolyo</a>
-  <a href="hakkimda" onclick="closeMenu()">Hakkımda</a>
-  <a href="medya" onclick="closeMenu()">Medya</a>
-  <a href="/blog" onclick="closeMenu()">Blog</a>
-  <a href="iletisim" onclick="closeMenu()">İletişime Geç</a>`;
-
-  const langSw = isEn ? `<a href="/${slug}" class="lang-sw" aria-label="Türkçe">TR</a>` : `<a href="/en/${slug}" class="lang-sw" aria-label="English">EN</a>`;
   const contact = isEn ? '/en/contact' : 'iletisim';
   const contactLabel = isEn ? 'Get in Touch' : 'İletişime Geç';
   const servicesOverview = isEn ? '/en/services' : 'hizmetler';
@@ -78,8 +43,6 @@ function buildPage(svc, lang) {
   const ctaText = isEn ? "Let's discuss how this service fits your brand's visibility goals." : 'Bu hizmetin markanızın görünürlük hedeflerine nasıl uyduğunu konuşalım.';
   const ctaBtn = contactLabel;
   const featuresTitle = isEn ? "What's included" : 'Neler dahil';
-  const home = isEn ? '/en/' : '/';
-  const logoAria = isEn ? 'Nurdai Home' : 'Nurdai Ana Sayfa';
 
   const features = loc.features.map(f => `<div class="svc-feature">→ ${esc(f)}</div>`).join('\n          ');
 
@@ -130,21 +93,10 @@ function buildPage(svc, lang) {
 <body>
 <div class="cur" id="cur"></div>
 <div class="curl" id="curl"></div>
-<nav class="nav" id="main-nav">
-  <div class="con nav-in">
-    <a href="${home}" class="logo logo-img-link" aria-label="${logoAria}"><img src="/assets/images/nurdai-logo-nav.png" alt="Nurdai" class="logo-img" width="1024" height="798"></a>
-    <ul class="nav-links">${nav}
-    </ul>
-    <div class="nav-r">
-      ${langSw}
-      <button class="tgl" onclick="toggleTheme()" aria-label="${isEn ? 'Toggle theme' : 'Tema değiştir'}"><span id="theme-icon">☀️</span></button>
-      <a href="${contact}" class="nav-cta">${contactLabel}</a>
-      <div class="ham" onclick="toggleMenu()" aria-label="${isEn ? 'Menu' : 'Menü'}" role="button"><span></span><span></span><span></span></div>
-    </div>
-  </div>
-</nav>
-<div class="mob-menu" id="mob-menu">${mobNav}
-</div>
+<!-- NAV -->
+<nav class="nav" id="main-nav"></nav>
+<div class="mob-menu" id="mob-menu"></div>
+<script src="/assets/site-nav.js"></script>
 <main>
 <section class="page-hero center rv">
   <div class="con">
