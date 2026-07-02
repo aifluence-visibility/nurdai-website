@@ -34,13 +34,13 @@
           <li><a href="/hizmetler">Hizmetler</a></li>
           <li><a href="/portfolyo">Portfolyo</a></li>
           <li><a href="/hakkimda">Hakkımda</a></li>
-          <li><a href="/medya">Medya</a></li>
+          <li><a href="/blog">Blog</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Insights</h4>
         <ul>
-          <li><a href="/blog">Blog</a></li>
+          <li><a href="/medya">Medya</a></li>
           <li><a href="/insights/future-of-ai-search">Future of AI Search</a></li>
           <li><a href="/insights/ai-search-lab">AI Search Lab</a></li>
           <li><a href="/insights/research">Research</a></li>
@@ -90,13 +90,13 @@
           <li><a href="/en/services">Services</a></li>
           <li><a href="/en/portfolio">Portfolio</a></li>
           <li><a href="/en/about">About</a></li>
-          <li><a href="/en/media">Media</a></li>
+          <li><a href="/en/blog">Blog</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Insights</h4>
         <ul>
-          <li><a href="/en/blog">Blog</a></li>
+          <li><a href="/en/media">Media</a></li>
           <li><a href="/en/insights/future-of-ai-search">Future of AI Search</a></li>
           <li><a href="/en/insights/ai-search-lab">AI Search Lab</a></li>
           <li><a href="/en/insights/research">Research</a></li>

@@ -2,7 +2,7 @@
 (function () {
   const INSIGHTS = {
     tr: [
-      { label: 'Blog', href: '/blog' },
+      { label: 'Medya', href: '/medya' },
       { label: 'Future of AI Search', href: '/insights/future-of-ai-search' },
       { label: 'AI Search Lab', href: '/insights/ai-search-lab', soon: true },
       { label: 'Research', href: '/insights/research', soon: true },
@@ -11,7 +11,7 @@
       { label: 'Substack', href: 'https://hellonurdai.substack.com', external: true }
     ],
     en: [
-      { label: 'Blog', href: '/en/blog' },
+      { label: 'Media', href: '/en/media' },
       { label: 'Future of AI Search', href: '/en/insights/future-of-ai-search' },
       { label: 'AI Search Lab', href: '/en/insights/ai-search-lab', soon: true },
       { label: 'Research', href: '/en/insights/research', soon: true },
@@ -40,7 +40,7 @@
         { label: 'Hizmetler', href: '/hizmetler' },
         { label: 'Portfolyo', href: '/portfolyo' },
         { label: 'Hakkımda', href: '/hakkimda' },
-        { label: 'Medya', href: '/medya' }
+        { label: 'Blog', href: '/blog' }
       ],
       mobLinks: [
         { label: 'Ana Sayfa', href: '/' },
@@ -48,8 +48,8 @@
         { label: 'Hizmetler', href: '/hizmetler' },
         { label: 'Portfolyo', href: '/portfolyo' },
         { label: 'Hakkımda', href: '/hakkimda' },
-        { label: 'Medya', href: '/medya' },
         { label: 'Blog', href: '/blog' },
+        { label: 'Medya', href: '/medya' },
         { label: 'Future of AI Search', href: '/insights/future-of-ai-search' },
         { label: 'AI Search Lab', href: '/insights/ai-search-lab' },
         { label: 'Research', href: '/insights/research' }
@@ -73,7 +73,7 @@
         { label: 'Services', href: '/en/services' },
         { label: 'Portfolio', href: '/en/portfolio' },
         { label: 'About', href: '/en/about' },
-        { label: 'Media', href: '/en/media' }
+        { label: 'Blog', href: '/en/blog' }
       ],
       mobLinks: [
         { label: 'Home', href: '/en/' },
@@ -81,8 +81,8 @@
         { label: 'Services', href: '/en/services' },
         { label: 'Portfolio', href: '/en/portfolio' },
         { label: 'About', href: '/en/about' },
-        { label: 'Media', href: '/en/media' },
         { label: 'Blog', href: '/en/blog' },
+        { label: 'Media', href: '/en/media' },
         { label: 'Future of AI Search', href: '/en/insights/future-of-ai-search' },
         { label: 'AI Search Lab', href: '/en/insights/ai-search-lab' },
         { label: 'Research', href: '/en/insights/research' }
@@ -101,9 +101,13 @@
     const path = location.pathname.replace(/\/index\.html$/, '').replace(/\.html$/, '') || '/';
     if (lang === 'tr') {
       if (path.startsWith('/insights/')) return '/en' + path;
+      if (path === '/medya') return '/en/media';
+      if (path === '/blog' || path.startsWith('/blog/')) return '/en/blog' + path.slice(5);
       return NAV.tr.langHref;
     }
     if (path.startsWith('/en/insights/')) return path.replace(/^\/en/, '') || '/';
+    if (path === '/en/media') return '/medya';
+    if (path === '/en/blog' || path.startsWith('/en/blog/')) return '/blog' + path.slice(8);
     return NAV.en.langHref;
   }
 
@@ -118,6 +122,8 @@
     if (target === '/') return current === '/' || current === '';
     if (current === target) return true;
     if (target.includes('/insights/') && current.startsWith(target)) return true;
+    if (target === '/medya' && (current === '/medya' || current === 'medya')) return true;
+    if (target === '/en/media' && (current === '/en/media' || current.startsWith('/en/media'))) return true;
     if (target === '/blog' && current.startsWith('/blog')) return true;
     if (target === '/en/blog' && current.startsWith('/en/blog')) return true;
     return false;
@@ -125,7 +131,7 @@
 
   function insightsActive() {
     const p = location.pathname;
-    return p.includes('/insights/') || p.startsWith('/blog') || p.startsWith('/en/blog');
+    return p.includes('/insights/') || p === '/medya' || p.endsWith('/medya') || p.startsWith('/en/media');
   }
 
   function renderInsightsMenu(lang) {
