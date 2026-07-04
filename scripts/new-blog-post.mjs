@@ -11,6 +11,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { generateSitemap } from './generate-sitemap.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
@@ -147,12 +148,14 @@ blogData.posts.unshift({
   published: false
 });
 fs.writeFileSync(blogJsonPath, JSON.stringify(blogData, null, 2) + '\n', 'utf8');
+generateSitemap({ log: false });
 
 console.log(`✓ blog/${slug}.html oluşturuldu`);
 console.log(`✓ content/blog.json güncellendi (published: false)`);
+console.log(`✓ sitemap.xml güncellendi (yayınlanınca otomatik eklenir)`);
 console.log('');
 console.log('Sonraki adımlar:');
 console.log('1. blog/' + slug + '.html içeriğini düzenle');
 console.log('2. content/blog.json içinde "published": true yap');
-console.log('3. sitemap.xml\'e URL ekle: https://nurdai.com/blog/' + slug);
+console.log('3. npm run sitemap  (veya publish sırasında otomatik çalışır)');
 console.log('4. git commit + push');
