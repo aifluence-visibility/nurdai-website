@@ -3,10 +3,30 @@
     "featured": { "enabled": true, "dataKey": "featured" },
     "podcast": { "enabled": false, "items": [] },
     "videos": { "enabled": false, "items": [] },
-    "guestArticles": { "enabled": false, "items": [] },
+    "guestArticles": { "enabled": true, "items": [] },
     "interviews": { "enabled": false, "items": [] },
     "pressMentions": { "enabled": false, "items": [] }
   },
+  "guestArticles": [
+    {
+      "id": "sansu-future-of-digital-discovery",
+      "author": "Sansu Abraham",
+      "authorTitle": "Founder, Simply Sansu",
+      "authorUrl": "https://simplysansu.com",
+      "authorPhoto": "/assets/images/guest/sansu-abraham.jpg",
+      "title": "The Future of Digital Discovery: Beyond Google Search",
+      "slug": "future-of-digital-discovery",
+      "url": "/en/guest/future-of-digital-discovery",
+      "date": "2026-07-04",
+      "dateLabel": { "tr": "Temmuz 2026", "en": "July 2026" },
+      "excerpt": {
+        "en": "Digital discovery now spans ChatGPT, Perplexity, LinkedIn, YouTube, and Reddit—not just Google. Sansu Abraham on why your website, authority, and experience-led content still define AI-era visibility.",
+        "tr": "Dijital keşif artık yalnızca Google değil; ChatGPT, Perplexity, LinkedIn, YouTube ve Reddit'i kapsıyor. Sansu Abraham, web sitenizin, otoritenizin ve deneyim odaklı içeriğin AI çağında neden hâlâ belirleyici olduğunu anlatıyor."
+      },
+      "categories": ["Guest Articles", "Digital Discovery", "AI Visibility"],
+      "tags": ["digital discovery", "AI search", "Digital PR", "SEO", "AI SEO", "content marketing", "personal branding"]
+    }
+  ],
   "featured": [
     {
       "id": "simplysansu-new-seo-2026",

@@ -13,6 +13,7 @@ async function loadMediaCenter(lang) {
       socialSub: 'AI visibility ve dijital strateji içeriklerini takip edin.',
       published: 'Yayın',
       readArticle: 'Makaleyi Oku →',
+      readGuest: 'Konuk Yazısını Oku →',
       upcoming: 'Yaklaşan Yayınlar',
       upcomingText: 'Yeni uluslararası yayınlar yakında.'
     },
@@ -27,6 +28,7 @@ async function loadMediaCenter(lang) {
       socialSub: 'Follow AI visibility and digital strategy content.',
       published: 'Published',
       readArticle: 'Read Article →',
+      readGuest: 'Read Guest Article →',
       upcoming: 'Upcoming Publications',
       upcomingText: 'More international publications coming soon.'
     }
@@ -37,6 +39,39 @@ async function loadMediaCenter(lang) {
     const res = await fetch('/content/media.json');
     if (!res.ok) throw new Error('media.json');
     const data = await res.json();
+
+    const guestEl = document.getElementById('media-guest-list');
+    const guestComingEl = document.getElementById('media-guest-coming');
+    if (guestEl && data.guestArticles && data.guestArticles.length) {
+      if (guestComingEl) guestComingEl.hidden = true;
+      guestEl.innerHTML = data.guestArticles.map(item => {
+        const excerpt = item.excerpt[lang] || item.excerpt.en;
+        const dateLabel = item.dateLabel[lang] || item.dateLabel.en;
+        const category = item.categories && item.categories[0] ? item.categories[0] : 'Guest Article';
+        return `
+        <a href="${item.url}" class="media-guest-card rv">
+          <div class="mgc-glow" aria-hidden="true"></div>
+          <div class="mgc-inner">
+            <div class="mgc-author">
+              <img class="mgc-photo" src="${item.authorPhoto}" alt="${item.author}" width="56" height="56" loading="lazy">
+              <div>
+                <span class="mgc-author-name">${item.author}</span>
+                <span class="mgc-author-title">${item.authorTitle}</span>
+              </div>
+            </div>
+            <div class="mgc-body">
+              <span class="mgc-cat">${category}</span>
+              <h3 class="mgc-title">${item.title}</h3>
+              <p class="mgc-date">${L.published}: ${dateLabel}</p>
+              <p class="mgc-excerpt">${excerpt}</p>
+            </div>
+            <div class="mgc-action">
+              <span class="btn-p mgc-btn">${L.readGuest}</span>
+            </div>
+          </div>
+        </a>`;
+      }).join('');
+    }
 
     const featuredEl = document.getElementById('media-featured-list');
     if (featuredEl && data.featured) {
@@ -76,7 +111,7 @@ async function loadMediaCenter(lang) {
     }
 
     if (typeof revealElements === 'function') {
-      [featuredEl, socialEl].forEach(el => { if (el) revealElements(el); });
+      [featuredEl, guestEl, socialEl].forEach(el => { if (el) revealElements(el); });
     }
   } catch (e) {
     console.warn('Media center yüklenemedi', e);
@@ -91,7 +126,7 @@ async function loadMediaCenter(lang) {
 window.loadMediaCenter = loadMediaCenter;
 
 (function autoInitMedia() {
-  if (document.getElementById('media-featured-list') || document.getElementById('media-social-grid')) {
+  if (document.getElementById('media-featured-list') || document.getElementById('media-social-grid') || document.getElementById('media-guest-list')) {
     const lang = document.documentElement.lang === 'en' || location.pathname.startsWith('/en') ? 'en' : 'tr';
     loadMediaCenter(lang);
   }
