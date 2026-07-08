@@ -213,6 +213,9 @@ section{padding:88px 0}
 .guest-author-title a{color:var(--a1);text-decoration:none}
 .guest-author-title a:hover{text-decoration:underline}
 .guest-author-bio{font-size:.87rem;color:var(--txt2);line-height:1.72;margin:0}
+.research-lang-switch{margin-top:40px;padding-top:24px;border-top:1px solid var(--brd);font-size:.88rem}
+.research-lang-switch a{color:var(--a1);font-weight:600;text-decoration:none}
+.research-lang-switch a:hover{text-decoration:underline}
 @media(max-width:900px){
   .media-guest-card .mgc-inner{grid-template-columns:1fr;text-align:left;gap:20px;padding:28px 24px}
   .media-guest-card .mgc-action{display:flex;justify-content:flex-start}

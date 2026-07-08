@@ -27,10 +27,10 @@
       "status": "comingSoon"
     },
     "research": {
-      "enabled": false,
+      "enabled": true,
       "slug": "research",
       "type": "research",
-      "status": "comingSoon"
+      "status": "active"
     },
     "frameworks": {
       "enabled": false,
@@ -124,6 +124,25 @@
       "excerpt": {
         "tr": "Yapay zeka sistemlerinin içerikleri nasıl seçip sunduğunu anlayan yeni bir disiplin.",
         "en": "A new discipline focused on how generative AI systems select and present content."
+      }
+    }
+  ],
+  "researchArticles": [
+    {
+      "id": "ai-skills-hiring-2026",
+      "published": true,
+      "date": "2026-07-08",
+      "url": {
+        "tr": "/insights/research/2026-ai-becerileri-is-ilanlari",
+        "en": "/en/insights/research/ai-skills-companies-hiring-2026"
+      },
+      "title": {
+        "tr": "2026'da Şirketler Gerçekten Hangi AI Becerilerini Arıyor?",
+        "en": "What AI Skills Are Companies Really Hiring for in 2026?"
+      },
+      "excerpt": {
+        "tr": "İş unvanları aynı, beklentiler tamamen değişiyor. Yüzlerce iş ilanından çıkan tablo: AI Search, LLM, yapılandırılmış içerik ve AI Visibility becerileri artık SEO'dan growth'a kadar her role ekleniyor.",
+        "en": "Job titles may look the same, but expectations have changed. Analysis of hundreds of job postings reveals AI Search, LLMs, structured content, and AI Visibility skills are now embedded across marketing roles."
       }
     }
   ]

@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://nurdai.com/blog/</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -81,7 +81,7 @@
   </url>
   <url>
     <loc>https://nurdai.com/en/blog/</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -129,9 +129,15 @@
   </url>
   <url>
     <loc>https://nurdai.com/en/insights/research</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://nurdai.com/en/insights/research/ai-skills-companies-hiring-2026</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
   </url>
   <url>
     <loc>https://nurdai.com/en/media</loc>
@@ -207,9 +213,15 @@
   </url>
   <url>
     <loc>https://nurdai.com/insights/research</loc>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://nurdai.com/insights/research/2026-ai-becerileri-is-ilanlari</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
   </url>
   <url>
     <loc>https://nurdai.com/kullanim-kosullari</loc>

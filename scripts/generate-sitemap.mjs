@@ -51,10 +51,13 @@ export function generateSitemap({ write = true, log = true } = {}) {
   const staticConfig = readJson('content/sitemap-static.json');
   const blogData = readJson('content/blog.json');
   const mediaData = readJson('content/media.json');
+  const insightsData = readJson('content/insights.json');
   const baseUrl = staticConfig.baseUrl.replace(/\/$/, '');
 
   const publishedPosts = (blogData.posts || []).filter(post => post.published !== false);
+  const publishedResearch = (insightsData.researchArticles || []).filter(article => article.published !== false);
   const latestBlogDate = maxDate(...publishedPosts.map(post => post.date)) || new Date().toISOString().slice(0, 10);
+  const latestResearchDate = maxDate(...publishedResearch.map(article => article.date)) || new Date().toISOString().slice(0, 10);
   const today = new Date().toISOString().slice(0, 10);
 
   const entries = [];
@@ -62,6 +65,8 @@ export function generateSitemap({ write = true, log = true } = {}) {
   for (const page of staticConfig.pages) {
     const lastmod = page.dynamicLastmod === 'blog'
       ? maxDate(page.lastmod, latestBlogDate, today)
+      : page.dynamicLastmod === 'research'
+      ? maxDate(page.lastmod, latestResearchDate, today)
       : page.lastmod;
 
     entries.push({
@@ -107,6 +112,26 @@ export function generateSitemap({ write = true, log = true } = {}) {
     });
   }
 
+  for (const article of publishedResearch) {
+    for (const lang of ['tr', 'en']) {
+      const articlePath = article.url?.[lang];
+      if (!articlePath) continue;
+
+      const rel = articlePath.replace(/^\//, '');
+      const htmlPath = path.join(root, rel.endsWith('.html') ? rel : `${rel}.html`);
+      if (!fs.existsSync(htmlPath)) {
+        console.warn(`⚠ ${articlePath} HTML bulunamadı — yine de sitemap'e eklendi`);
+      }
+
+      entries.push({
+        loc: toLoc(baseUrl, articlePath),
+        lastmod: article.date || today,
+        changefreq: 'monthly',
+        priority: '0.78'
+      });
+    }
+  }
+
   const unique = new Map();
   for (const entry of entries) {
     unique.set(entry.loc, entry);
@@ -132,6 +157,7 @@ export function generateSitemap({ write = true, log = true } = {}) {
     console.log(`  • ${staticConfig.pages.length} statik sayfa`);
     console.log(`  • ${publishedPosts.length} blog yazısı`);
     console.log(`  • ${(mediaData.guestArticles || []).length} konuk yazısı`);
+    console.log(`  • ${publishedResearch.length} research yazısı (${publishedResearch.length * 2} URL)`);
   }
 
   return { xml, count: sorted.length };
