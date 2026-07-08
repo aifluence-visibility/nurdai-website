@@ -46,6 +46,42 @@
   },
   "futureOfAiSearchArticles": [
     {
+      "id": "hiring-changing-age-ai-skills-2026",
+      "source": "linkedin",
+      "slug": "hiring-changing-age-ai-skills-companies-really-looking",
+      "date": "2026-07-08",
+      "url": {
+        "tr": "https://www.linkedin.com/pulse/hiring-changing-age-ai-skills-companies-really-looking-nurdan-cetin--tellf",
+        "en": "https://www.linkedin.com/pulse/hiring-changing-age-ai-skills-companies-really-looking-nurdan-cetin--tellf"
+      },
+      "title": {
+        "tr": "Hiring Is Changing in the Age of AI: The Skills Companies Are Really Looking for in 2026",
+        "en": "Hiring Is Changing in the Age of AI: The Skills Companies Are Really Looking for in 2026"
+      },
+      "excerpt": {
+        "tr": "Yüzlerce iş ilanını inceledikten sonra ortaya çıkan tablo: şirketler artık yalnızca tanıdık unvanları değil, AI okuryazarlığı, yapılandırılmış içerik ve LLM destekli arama deneyimlerinde görünürlük becerilerini arıyor.",
+        "en": "After analyzing hundreds of job postings, one pattern is clear: companies still hire familiar titles, but they now expect AI fluency, structured content, and visibility across LLM-powered search experiences."
+      }
+    },
+    {
+      "id": "ai-visibility-next-digital-discipline",
+      "source": "linkedin",
+      "slug": "ai-visibility-becoming-next-digital-discipline",
+      "date": "2026-06-30",
+      "url": {
+        "tr": "https://www.linkedin.com/pulse/ai-visibility-becoming-next-digital-discipline-nurdan-cetin--liuxf",
+        "en": "https://www.linkedin.com/pulse/ai-visibility-becoming-next-digital-discipline-nurdan-cetin--liuxf"
+      },
+      "title": {
+        "tr": "AI Visibility Is Becoming the Next Digital Discipline",
+        "en": "AI Visibility Is Becoming the Next Digital Discipline"
+      },
+      "excerpt": {
+        "tr": "Arama değişiyor — markaların keşfedilme biçimi de. AI Visibility, SEO'nun ötesinde yeni bir dijital disiplin olarak yükseliyor.",
+        "en": "Search is changing. And with it, the way brands are discovered. AI Visibility is emerging as the next digital discipline beyond traditional SEO."
+      }
+    },
+    {
       "id": "ai-visibility-seo-fark",
       "source": "blog",
       "slug": "ai-visibility-seo-fark",
