@@ -5,7 +5,7 @@
       { label: 'Medya', href: '/medya' },
       { label: 'Future of AI Search', href: '/insights/future-of-ai-search' },
       { label: 'AI Search Lab', href: '/insights/ai-search-lab', soon: true },
-      { label: 'Research', href: '/insights/research', soon: true },
+      { label: 'Research', href: '/insights/research' },
       { divider: 'Newsletter' },
       { label: 'Future of AI Search', href: '/insights/future-of-ai-search', sub: true },
       { label: 'Substack', href: 'https://hellonurdai.substack.com', external: true }
@@ -14,7 +14,7 @@
       { label: 'Media', href: '/en/media' },
       { label: 'Future of AI Search', href: '/en/insights/future-of-ai-search' },
       { label: 'AI Search Lab', href: '/en/insights/ai-search-lab', soon: true },
-      { label: 'Research', href: '/en/insights/research', soon: true },
+      { label: 'Research', href: '/en/insights/research' },
       { divider: 'Newsletter' },
       { label: 'Future of AI Search', href: '/en/insights/future-of-ai-search', sub: true },
       { label: 'Substack', href: 'https://hellonurdai.substack.com', external: true }
@@ -99,6 +99,16 @@
 
   function resolveLangHref(lang) {
     const path = location.pathname.replace(/\/index\.html$/, '').replace(/\.html$/, '') || '/';
+    const targetLang = lang === 'tr' ? 'en' : 'tr';
+    const alt = document.querySelector(`link[rel="alternate"][hreflang="${targetLang}"]`);
+    if (alt) {
+      try {
+        const url = new URL(alt.getAttribute('href'), location.origin);
+        const altPath = url.pathname.replace(/\/index\.html$/, '').replace(/\.html$/, '').replace(/\/$/, '') || '/';
+        const isGenericHome = altPath === '/' || altPath === '/en';
+        if (!isGenericHome) return altPath === '/' ? '/' : altPath;
+      } catch (_) {}
+    }
     if (lang === 'tr') {
       if (path.startsWith('/insights/')) return '/en' + path;
       if (path === '/medya') return '/en/media';
