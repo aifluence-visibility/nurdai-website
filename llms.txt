@@ -1,19 +1,52 @@
-# NURDAI
+# Nurdai
 
-> Markaların dijital görünürlüğünü arama motorları ve yeni nesil AI sistemleri için yapılandıran stratejik dijital görünürlük stüdyosu.
+> Strategic digital visibility studio structuring brands for search engines and AI systems (ChatGPT, Gemini, Perplexity, Claude, Google AI Overviews).
 
-## Hakkında
-NURDAI, 2019'dan bu yana dijital alanda çalışan ve 2026 itibarıyla AI Visibility danışmanlığına odaklanan bir stratejik görünürlük stüdyosudur. Kurucu Nurdai, SEO, GEO ve yapay zeka sistemleri konusunda uzmandır.
+## About
+Nurdai helps brands become discoverable and citable across traditional search and generative AI. Founded by Nurdan Çetin (Nurdai), specializing in AI Visibility, GEO (Generative Engine Optimization), semantic SEO, and entity optimization.
 
-## Hizmetler
-- Yapay Zeka Görünürlüğü: AI sistemlerinde marka görünürlüğü ve discoverability optimizasyonu.
-- SEO & GEO: Arama motorları ve generative AI sistemleri için optimize edilmiş görünürlük altyapısı.
-- İçerik & Semantic Structure: AI-readable içerik yapıları ve semantic authority sistemleri.
-- Sosyal Medya & Discovery: Sosyal platformlarda görünürlük ve dijital sinyal güçlendirme.
-- Dijital Marka Altyapısı: Modern dijital görünürlük için teknik ve stratejik marka yapılanması.
+## Core services
+- AI Visibility & brand discoverability in LLM-powered search
+- AI Visibility Audit
+- Generative Engine Optimization (GEO)
+- AI Search Optimization
+- Semantic SEO & Entity SEO
+- Digital Authority
 
-## İletişim
-- E-posta: hello@nurdai.com
-- Konum: Bodrum, Muğla, Türkiye
-- Instagram: https://www.instagram.com/hellonurdai
-- LinkedIn: https://www.linkedin.com/company/nurdai/
+## Publications & content
+- Future of AI Search (LinkedIn Newsletter): https://nurdai.com/en/insights/future-of-ai-search
+- Research reports: https://nurdai.com/en/insights/research
+- Blog: https://nurdai.com/blog/
+- Guest articles: https://nurdai.com/en/media
+- Media center: https://nurdai.com/medya
+
+## Key pages (English)
+- Home: https://nurdai.com/en/
+- AI Visibility: https://nurdai.com/en/ai-visibility
+- Services: https://nurdai.com/en/services
+- AI Visibility Audit: https://nurdai.com/en/ai-visibility-audit
+- About: https://nurdai.com/en/about
+- Contact: https://nurdai.com/en/contact
+
+## Key pages (Turkish)
+- Ana sayfa: https://nurdai.com/
+- Yapay Zeka Görünürlüğü: https://nurdai.com/yapay-zeka-gorunurlugu
+- Hizmetler: https://nurdai.com/hizmetler
+- Hakkımda: https://nurdai.com/hakkimda
+- İletişim: https://nurdai.com/iletisim
+
+## Research (latest)
+- What AI Skills Are Companies Hiring for in 2026 (EN): https://nurdai.com/en/insights/research/ai-skills-companies-hiring-2026
+- 2026'da Şirketler Hangi AI Becerilerini Arıyor (TR): https://nurdai.com/insights/research/2026-ai-becerileri-is-ilanlari
+
+## Contact
+- Email: hello@nurdai.com
+- Location: Bodrum, Muğla, Turkey
+- LinkedIn: https://linkedin.com/company/nurdai
+- Google Business: https://www.google.com/search?kgmid=/g/11z8tkbskk
+- Substack: https://hellonurdai.substack.com
+- Clutch: https://clutch.co/profile/nurdai
+
+## Optional
+- Full site map: https://nurdai.com/sitemap.xml
+- Extended LLM context: https://nurdai.com/llms-full.txt

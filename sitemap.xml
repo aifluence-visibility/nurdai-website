@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://nurdai.com/blog/</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -81,7 +81,7 @@
   </url>
   <url>
     <loc>https://nurdai.com/en/blog/</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -129,7 +129,7 @@
   </url>
   <url>
     <loc>https://nurdai.com/en/insights/research</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -213,7 +213,7 @@
   </url>
   <url>
     <loc>https://nurdai.com/insights/research</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -227,6 +227,12 @@
     <loc>https://nurdai.com/kullanim-kosullari</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nurdai.com/llms-full.txt</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>

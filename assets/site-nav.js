@@ -164,7 +164,7 @@
     ).join('');
     const insightsOpen = insightsActive();
     return `<div class="con nav-in">
-    <a href="${L.logoHref}" class="logo logo-img-link" aria-label="${L.logoAria}"><img src="/assets/images/nurdai-logo-nav.png" alt="" class="logo-img" width="1024" height="798"></a>
+    <a href="${L.logoHref}" class="logo logo-img-link" aria-label="${L.logoAria}"><img src="/assets/images/nurdai-logo-nav.png" alt="Nurdai" class="logo-img" width="1024" height="798"></a>
     <ul class="nav-links" aria-label="${L.navAria}">
       ${links}
       <li class="nav-drop${insightsOpen ? ' is-open' : ''}">

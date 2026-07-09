@@ -383,6 +383,13 @@ footer{padding:52px 0 32px;border-top:1px solid var(--brd);background:var(--bg2)
 .faq-item[open] summary::after{transform:rotate(45deg)}
 .faq-item p{padding:0 22px 18px;font-size:.86rem;color:var(--txt2);line-height:1.8}
 
+/* ── ARTICLE RELATED LINKS ── */
+.article-related{margin:40px 0 0;padding:24px 28px;background:var(--surf);border:1px solid var(--brd);border-radius:var(--rlg)}
+.article-related-label{font-size:.72rem;font-weight:700;color:var(--a1);text-transform:uppercase;letter-spacing:.07em;margin-bottom:14px}
+.article-related-list{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px 20px}
+.article-related-list a{font-size:.88rem;color:var(--txt2);text-decoration:none;transition:color .2s}
+.article-related-list a:hover{color:var(--a1)}
+
 /* ── SCENARIO CARD (AI Visibility page) ── */
 .scenario-card{background:rgba(109,40,217,.06);border:1px solid rgba(109,40,217,.18);border-radius:var(--rlg);padding:28px 32px;margin-top:24px;max-width:680px}
 .scenario-card p{font-size:.9rem;color:var(--txt2);line-height:1.85;margin:0}

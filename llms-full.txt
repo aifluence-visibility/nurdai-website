@@ -1,0 +1,59 @@
+# Nurdai — Full LLM Context
+
+> AI Visibility & digital discoverability consultancy. Bilingual site (Turkish + English).
+
+## Organization
+- Name: Nurdai
+- Founder: Nurdan Çetin (also known as Nurdai)
+- URL: https://nurdai.com
+- Email: hello@nurdai.com
+- Phone: +905325788737
+- Location: Bodrum, Muğla, Turkey
+- Services: AI Visibility, GEO, AI Search Optimization, Semantic SEO, Entity SEO, Digital Authority, AI Visibility Audit
+
+## sameAs / profiles
+- https://linkedin.com/company/nurdai
+- https://hellonurdai.substack.com
+- https://clutch.co/profile/nurdai
+- https://instagram.com/hellonurdai
+- https://youtube.com/@Hellonurdai
+- https://tiktok.com/@hellonurdai
+- https://www.google.com/search?kgmid=/g/11z8tkbskk
+
+## Insights publications
+### Future of AI Search (active newsletter)
+- Hub TR: https://nurdai.com/insights/future-of-ai-search
+- Hub EN: https://nurdai.com/en/insights/future-of-ai-search
+- LinkedIn Newsletter: https://www.linkedin.com/newsletters/future-of-ai-search-7476605211265064960/
+
+### Research (active)
+- Hub TR: https://nurdai.com/insights/research
+- Hub EN: https://nurdai.com/en/insights/research
+- AI Skills Hiring 2026 EN: https://nurdai.com/en/insights/research/ai-skills-companies-hiring-2026
+- AI Becerileri 2026 TR: https://nurdai.com/insights/research/2026-ai-becerileri-is-ilanlari
+
+### Guest Articles
+- Media hub EN: https://nurdai.com/en/media
+- Future of Digital Discovery (Sansu Abraham): https://nurdai.com/en/guest/future-of-digital-discovery
+
+## Blog posts (Turkish)
+- https://nurdai.com/blog/ai-visibility-seo-fark
+- https://nurdai.com/blog/chatgpt-perplexity-marka-gorunurlugu
+- https://nurdai.com/blog/geo-nedir-generative-engine-optimization
+
+## Service pages
+| TR | EN |
+|---|---|
+| /yapay-zeka-gorunurlugu | /en/ai-visibility |
+| /ai-visibility-audit | /en/ai-visibility-audit |
+| /generative-engine-optimization | /en/generative-engine-optimization |
+| /ai-search-optimization | /en/ai-search-optimization |
+| /semantic-seo | /en/semantic-seo |
+| /entity-seo | /en/entity-seo |
+| /digital-authority | /en/digital-authority |
+| /hizmetler | /en/services |
+
+## Technical
+- Sitemap: https://nurdai.com/sitemap.xml
+- robots.txt allows GPTBot, ChatGPT-User, OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended
+- Structured data: Organization, Person, WebSite, Article/BlogPosting, FAQPage, Service, BreadcrumbList

@@ -5,6 +5,7 @@
   "scripts": {
     "new-post": "node scripts/new-blog-post.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
+    "sync-blog-seo": "node scripts/sync-blog-seo.mjs",
     "generate-og": "node scripts/generate-og-home.mjs",
     "build:services": "node scripts/build-service-pages.mjs",
     "build:logo": "python3 scripts/build-logo-assets.py"

@@ -36,6 +36,7 @@
     { "path": "/en/blog/", "lastmod": "2026-07-01", "changefreq": "weekly", "priority": "0.8", "dynamicLastmod": "blog" },
     { "path": "/en/insights/future-of-ai-search", "lastmod": "2026-07-01", "changefreq": "weekly", "priority": "0.85" },
     { "path": "/en/insights/ai-search-lab", "lastmod": "2026-07-01", "changefreq": "monthly", "priority": "0.5" },
-    { "path": "/en/insights/research", "lastmod": "2026-07-01", "changefreq": "monthly", "priority": "0.5", "dynamicLastmod": "research" }
+    { "path": "/en/insights/research", "lastmod": "2026-07-01", "changefreq": "monthly", "priority": "0.5", "dynamicLastmod": "research" },
+    { "path": "/llms-full.txt", "lastmod": "2026-07-09", "changefreq": "monthly", "priority": "0.3" }
   ]
 }

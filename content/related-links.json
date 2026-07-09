@@ -1,0 +1,92 @@
+{
+  "blog": {
+    "ai-visibility-seo-fark": {
+      "tr": [
+        { "href": "/yapay-zeka-gorunurlugu", "label": "Yapay Zeka Görünürlüğü" },
+        { "href": "/ai-visibility-audit", "label": "AI Visibility Audit" },
+        { "href": "/insights/research/2026-ai-becerileri-is-ilanlari", "label": "2026 AI Becerileri Araştırması" },
+        { "href": "/blog/geo-nedir-generative-engine-optimization", "label": "GEO Nedir?" }
+      ],
+      "en": [
+        { "href": "/en/ai-visibility", "label": "AI Visibility" },
+        { "href": "/en/ai-visibility-audit", "label": "AI Visibility Audit" },
+        { "href": "/en/insights/research/ai-skills-companies-hiring-2026", "label": "AI Skills Hiring 2026 Research" },
+        { "href": "/blog/geo-nedir-generative-engine-optimization", "label": "What Is GEO?" }
+      ]
+    },
+    "chatgpt-perplexity-marka-gorunurlugu": {
+      "tr": [
+        { "href": "/yapay-zeka-gorunurlugu", "label": "Yapay Zeka Görünürlüğü" },
+        { "href": "/generative-engine-optimization", "label": "Generative Engine Optimization" },
+        { "href": "/blog/ai-visibility-seo-fark", "label": "AI Visibility vs SEO" },
+        { "href": "/ai-visibility-audit", "label": "AI Visibility Audit" }
+      ],
+      "en": [
+        { "href": "/en/ai-visibility", "label": "AI Visibility" },
+        { "href": "/en/generative-engine-optimization", "label": "GEO" },
+        { "href": "/blog/ai-visibility-seo-fark", "label": "AI Visibility vs SEO" },
+        { "href": "/en/ai-visibility-audit", "label": "AI Visibility Audit" }
+      ]
+    },
+    "geo-nedir-generative-engine-optimization": {
+      "tr": [
+        { "href": "/generative-engine-optimization", "label": "GEO Hizmeti" },
+        { "href": "/blog/chatgpt-perplexity-marka-gorunurlugu", "label": "ChatGPT & Perplexity Görünürlüğü" },
+        { "href": "/semantic-seo", "label": "Semantic SEO" },
+        { "href": "/insights/research/2026-ai-becerileri-is-ilanlari", "label": "2026 AI Becerileri" }
+      ],
+      "en": [
+        { "href": "/en/generative-engine-optimization", "label": "GEO Service" },
+        { "href": "/blog/chatgpt-perplexity-marka-gorunurlugu", "label": "ChatGPT & Perplexity Visibility" },
+        { "href": "/en/semantic-seo", "label": "Semantic SEO" },
+        { "href": "/en/insights/research/ai-skills-companies-hiring-2026", "label": "AI Skills 2026 Research" }
+      ]
+    }
+  },
+  "research": {
+    "2026-ai-becerileri-is-ilanlari": {
+      "tr": [
+        { "href": "/yapay-zeka-gorunurlugu", "label": "Yapay Zeka Görünürlüğü" },
+        { "href": "/ai-search-optimization", "label": "AI Search Optimization" },
+        { "href": "/blog/ai-visibility-seo-fark", "label": "AI Visibility vs SEO" },
+        { "href": "/insights/future-of-ai-search", "label": "Future of AI Search" }
+      ],
+      "en": [
+        { "href": "/en/ai-visibility", "label": "AI Visibility" },
+        { "href": "/en/ai-search-optimization", "label": "AI Search Optimization" },
+        { "href": "/blog/ai-visibility-seo-fark", "label": "AI Visibility vs SEO" },
+        { "href": "/en/insights/future-of-ai-search", "label": "Future of AI Search" }
+      ]
+    },
+    "ai-skills-companies-hiring-2026": {
+      "tr": [
+        { "href": "/yapay-zeka-gorunurlugu", "label": "Yapay Zeka Görünürlüğü" },
+        { "href": "/ai-search-optimization", "label": "AI Search Optimization" },
+        { "href": "/blog/ai-visibility-seo-fark", "label": "AI Visibility vs SEO" },
+        { "href": "/insights/future-of-ai-search", "label": "Future of AI Search" }
+      ],
+      "en": [
+        { "href": "/en/ai-visibility", "label": "AI Visibility" },
+        { "href": "/en/ai-search-optimization", "label": "AI Search Optimization" },
+        { "href": "/blog/ai-visibility-seo-fark", "label": "AI Visibility vs SEO" },
+        { "href": "/en/insights/future-of-ai-search", "label": "Future of AI Search" }
+      ]
+    }
+  },
+  "service": {
+    "ai-visibility-audit": {
+      "tr": [
+        { "href": "/yapay-zeka-gorunurlugu", "label": "Yapay Zeka Görünürlüğü" },
+        { "href": "/blog/ai-visibility-seo-fark", "label": "AI Visibility vs SEO" },
+        { "href": "/insights/research/2026-ai-becerileri-is-ilanlari", "label": "2026 AI Becerileri Araştırması" },
+        { "href": "/blog/chatgpt-perplexity-marka-gorunurlugu", "label": "ChatGPT & Perplexity Görünürlüğü" }
+      ],
+      "en": [
+        { "href": "/en/ai-visibility", "label": "AI Visibility" },
+        { "href": "/blog/ai-visibility-seo-fark", "label": "AI Visibility vs SEO" },
+        { "href": "/en/insights/research/ai-skills-companies-hiring-2026", "label": "AI Skills 2026 Research" },
+        { "href": "/blog/chatgpt-perplexity-marka-gorunurlugu", "label": "ChatGPT & Perplexity Visibility" }
+      ]
+    }
+  }
+}

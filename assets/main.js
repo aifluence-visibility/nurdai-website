@@ -80,7 +80,10 @@ function closeMenu() {
       btn.addEventListener('click', toggleMenu);
       el.replaceWith(btn);
     });
-    document.querySelectorAll('.logo-img-link[aria-label] img').forEach(img => { img.alt = ''; });
+    document.querySelectorAll('.logo-img-link[aria-label] img').forEach(img => {
+      const label = img.closest('.logo-img-link')?.getAttribute('aria-label');
+      if (label && !img.getAttribute('alt')) img.alt = label;
+    });
     document.querySelectorAll('.footer-social a[aria-label]').forEach(a => {
       if (!a.querySelector('.sr-only')) {
         const span = document.createElement('span');

@@ -34,3 +34,6 @@ User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://nurdai.com/sitemap.xml
+
+# LLM context: https://nurdai.com/llms.txt
+# Extended context: https://nurdai.com/llms-full.txt
