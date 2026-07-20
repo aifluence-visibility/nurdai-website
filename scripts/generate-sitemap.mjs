@@ -89,6 +89,16 @@ export function generateSitemap({ write = true, log = true } = {}) {
       changefreq: 'weekly',
       priority: '0.8'
     });
+
+    const enPostPath = path.join(root, 'en', 'blog', `${post.slug}.html`);
+    if (fs.existsSync(enPostPath)) {
+      entries.push({
+        loc: `${baseUrl}/en/blog/${post.slug}`,
+        lastmod: post.date || today,
+        changefreq: 'weekly',
+        priority: '0.8'
+      });
+    }
   }
 
   for (const guest of mediaData.guestArticles || []) {

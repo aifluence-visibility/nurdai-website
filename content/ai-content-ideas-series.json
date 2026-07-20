@@ -1,0 +1,113 @@
+{
+  "id": "ai-content-ideas",
+  "category": "AI Content Ideas",
+  "categorySlug": "ai-content-ideas",
+  "sidebarTitle": {
+    "en": "AI Content Strategy Series",
+    "tr": "AI İçerik Stratejisi Serisi"
+  },
+  "continueReading": {
+    "en": "Continue Reading",
+    "tr": "Okumaya Devam Et"
+  },
+  "prev": {
+    "en": "Previous Article",
+    "tr": "Önceki Yazı"
+  },
+  "next": {
+    "en": "Next Article",
+    "tr": "Sonraki Yazı"
+  },
+  "articles": [
+    {
+      "slug": "ai-content-ideas-for-dentists",
+      "en": {
+        "title": "AI Content Ideas for Dentists"
+      },
+      "tr": {
+        "title": "Diş Klinikleri İçin AI Çağında İçerik Fikirleri"
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-restaurants",
+      "en": {
+        "title": "AI Content Ideas for Restaurants"
+      },
+      "tr": {
+        "title": "Restoranlar İçin AI Çağında İçerik Fikirleri"
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-hotels",
+      "en": {
+        "title": "AI Content Ideas for Hotels"
+      },
+      "tr": {
+        "title": "Oteller İçin AI Çağında İçerik Fikirleri"
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-law-firms",
+      "en": {
+        "title": "AI Content Ideas for Law Firms"
+      },
+      "tr": {
+        "title": "Hukuk Büroları İçin AI Çağında İçerik Fikirleri"
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-real-estate-agencies",
+      "en": {
+        "title": "AI Content Ideas for Real Estate Agencies"
+      },
+      "tr": {
+        "title": "Emlak Ofisleri İçin AI Çağında İçerik Fikirleri"
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-veterinary-clinics",
+      "en": {
+        "title": "AI Content Ideas for Veterinary Clinics"
+      },
+      "tr": {
+        "title": "Veteriner Klinikleri İçin AI Çağında İçerik Fikirleri"
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-fitness-centers",
+      "en": {
+        "title": "AI Content Ideas for Fitness Centers"
+      },
+      "tr": {
+        "title": "Fitness Merkezleri İçin AI Çağında İçerik Fikirleri"
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-e-commerce-brands",
+      "en": {
+        "title": "AI Content Ideas for E-commerce Brands"
+      },
+      "tr": {
+        "title": "E-ticaret Markaları İçin AI Çağında İçerik Fikirleri"
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-saas-companies",
+      "en": {
+        "title": "AI Content Ideas for SaaS Companies"
+      },
+      "tr": {
+        "title": "SaaS Şirketleri İçin AI Çağında İçerik Fikirleri"
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-beauty-clinics",
+      "en": {
+        "title": "AI Content Ideas for Beauty Clinics"
+      },
+      "tr": {
+        "title": "Güzellik Klinikleri İçin AI Çağında İçerik Fikirleri"
+      }
+    }
+  ]
+}

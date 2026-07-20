@@ -155,7 +155,8 @@ const BLOG_CAT_SLUGS = {
   'GEO': 'geo',
   'AI Search': 'ai-search',
   'SEO': 'seo',
-  'Digital Strategy': 'digital-strategy'
+  'Digital Strategy': 'digital-strategy',
+  'AI Content Ideas': 'ai-content-ideas'
 };
 
 const BLOG_CAT_LIST = [
@@ -164,7 +165,8 @@ const BLOG_CAT_LIST = [
   { slug: 'geo', tr: 'GEO', en: 'GEO' },
   { slug: 'ai-search', tr: 'AI Search', en: 'AI Search' },
   { slug: 'seo', tr: 'SEO', en: 'SEO' },
-  { slug: 'digital-strategy', tr: 'Digital Strategy', en: 'Digital Strategy' }
+  { slug: 'digital-strategy', tr: 'Digital Strategy', en: 'Digital Strategy' },
+  { slug: 'ai-content-ideas', tr: 'AI Content Ideas', en: 'AI Content Ideas' }
 ];
 
 function blogCatSlug(cat) {

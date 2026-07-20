@@ -1,6 +1,166 @@
 {
   "posts": [
     {
+      "slug": "ai-content-ideas-for-dentists",
+      "category": "AI Content Ideas",
+      "date": "2026-07-20",
+      "published": true,
+      "tr": {
+        "title": "Diş Klinikleri İçin AI Çağında İçerik Fikirleri",
+        "excerpt": "Diş Klinikleri İçin AI Çağında İçerik Fikirleri — Nurdai AI İçerik Stratejisi Serisi.",
+        "body": ""
+      },
+      "en": {
+        "title": "AI Content Ideas for Dentists",
+        "excerpt": "AI Content Ideas for Dentists — Nurdai AI Content Strategy Series.",
+        "body": ""
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-restaurants",
+      "category": "AI Content Ideas",
+      "date": "2026-07-20",
+      "published": true,
+      "tr": {
+        "title": "Restoranlar İçin AI Çağında İçerik Fikirleri",
+        "excerpt": "Restoranlar İçin AI Çağında İçerik Fikirleri — Nurdai AI İçerik Stratejisi Serisi.",
+        "body": ""
+      },
+      "en": {
+        "title": "AI Content Ideas for Restaurants",
+        "excerpt": "AI Content Ideas for Restaurants — Nurdai AI Content Strategy Series.",
+        "body": ""
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-hotels",
+      "category": "AI Content Ideas",
+      "date": "2026-07-20",
+      "published": true,
+      "tr": {
+        "title": "Oteller İçin AI Çağında İçerik Fikirleri",
+        "excerpt": "Oteller İçin AI Çağında İçerik Fikirleri — Nurdai AI İçerik Stratejisi Serisi.",
+        "body": ""
+      },
+      "en": {
+        "title": "AI Content Ideas for Hotels",
+        "excerpt": "AI Content Ideas for Hotels — Nurdai AI Content Strategy Series.",
+        "body": ""
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-law-firms",
+      "category": "AI Content Ideas",
+      "date": "2026-07-20",
+      "published": true,
+      "tr": {
+        "title": "Hukuk Büroları İçin AI Çağında İçerik Fikirleri",
+        "excerpt": "Hukuk Büroları İçin AI Çağında İçerik Fikirleri — Nurdai AI İçerik Stratejisi Serisi.",
+        "body": ""
+      },
+      "en": {
+        "title": "AI Content Ideas for Law Firms",
+        "excerpt": "AI Content Ideas for Law Firms — Nurdai AI Content Strategy Series.",
+        "body": ""
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-real-estate-agencies",
+      "category": "AI Content Ideas",
+      "date": "2026-07-20",
+      "published": true,
+      "tr": {
+        "title": "Emlak Ofisleri İçin AI Çağında İçerik Fikirleri",
+        "excerpt": "Emlak Ofisleri İçin AI Çağında İçerik Fikirleri — Nurdai AI İçerik Stratejisi Serisi.",
+        "body": ""
+      },
+      "en": {
+        "title": "AI Content Ideas for Real Estate Agencies",
+        "excerpt": "AI Content Ideas for Real Estate Agencies — Nurdai AI Content Strategy Series.",
+        "body": ""
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-veterinary-clinics",
+      "category": "AI Content Ideas",
+      "date": "2026-07-20",
+      "published": true,
+      "tr": {
+        "title": "Veteriner Klinikleri İçin AI Çağında İçerik Fikirleri",
+        "excerpt": "Veteriner Klinikleri İçin AI Çağında İçerik Fikirleri — Nurdai AI İçerik Stratejisi Serisi.",
+        "body": ""
+      },
+      "en": {
+        "title": "AI Content Ideas for Veterinary Clinics",
+        "excerpt": "AI Content Ideas for Veterinary Clinics — Nurdai AI Content Strategy Series.",
+        "body": ""
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-fitness-centers",
+      "category": "AI Content Ideas",
+      "date": "2026-07-20",
+      "published": true,
+      "tr": {
+        "title": "Fitness Merkezleri İçin AI Çağında İçerik Fikirleri",
+        "excerpt": "Fitness Merkezleri İçin AI Çağında İçerik Fikirleri — Nurdai AI İçerik Stratejisi Serisi.",
+        "body": ""
+      },
+      "en": {
+        "title": "AI Content Ideas for Fitness Centers",
+        "excerpt": "AI Content Ideas for Fitness Centers — Nurdai AI Content Strategy Series.",
+        "body": ""
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-e-commerce-brands",
+      "category": "AI Content Ideas",
+      "date": "2026-07-20",
+      "published": true,
+      "tr": {
+        "title": "E-ticaret Markaları İçin AI Çağında İçerik Fikirleri",
+        "excerpt": "E-ticaret Markaları İçin AI Çağında İçerik Fikirleri — Nurdai AI İçerik Stratejisi Serisi.",
+        "body": ""
+      },
+      "en": {
+        "title": "AI Content Ideas for E-commerce Brands",
+        "excerpt": "AI Content Ideas for E-commerce Brands — Nurdai AI Content Strategy Series.",
+        "body": ""
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-saas-companies",
+      "category": "AI Content Ideas",
+      "date": "2026-07-20",
+      "published": true,
+      "tr": {
+        "title": "SaaS Şirketleri İçin AI Çağında İçerik Fikirleri",
+        "excerpt": "SaaS Şirketleri İçin AI Çağında İçerik Fikirleri — Nurdai AI İçerik Stratejisi Serisi.",
+        "body": ""
+      },
+      "en": {
+        "title": "AI Content Ideas for SaaS Companies",
+        "excerpt": "AI Content Ideas for SaaS Companies — Nurdai AI Content Strategy Series.",
+        "body": ""
+      }
+    },
+    {
+      "slug": "ai-content-ideas-for-beauty-clinics",
+      "category": "AI Content Ideas",
+      "date": "2026-07-20",
+      "published": true,
+      "tr": {
+        "title": "Güzellik Klinikleri İçin AI Çağında İçerik Fikirleri",
+        "excerpt": "Güzellik Klinikleri İçin AI Çağında İçerik Fikirleri — Nurdai AI İçerik Stratejisi Serisi.",
+        "body": ""
+      },
+      "en": {
+        "title": "AI Content Ideas for Beauty Clinics",
+        "excerpt": "AI Content Ideas for Beauty Clinics — Nurdai AI Content Strategy Series.",
+        "body": ""
+      }
+    },
+    {
       "slug": "ai-visibility-seo-fark",
       "category": "AI Visibility",
       "date": "2026-05-08",
