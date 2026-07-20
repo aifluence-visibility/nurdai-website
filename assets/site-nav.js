@@ -97,6 +97,18 @@
     return 'tr';
   }
 
+  function isBlogIndexPath(href) {
+    const normalized = normalizePath(href);
+    return normalized === '/blog' || normalized === '/en/blog';
+  }
+
+  function withBlogCategory(href) {
+    const cat = new URLSearchParams(location.search).get('cat');
+    if (!cat || !isBlogIndexPath(href)) return href;
+    const base = href.endsWith('/') ? href : `${href}/`;
+    return `${base}?cat=${encodeURIComponent(cat)}`;
+  }
+
   function resolveLangHref(lang) {
     const path = location.pathname.replace(/\/index\.html$/, '').replace(/\.html$/, '') || '/';
     const targetLang = lang === 'tr' ? 'en' : 'tr';
@@ -106,18 +118,21 @@
         const url = new URL(alt.getAttribute('href'), location.origin);
         const altPath = url.pathname.replace(/\/index\.html$/, '').replace(/\.html$/, '').replace(/\/$/, '') || '/';
         const isGenericHome = altPath === '/' || altPath === '/en';
-        if (!isGenericHome) return altPath === '/' ? '/' : altPath;
+        if (!isGenericHome) {
+          const resolved = altPath === '/' ? '/' : altPath;
+          return withBlogCategory(resolved);
+        }
       } catch (_) {}
     }
     if (lang === 'tr') {
       if (path.startsWith('/insights/')) return '/en' + path;
       if (path === '/medya') return '/en/media';
-      if (path === '/blog' || path.startsWith('/blog/')) return '/en/blog' + path.slice(5);
+      if (path === '/blog' || path.startsWith('/blog/')) return withBlogCategory('/en/blog' + path.slice(5));
       return NAV.tr.langHref;
     }
     if (path.startsWith('/en/insights/')) return path.replace(/^\/en/, '') || '/';
     if (path === '/en/media') return '/medya';
-    if (path === '/en/blog' || path.startsWith('/en/blog/')) return '/blog' + path.slice(8);
+    if (path === '/en/blog' || path.startsWith('/en/blog/')) return withBlogCategory('/blog' + path.slice(8));
     return NAV.en.langHref;
   }
 

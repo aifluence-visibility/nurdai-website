@@ -14,7 +14,8 @@
         "title": "AI Content Ideas for Dentists",
         "excerpt": "AI Content Ideas for Dentists — Nurdai AI Content Strategy Series.",
         "body": ""
-      }
+      },
+      "enPage": true
     },
     {
       "slug": "ai-content-ideas-for-restaurants",
@@ -30,7 +31,8 @@
         "title": "AI Content Ideas for Restaurants",
         "excerpt": "AI Content Ideas for Restaurants — Nurdai AI Content Strategy Series.",
         "body": ""
-      }
+      },
+      "enPage": true
     },
     {
       "slug": "ai-content-ideas-for-hotels",
@@ -46,7 +48,8 @@
         "title": "AI Content Ideas for Hotels",
         "excerpt": "AI Content Ideas for Hotels — Nurdai AI Content Strategy Series.",
         "body": ""
-      }
+      },
+      "enPage": true
     },
     {
       "slug": "ai-content-ideas-for-law-firms",
@@ -62,7 +65,8 @@
         "title": "AI Content Ideas for Law Firms",
         "excerpt": "AI Content Ideas for Law Firms — Nurdai AI Content Strategy Series.",
         "body": ""
-      }
+      },
+      "enPage": true
     },
     {
       "slug": "ai-content-ideas-for-real-estate-agencies",
@@ -78,7 +82,8 @@
         "title": "AI Content Ideas for Real Estate Agencies",
         "excerpt": "AI Content Ideas for Real Estate Agencies — Nurdai AI Content Strategy Series.",
         "body": ""
-      }
+      },
+      "enPage": true
     },
     {
       "slug": "ai-content-ideas-for-veterinary-clinics",
@@ -94,7 +99,8 @@
         "title": "AI Content Ideas for Veterinary Clinics",
         "excerpt": "AI Content Ideas for Veterinary Clinics — Nurdai AI Content Strategy Series.",
         "body": ""
-      }
+      },
+      "enPage": true
     },
     {
       "slug": "ai-content-ideas-for-fitness-centers",
@@ -110,7 +116,8 @@
         "title": "AI Content Ideas for Fitness Centers",
         "excerpt": "AI Content Ideas for Fitness Centers — Nurdai AI Content Strategy Series.",
         "body": ""
-      }
+      },
+      "enPage": true
     },
     {
       "slug": "ai-content-ideas-for-e-commerce-brands",
@@ -126,7 +133,8 @@
         "title": "AI Content Ideas for E-commerce Brands",
         "excerpt": "AI Content Ideas for E-commerce Brands — Nurdai AI Content Strategy Series.",
         "body": ""
-      }
+      },
+      "enPage": true
     },
     {
       "slug": "ai-content-ideas-for-saas-companies",
@@ -142,7 +150,8 @@
         "title": "AI Content Ideas for SaaS Companies",
         "excerpt": "AI Content Ideas for SaaS Companies — Nurdai AI Content Strategy Series.",
         "body": ""
-      }
+      },
+      "enPage": true
     },
     {
       "slug": "ai-content-ideas-for-beauty-clinics",
@@ -158,7 +167,8 @@
         "title": "AI Content Ideas for Beauty Clinics",
         "excerpt": "AI Content Ideas for Beauty Clinics — Nurdai AI Content Strategy Series.",
         "body": ""
-      }
+      },
+      "enPage": true
     },
     {
       "slug": "ai-visibility-seo-fark",
@@ -174,7 +184,8 @@
         "title": "The Difference Between AI Visibility and SEO",
         "excerpt": "Ranking on search engines and being cited by AI systems are not the same thing.",
         "body": ""
-      }
+      },
+      "enPage": false
     },
     {
       "slug": "chatgpt-perplexity-marka-gorunurlugu",
@@ -190,7 +201,8 @@
         "title": "How to Build Brand Visibility on ChatGPT and Perplexity",
         "excerpt": "Which criteria do AI search systems use when selecting sources? A 5-step practical strategy.",
         "body": ""
-      }
+      },
+      "enPage": false
     },
     {
       "slug": "geo-nedir-generative-engine-optimization",
@@ -206,7 +218,8 @@
         "title": "What Is GEO? A Guide to Generative Engine Optimization",
         "excerpt": "A new discipline focused on how generative AI systems select and present content.",
         "body": ""
-      }
+      },
+      "enPage": false
     }
   ]
 }

@@ -362,8 +362,9 @@ async function loadBlog(containerId, lang) {
     container.innerHTML = posts.map((p, i) => {
       const slug = blogCatSlug(p.category);
       const featured = i === 0 ? ' featured' : '';
+      const href = lang === 'en' && p.enPage === false ? `/blog/${p.slug}` : `${prefix}${p.slug}`;
       return `
-      <a href="${prefix}${p.slug}" class="blog-card rv cat-${slug}${featured}" data-cat="${slug}">
+      <a href="${href}" class="blog-card rv cat-${slug}${featured}" data-cat="${slug}">
         <div class="blog-card-top">
           <span class="blog-card-cat">${p.category || 'Blog'}</span>
           <time datetime="${p.date || ''}">${p.dateLabel || ''}</time>
