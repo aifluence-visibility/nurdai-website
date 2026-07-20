@@ -137,7 +137,7 @@ function buildPage(svc, lang) {
 </main>
 <footer role="contentinfo"></footer>
 <script src="/assets/site-footer.js" defer></script>
-<script src="/assets/main.js" defer></script>
+<script src="/assets/main.js?v=20260720" defer></script>
 </body>
 </html>`;
 }

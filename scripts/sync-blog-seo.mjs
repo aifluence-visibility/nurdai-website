@@ -94,8 +94,8 @@ function syncPost(p) {
 
   if (!html.includes('article-related.js')) {
     html = html.replace(
-      '<script src="/assets/main.js" defer></script>',
-      '<script src="/assets/article-related.js" defer></script>\n<script src="/assets/main.js" defer></script>'
+      '<script src="/assets/main.js?v=20260720" defer></script>',
+      '<script src="/assets/article-related.js" defer></script>\n<script src="/assets/main.js?v=20260720" defer></script>'
     );
   }
 

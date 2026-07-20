@@ -129,7 +129,7 @@ const html = `<!DOCTYPE html>
 </section>
 </main>
 <footer role="contentinfo"><div class="con"><div class="footer-bot"><span>© 2026 Nurdai</span></div></div></footer>
-<script src="../assets/main.js" defer></script>
+<script src="../assets/main.js?v=20260720" defer></script>
 </body>
 </html>
 `;
